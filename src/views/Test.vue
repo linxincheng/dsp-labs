@@ -1,6 +1,7 @@
 <template>
   <div class="test">
     <Test :msg.sync="msg" @updates="update" />
+    {{ 1000 | test }}
   </div>
 </template>
 

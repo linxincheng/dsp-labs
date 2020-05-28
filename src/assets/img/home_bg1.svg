@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="1481px" viewBox="0 0 1440 1481" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54 (76480) - https://sketchapp.com -->
+    <title>编组 15</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="90.8786763%" y1="18.1261915%" x2="25.453939%" y2="104.529087%" id="linearGradient-1">
+            <stop stop-color="#8252CF" offset="0%"></stop>
+            <stop stop-color="#3A7FE5" offset="100%"></stop>
+        </linearGradient>
+        <filter x="-24.8%" y="-80.2%" width="149.5%" height="260.4%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="50" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <linearGradient x1="-13.5710884%" y1="47.5423037%" x2="103.814468%" y2="45.3318173%" id="linearGradient-3">
+            <stop stop-color="#8252CF" offset="0%"></stop>
+            <stop stop-color="#3A7FE5" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="home复制">
+            <g id="编组-15" transform="translate(0.000000, -1.000000)">
+                <path d="M1441,0 L1441,1062.62942 C1369.03982,1305.12199 1144.50412,1482 878.656336,1482 C695.692805,1482 532.296982,1398.22068 424.738826,1266.93199 L424.738739,1266.93189 L0.156335804,841.705715 L0.863989851,7.46624984e-14 L1441,0 Z" id="路径" fill="url(#linearGradient-1)"></path>
+                <ellipse id="椭圆形" fill="#4C39A2" filter="url(#filter-2)" transform="translate(1109.910517, 680.739758) rotate(44.000000) translate(-1109.910517, -680.739758) " cx="1109.91052" cy="680.739758" rx="303" ry="93.5"></ellipse>
+                <path d="M1441,0 L1441,1063.02441 C1401.8509,1055.52799 1367.57176,1034.32144 1343.35177,1004.59392 L1239.36201,899.650924 C1227.84678,885.211841 1215.40527,871.268521 1202.03747,857.90072 L725.447496,381.31075 C532.528496,188.39175 219.744996,188.39175 26.8259961,381.31075 L0,408.136746 L0,0 L1441,0 Z" id="路径" fill="url(#linearGradient-3)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

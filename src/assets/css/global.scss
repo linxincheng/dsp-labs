@@ -1,0 +1,44 @@
+@font-face {
+  font-family: "Montserrat-Medium";
+  src: url("./font/Montserrat-Medium.ttf");
+}
+
+.white {
+  color: white;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.flex {
+  display: flex;
+
+  &.between {
+    justify-content: space-between;
+  }
+
+  &.around {
+    justify-content: space-around;
+  }
+
+  &.jc-center {
+    justify-content: center;
+  }
+
+  &.jc-end {
+    justify-content: flex-end;
+  }
+
+  &.ai-center {
+    align-items: center;
+  }
+
+  &.column {
+    flex-direction: column;
+  }
+
+  &.wrap-wrap {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="706px" height="1009px" viewBox="0 0 706 1009" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54 (76480) - https://sketchapp.com -->
+    <title>ipfsex_bai</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M643,924.800447 L74.4968858,398.696771 C74.282918,398.498761 74.0693274,398.300344 73.8561154,398.101521 C-18.8897039,311.614645 -23.9635802,166.317838 62.5232954,73.5720183 C149.340221,-19.5277366 295.191509,-24.6209758 388.291264,62.1959502 L643,299.715689 L643,924.800447 Z" id="path-1"></path>
+        <filter x="-14.9%" y="-7.8%" width="124.0%" height="116.9%" filterUnits="objectBoundingBox" id="filter-3">
+            <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="-19" dy="5" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="21.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.298039216   0 0 0 0 0.223529412   0 0 0 0 0.635294118  0 0 0 0.649093094 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ipfsex" transform="translate(-734.000000, -158.000000)">
+            <g id="编组-10" transform="translate(797.000000, 197.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="ipfsex_bai">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
