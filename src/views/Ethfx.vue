@@ -17,7 +17,11 @@
           protocol. The purpose is to provide a stable and safe file storage
           network for DApp / Dweb of the Ethernet.
         </p>
-        <button class="btn-theme flex ai-center jc-center ">
+        <button
+          class="btn-theme flex ai-center jc-center"
+          title="https://github.com/ETHFSx"
+          @click="linkTo('https://github.com/ETHFSx')"
+        >
           <i class="iconfont iconjiantou"></i>
           Github
           <i class="iconfont icongithub"></i>
@@ -135,7 +139,7 @@ export default class Ethfs extends Vue {
   public list: Array<FeatrueIconStru> = [
     {
       src: "iconhome_icon_b2",
-      sup: "Open aND",
+      sup: "Open and",
       sub: "Free",
     },
     {
@@ -187,6 +191,10 @@ export default class Ethfs extends Vue {
   Based on the above file distribution strategy and incentive strategy, the number of file backups exists in the network as much as possible. Gradually make files, websites, Dapp data into a state that can never be deleted and can run on the entire network, and finally achieve a truly complete business decentralized network world.`,
     },
   ];
+
+  public linkTo(url: string): void {
+    window.open(url);
+  }
 }
 </script>
 <style lang="scss" scoped>
@@ -203,10 +211,19 @@ export default class Ethfs extends Vue {
       top: 4vw;
       min-height: 50vw;
 
+      @media screen and (max-width: 768px) {
+        width: 80vw;
+      }
+
       & > h4 {
         font-size: 1.8vw;
         color: rgba(47, 147, 255, 1);
         line-height: 2.1vw;
+        user-select: none;
+
+        @media screen and (max-width: 768px) {
+          line-height: 18px;
+        }
       }
 
       & > p {
@@ -214,6 +231,10 @@ export default class Ethfs extends Vue {
         font-size: 1.6vw;
         color: rgba(100, 100, 100, 1);
         line-height: 3.1vw;
+
+        @media screen and (max-width: 768px) {
+          line-height: 24px;
+        }
       }
 
       & > .btn-theme {
@@ -235,6 +256,7 @@ export default class Ethfs extends Vue {
         border: 0;
         cursor: pointer;
         transition: all 0.2s ease;
+        user-select: none;
 
         &:active {
           opacity: 0.8;
@@ -243,12 +265,14 @@ export default class Ethfs extends Vue {
         .iconjiantou {
           //   font-size: 22px;
           font-size: 1.6vw;
-          margin-right: 44px;
+          margin-right: 3vw;
+          user-select: none;
         }
         .icongithub {
           //   font-size: 44px;
           font-size: 3vw;
-          margin-left: 34px;
+          margin-left: 2.5vw;
+          user-select: none;
         }
       }
     }
@@ -259,6 +283,7 @@ export default class Ethfs extends Vue {
       left: 25vw;
       width: 62vw;
       z-index: -1;
+      user-select: none;
     }
 
     & > .ethfs-tu1 {
@@ -266,6 +291,7 @@ export default class Ethfs extends Vue {
       top: 23.2vw;
       left: 0;
       width: 57vw;
+      user-select: none;
     }
 
     & > .ex-xiu2 {
@@ -273,17 +299,27 @@ export default class Ethfs extends Vue {
       top: 31.7vw;
       left: 62.3vw;
       height: 16vw;
+      user-select: none;
     }
   }
 
   .feature-content {
     width: 94%;
     margin: 0 auto 55vw;
+
+    @media screen and (max-width: 768px) {
+      width: 80%;
+    }
     li {
       width: 44%;
       margin: 30px 3%;
 
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+
       .title {
+        user-select: none;
         & > .order-number {
           width: 50px;
           height: 50px;
@@ -324,6 +360,7 @@ export default class Ethfs extends Vue {
       left: 58vw;
       transform: rotateZ(-180deg) rotateX(180deg);
       width: 15vw;
+      user-select: none;
     }
 
     & > .ex-dian {
@@ -331,6 +368,7 @@ export default class Ethfs extends Vue {
       top: -20vw;
       left: 44vw;
       width: 38vw;
+      user-select: none;
     }
 
     .ipfsx-brings-dicai {
@@ -342,7 +380,7 @@ export default class Ethfs extends Vue {
 
     .ipfsx-brings-cai {
       position: absolute;
-      top: -30.4vw;
+      top: -28.4vw;
       right: 0;
       width: 27%;
       user-select: none;
@@ -364,6 +402,12 @@ export default class Ethfs extends Vue {
       width: 50vw;
       padding-top: 12vw;
       margin-left: 30.7vw;
+      user-select: none;
+
+      @media screen and (max-width: 1024px) {
+        width: 80vw;
+        margin-left: 10vw;
+      }
     }
 
     .ethfs-brings-distribution {
@@ -371,6 +415,11 @@ export default class Ethfs extends Vue {
       margin-top: 5vw;
       margin-left: 30.7vw;
       position: relative;
+
+      @media screen and (max-width: 1024px) {
+        width: 80vw;
+        margin-left: 10vw;
+      }
 
       h4 {
         font-size: 22px;
@@ -381,8 +430,11 @@ export default class Ethfs extends Vue {
       p {
         font-size: 16px;
         color: rgba(255, 255, 255, 1);
-        line-height: 2.1vw;
+        line-height: 24px;
         margin-top: 1.3vw;
+        @media screen and (max-width: 1024px) {
+          margin-top: 24px;
+        }
       }
 
       .ipfsx-brings-xiu1 {
@@ -391,6 +443,7 @@ export default class Ethfs extends Vue {
         transform: rotateY(180deg) rotateZ(-15deg);
         width: 9vw;
         left: -13vw;
+        user-select: none;
       }
 
       .ethfs-brings-yuan {
@@ -399,6 +452,7 @@ export default class Ethfs extends Vue {
         left: -7vw;
         width: 38vw;
         z-index: -1;
+        user-select: none;
       }
     }
 

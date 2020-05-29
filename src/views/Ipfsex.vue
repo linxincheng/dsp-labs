@@ -20,7 +20,11 @@
           IPFS network. Finally, a more complete distributed storage network is
           established.
         </p>
-        <button class="btn-theme flex ai-center jc-center ">
+        <button
+          class="btn-theme flex ai-center jc-center"
+          title="https://github.com/IPFS-eX"
+          @click="linkTo('https://github.com/IPFS-eX')"
+        >
           <i class="iconfont iconjiantou"></i>
           Github
           <i class="iconfont icongithub"></i>
@@ -161,6 +165,10 @@ export default class Ipfsex extends Vue {
       sub: "Control",
     },
   ];
+
+  public linkTo(url: string): void {
+    window.open(url);
+  }
 }
 </script>
 <style lang="scss" scoped>
@@ -170,6 +178,10 @@ export default class Ipfsex extends Vue {
     margin-top: 25vw;
     height: 100vw;
 
+    @media screen and (max-width: 435px) {
+      height: 140vw;
+    }
+
     .article {
       position: absolute;
       width: 47vw;
@@ -177,10 +189,19 @@ export default class Ipfsex extends Vue {
       top: 4vw;
       min-height: 50vw;
 
+      @media screen and (max-width: 768px) {
+        width: 80vw;
+      }
+
       & > h4 {
         font-size: 1.8vw;
         color: rgba(47, 147, 255, 1);
         line-height: 2.1vw;
+        user-select: none;
+
+        @media screen and (max-width: 768px) {
+          line-height: 18px;
+        }
       }
 
       & > p {
@@ -188,6 +209,10 @@ export default class Ipfsex extends Vue {
         font-size: 1.6vw;
         color: rgba(100, 100, 100, 1);
         line-height: 3.1vw;
+
+        @media screen and (max-width: 768px) {
+          line-height: 24px;
+        }
       }
 
       & > .btn-theme {
@@ -209,6 +234,11 @@ export default class Ipfsex extends Vue {
         border: 0;
         cursor: pointer;
         transition: all 0.2s ease;
+        user-select: none;
+
+        @media screen and (max-width: 435px) {
+          top: 76.2vw;
+        }
 
         &:active {
           opacity: 0.8;
@@ -217,12 +247,14 @@ export default class Ipfsex extends Vue {
         .iconjiantou {
           //   font-size: 22px;
           font-size: 1.6vw;
-          margin-right: 44px;
+          margin-right: 3vw;
+          user-select: none;
         }
         .icongithub {
           //   font-size: 44px;
           font-size: 3vw;
-          margin-left: 34px;
+          margin-left: 2.5vw;
+          user-select: none;
         }
       }
     }
@@ -233,6 +265,7 @@ export default class Ipfsex extends Vue {
       left: 25vw;
       width: 62vw;
       z-index: -1;
+      user-select: none;
     }
 
     & > .ipfsex-tu1 {
@@ -240,6 +273,11 @@ export default class Ipfsex extends Vue {
       top: 23.2vw;
       left: 0;
       width: 57vw;
+      user-select: none;
+
+      @media screen and (max-width: 435px) {
+        top: 53.2vw;
+      }
     }
 
     & > .ex-xiu2 {
@@ -247,6 +285,11 @@ export default class Ipfsex extends Vue {
       top: 31.7vw;
       left: 62.3vw;
       height: 16vw;
+      user-select: none;
+
+      @media screen and (max-width: 435px) {
+        top: 61.7vw;
+      }
     }
 
     & > .ex-xiu {
@@ -255,6 +298,11 @@ export default class Ipfsex extends Vue {
       left: 74vw;
       transform: rotateZ(-180deg) rotateX(180deg);
       width: 15vw;
+      user-select: none;
+
+      @media screen and (max-width: 435px) {
+        top: 83vw;
+      }
     }
 
     & > .ex-dian {
@@ -262,6 +310,11 @@ export default class Ipfsex extends Vue {
       top: 70vw;
       left: 44vw;
       width: 38vw;
+      user-select: none;
+
+      @media screen and (max-width: 435px) {
+        top: 100vw;
+      }
     }
   }
 
@@ -279,9 +332,9 @@ export default class Ipfsex extends Vue {
       user-select: none;
     }
 
-    .ipfsx-brings-cai {
+    & > .ipfsx-brings-cai {
       position: absolute;
-      top: -30.4vw;
+      top: -28.4vw;
       right: 0;
       width: 27%;
       user-select: none;
@@ -303,6 +356,12 @@ export default class Ipfsex extends Vue {
       width: 50vw;
       padding-top: 12vw;
       margin-left: 30.7vw;
+      user-select: none;
+
+      @media screen and (max-width: 768px) {
+        width: 80vw;
+        margin-left: 10vw;
+      }
     }
 
     .ipfsex-brings-distribution {
@@ -311,10 +370,16 @@ export default class Ipfsex extends Vue {
       margin-left: 30.7vw;
       position: relative;
 
+      @media screen and (max-width: 768px) {
+        width: 80vw;
+        margin-left: 10vw;
+      }
+
       h4 {
         font-size: 22px;
         color: rgba(255, 255, 255, 1);
         line-height: 27px;
+        user-select: none;
       }
 
       p {
@@ -322,6 +387,10 @@ export default class Ipfsex extends Vue {
         color: rgba(255, 255, 255, 1);
         line-height: 2.1vw;
         margin-top: 1.3vw;
+
+        @media screen and (max-width: 1024px) {
+          line-height: 24px;
+        }
       }
 
       .ipfsx-brings-xiu1 {
@@ -330,6 +399,11 @@ export default class Ipfsex extends Vue {
         transform: rotateY(180deg) rotateZ(-15deg);
         width: 9vw;
         left: -13vw;
+        user-select: none;
+
+        @media screen and (max-width: 768px) {
+          left: 13vw;
+        }
       }
     }
 
@@ -339,11 +413,24 @@ export default class Ipfsex extends Vue {
       margin-top: 13vw;
       position: relative;
 
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        margin-left: 0vw;
+        flex-wrap: wrap;
+      }
+
       .ipfsex-brings-privacy-protection {
+        @media screen and (max-width: 768px) {
+          width: 80vw;
+          margin-left: 10vw;
+          margin-bottom: 13vw;
+        }
+
         h4 {
           font-size: 22px;
           color: rgba(255, 255, 255, 1);
           line-height: 27px;
+          user-select: none;
         }
 
         p {
@@ -351,30 +438,52 @@ export default class Ipfsex extends Vue {
           color: rgba(255, 255, 255, 1);
           line-height: 2.1vw;
           margin-top: 1.3vw;
+
+          @media screen and (max-width: 1024px) {
+            line-height: 24px;
+          }
         }
       }
 
       .ipfsex-brings-authority-control {
         margin-left: 11vw;
+
+        @media screen and (max-width: 768px) {
+          width: 80vw;
+          margin-left: 10vw;
+        }
+
         h4 {
           font-size: 22px;
           color: rgba(255, 255, 255, 1);
           line-height: 27px;
+          user-select: none;
         }
         p {
           font-size: 16px;
           color: rgba(255, 255, 255, 1);
           line-height: 2.1vw;
           margin-top: 1.3vw;
+
+          @media screen and (max-width: 1024px) {
+            line-height: 24px;
+          }
         }
       }
 
       .ipfsex-brings-yuan {
         position: absolute;
-        top: -10vw;
         left: 13vw;
         width: 38vw;
         z-index: -1;
+        top: -15vw;
+        user-select: none;
+
+        @media screen and (max-width: 768px) {
+          opacity: 0;
+          bottom: 2vw;
+          top: auto;
+        }
       }
     }
   }

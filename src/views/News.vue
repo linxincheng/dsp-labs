@@ -34,18 +34,21 @@ export default class News extends Vue {}
   .news-under-ui {
     position: relative;
     font-size: 0;
-    margin-top: -15vw;
+    margin-top: -12vw;
     .new-dicai {
       width: 100%;
       position: relative;
       z-index: -1;
+      margin: 0px;
+      user-select: none;
     }
 
     .new-cai2 {
       position: absolute;
-      top: -13vw;
+      top: -9vw;
       width: 43vw;
       left: 0;
+      user-select: none;
     }
 
     .new-cai3 {
@@ -55,6 +58,7 @@ export default class News extends Vue {}
       width: 27vw;
       right: 0;
       z-index: 0;
+      user-select: none;
     }
 
     & > div {
@@ -69,6 +73,7 @@ export default class News extends Vue {}
       left: 37.6vw;
       transform: rotateY(180deg);
       width: 15vw;
+      user-select: none;
     }
 
     .new-dian {
@@ -76,6 +81,7 @@ export default class News extends Vue {}
       top: 31vw;
       left: 43vw;
       width: 35vw;
+      user-select: none;
     }
   }
 }

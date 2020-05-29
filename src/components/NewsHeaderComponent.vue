@@ -48,7 +48,7 @@ export default class ClassName extends Vue {}
   position: relative;
   height: auto;
 
-  .news-bg {
+  .new-bg {
     user-select: none;
   }
 
@@ -62,8 +62,9 @@ export default class ClassName extends Vue {}
     z-index: 9;
 
     @media screen and (max-width: 768px) {
-      width: 80%;
+      width: 90%;
       margin-top: -30vw;
+      left: 5%;
     }
 
     & > h2 {
@@ -71,7 +72,9 @@ export default class ClassName extends Vue {}
       color: rgba(47, 147, 255, 1);
       line-height: 17vw;
       position: relative;
-      left: 2.2vw;
+      top: -10vw;
+      left: 6.2vw;
+      user-select: none;
     }
 
     & > section {
@@ -88,12 +91,15 @@ export default class ClassName extends Vue {}
           display: inline-block;
           margin-right: 10px;
           margin-bottom: 10px;
+          user-select: none;
         }
 
         & > h4 {
           font-size: 22px;
           color: rgba(47, 147, 255, 1);
           line-height: 40px;
+          user-select: none;
+
           @media screen and (max-width: 768px) {
             font-size: 20px;
           }
@@ -114,6 +120,8 @@ export default class ClassName extends Vue {}
     top: 12.8vw;
     left: 0;
     width: 26vw;
+    user-select: none;
+    z-index: 9;
   }
 
   .new-cai1 {
@@ -121,6 +129,7 @@ export default class ClassName extends Vue {}
     top: 15.3vw;
     right: 0;
     width: 33.5vw;
+    user-select: none;
   }
 
   .new-xiu1 {
@@ -128,6 +137,7 @@ export default class ClassName extends Vue {}
     top: 9.7vw;
     right: 24.4vw;
     width: 6.7vw;
+    user-select: none;
   }
 
   .new-xian {
@@ -137,6 +147,7 @@ export default class ClassName extends Vue {}
     width: 55vw;
     right: 0;
     opaction: 0.7;
+    user-select: none;
   }
 
   .new-xiu2 {
@@ -144,6 +155,7 @@ export default class ClassName extends Vue {}
     top: 70.2vw;
     height: 15.5vw;
     right: 23.4vw;
+    user-select: none;
   }
 }
 </style>

@@ -8,25 +8,29 @@ const routes: Array<RouteConfig> = [
   {
     path: "/",
     name: "Home",
+    meta: { index: 0 },
     component: Home,
-  },
-  {
-    path: "/news",
-    name: "News",
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/News.vue"),
   },
   {
     path: "/ipfsex",
     name: "Ipfsex",
+    meta: { index: 1 },
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/Ipfsex.vue"),
   },
   {
     path: "/ethfx",
     name: "Ethfx",
+    meta: { index: 2 },
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/Ethfx.vue"),
+  },
+  {
+    path: "/news",
+    name: "News",
+    meta: { index: 3 },
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/News.vue"),
   },
   {
     path: "/test",
@@ -40,7 +44,7 @@ const routes: Array<RouteConfig> = [
 ];
 
 const router = new VueRouter({
-  mode: "history",
+  mode: "hash",
   base: process.env.BASE_URL,
   routes,
 });

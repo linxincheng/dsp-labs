@@ -19,8 +19,18 @@
           >
         </li>
         <li>
-          <router-link active-class="nav-active" to="/" title="DSP LABS"
-            >DSP LABS</router-link
+          <a @click="goHomeDspLabs">
+            DSP LABS
+          </a>
+        </li>
+        <li>
+          <router-link active-class="nav-active" to="/ipfsex" title="IPFSEX"
+            >IPFSEX</router-link
+          >
+        </li>
+        <li>
+          <router-link active-class="nav-active" to="/ethfx" title="ETHFX"
+            >ETHFX</router-link
           >
         </li>
         <li>
@@ -42,6 +52,18 @@ export default class NavComponent extends Vue {
     this.$router.push({
       path: "/",
     });
+  }
+
+  public goHomeDspLabs(): void {
+    console.log(this.$router);
+    if (this.$router.currentRoute.name === "Home") {
+      location.href = "#firstAnchor";
+      this.pop = false;
+    } else {
+      this.$router.push({
+        path: "/#firstAnchor",
+      });
+    }
   }
 }
 </script>
@@ -66,6 +88,7 @@ export default class NavComponent extends Vue {
     transition: all 0.5s;
     z-index: 99;
     cursor: pointer;
+    user-select: none;
 
     @media screen and (max-width: 768px) {
       left: calc(50% - 40px);
@@ -74,9 +97,16 @@ export default class NavComponent extends Vue {
   }
 
   &.pop {
-    background: #208afd;
-    color: #fff !important;
-    padding: 24px 0;
+    @media screen and (max-width: 768px) {
+      background: linear-gradient(
+        270deg,
+        rgba(155, 97, 247, 1) 0%,
+        rgba(71, 128, 255, 1) 100%
+      );
+      color: #fff !important;
+      padding: 24px 0;
+      position: fixed;
+    }
   }
 
   nav {
@@ -88,6 +118,8 @@ export default class NavComponent extends Vue {
     align-items: center;
     margin: 0 auto;
     box-sizing: border-box;
+    user-select: none;
+
     .menu-line {
       display: none;
     }
@@ -142,11 +174,18 @@ export default class NavComponent extends Vue {
       margin-right: 150px;
       font-size: 16px;
       justify-content: flex-end;
+      transition: all 0.5s ease;
+
+      @media screen and (max-width: 1024px) {
+        margin-right: 120px;
+      }
 
       @media screen and (max-width: 768px) {
         transition: all 0.5s;
-        transform: translateX(100%);
+        transform: translateX(101%);
         border-top: 1px solid rgba(255, 255, 255, 0.2);
+        font-size: 0;
+        background: white;
 
         &.pop {
           transform: translateX(0);
@@ -160,7 +199,12 @@ export default class NavComponent extends Vue {
         bottom: 0px;
         width: 100%;
         margin: 0px;
-        background: #208afd;
+        // background: #208afd;
+        background: linear-gradient(
+          270deg,
+          rgba(155, 97, 247, 1) 0%,
+          rgba(71, 128, 255, 1) 100%
+        );
         color: #fff !important;
 
         li {
@@ -181,6 +225,15 @@ export default class NavComponent extends Vue {
         justify-content: center;
         align-items: center;
         margin: 0 20px;
+        transition: all 0.5s ease;
+
+        @media screen and (max-width: 1024px) {
+          margin: 0 10px;
+        }
+
+        @media screen and (max-width: 768px) {
+          margin: 0;
+        }
 
         a {
           &:hover {

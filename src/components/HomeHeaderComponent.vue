@@ -28,7 +28,7 @@
     <div class="header-graph-wrap">
       <div class="header-graph ab-1">
         <div>
-          <i class="iconfont iconhome_icon_storage"></i>
+          <i class="iconfont iconhome_icon_encryp"></i>
         </div>
         <p>ENCRYPTION</p>
       </div>
@@ -129,6 +129,10 @@ export default class HeaderComponent extends Vue {
       left: 10.4%;
     }
 
+    @media screen and (max-width: 768px) {
+      left: 5%;
+    }
+
     h1 {
       font-size: 10vw;
       line-height: 12.5vw;
@@ -188,10 +192,21 @@ export default class HeaderComponent extends Vue {
           line-height: 70px;
         }
 
+        @media screen and (max-width: 768px) {
+          width: 30px;
+          height: 30px;
+          border-radius: 15px;
+          line-height: 26px;
+        }
+
         i {
           font-size: 2.4vw;
           @media screen and (min-width: 1300px) {
             font-size: 30px;
+          }
+
+          @media screen and (max-width: 768px) {
+            font-size: 14px;
           }
         }
       }
@@ -212,6 +227,11 @@ export default class HeaderComponent extends Vue {
         @media screen and (min-width: 1300px) {
           left: -12px;
           top: 3px;
+        }
+
+        @media screen and (max-width: 768px) {
+          left: 1vw;
+          top: -2vw;
         }
       }
       &.ab-2 {

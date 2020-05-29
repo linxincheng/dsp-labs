@@ -76,8 +76,7 @@ export default class ExHeaderComponent extends Vue {
   }
 
   .ex-white-wrap {
-    width: 49%;
-    max-width: 720px;
+    width: 38%;
     position: absolute;
     top: 30vw;
     right: 0;
@@ -93,6 +92,7 @@ export default class ExHeaderComponent extends Vue {
       position: relative;
       width: 100%;
       height: 0;
+      user-select: none;
 
       .ipfslog {
         position: absolute;
@@ -137,9 +137,29 @@ export default class ExHeaderComponent extends Vue {
     left: 28.9vw;
     width: 58%;
 
+    @media screen and (max-width: 768px) {
+      top: 56vw;
+    }
+
     .ex-feature-item {
       margin-top: 4.2vw;
       width: 33%;
+
+      @media screen and (max-width: 768px) {
+        width: 50%;
+
+        &:nth-child(1),
+        &:nth-child(2) {
+          position: relative;
+          left: -8vw;
+        }
+
+        &:nth-child(5),
+        &:nth-child(6) {
+          position: relative;
+          left: 8vw;
+        }
+      }
 
       i {
         font-size: 2.7vw;

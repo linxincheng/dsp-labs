@@ -8,12 +8,7 @@
       >
         <img src="../assets/img/new_tuda.png" width="180" height="180" alt="" />
         <div class="news-list-item-content">
-          <img
-            src="../assets/img/new_tuda.png"
-            width="180"
-            height="180"
-            alt=""
-          />
+          <img src="../assets/img/new_tuda.png" alt="" />
           <h4>
             {{ item.title }}
           </h4>
@@ -30,6 +25,7 @@
         layout="prev, pager, next"
         :total="100"
         :page-size="pageSize"
+        :pager-count="5"
         :current-page.sync="currentPage"
         @current-change="pageChange"
         :hide-on-single-page="true"
@@ -74,7 +70,7 @@ export default class NewsList extends Vue {
 <style lang="scss" scoped>
 .news-list {
   min-height: 40vw;
-  width: 84%;
+  width: 90%;
   margin: 11vw auto 2vw;
 
   .news-list-content {
@@ -87,6 +83,9 @@ export default class NewsList extends Vue {
       }
 
       & > img {
+        flex-shrink: 0;
+        user-select: none;
+
         @media screen and (max-width: 768px) {
           display: none;
         }
@@ -102,6 +101,7 @@ export default class NewsList extends Vue {
           font-size: 22px;
           color: rgba(47, 147, 255, 1);
           line-height: 27px;
+          user-select: none;
         }
 
         p {
@@ -112,6 +112,10 @@ export default class NewsList extends Vue {
         }
         & > img {
           display: none;
+          user-select: none;
+          flex-shrink: 0;
+          width: 180;
+          height: 180;
 
           @media screen and (max-width: 768px) {
             display: inline-block;
@@ -131,8 +135,9 @@ export default class NewsList extends Vue {
   .paginate-wrap {
     margin-top: 8vw;
     overflow: hidden;
+    width: 100%;
     position: relative;
-    z-index: 999;
+    z-index: 999999;
 
     & > .paginate {
       float: right;

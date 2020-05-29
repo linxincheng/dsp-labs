@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="542px" height="542px" viewBox="0 0 542 542" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="488px" height="488px" viewBox="0 0 488 488" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 54 (76480) - https://sketchapp.com -->
     <title>ipfsex_yuan</title>
     <desc>Created with Sketch.</desc>
     <defs>
         <linearGradient x1="116.475352%" y1="-58.6124%" x2="-38.9873215%" y2="161.859598%" id="linearGradient-1">
-            <stop stop-color="#9B61F7" offset="0%"></stop>
-            <stop stop-color="#4780FF" offset="100%"></stop>
+            <stop stop-color="#4780FF" offset="0%"></stop>
+            <stop stop-color="#9B61F7" offset="100%"></stop>
         </linearGradient>
         <path d="M589,4471 C712.711784,4471 813,4370.71178 813,4247 C813,4123.28822 712.711784,4023 589,4023 C465.288216,4023 365,4123.28822 365,4247 C365,4370.71178 465.288216,4471 589,4471 Z M589,4388 C511.12785,4388 448,4324.87215 448,4247 C448,4169.12785 511.12785,4106 589,4106 C666.87215,4106 730,4169.12785 730,4247 C730,4324.87215 666.87215,4388 589,4388 Z" id="path-2"></path>
-        <filter x="-15.0%" y="-14.7%" width="134.8%" height="134.8%" filterUnits="objectBoundingBox" id="filter-3">
-            <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
-            <feOffset dx="11" dy="12" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
-            <feGaussianBlur stdDeviation="23" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
-            <feColorMatrix values="0 0 0 0 0.414572011   0 0 0 0 0.414572011   0 0 0 0 0.414572011  0 0 0 0.409801136 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        <filter x="-5.4%" y="-5.4%" width="116.1%" height="116.1%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="12" dy="12" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.17 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
         </filter>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="ipfsex" transform="translate(-329.000000, -3988.000000)">
+        <g id="ipfsex" transform="translate(-357.000000, -4015.000000)">
             <g id="ipfsex_yuan">
                 <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
                 <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>

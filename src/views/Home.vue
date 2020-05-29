@@ -158,6 +158,7 @@
       <img src="../assets/img/home_xian2.svg" class="home-xian2" alt="" />
       <img src="../assets/img/home_white3.svg" class="home-white3" alt="" />
       <div class="dsp-labs-content">
+        <a name="firstAnchor"></a>
         <h3>DSP Labs</h3>
         <p>
           DSP Labs is a research, development and deployment organization that
@@ -190,7 +191,15 @@ import FooterComponent from "@/components/FooterComponent.vue";
     FooterComponent,
   },
 })
-export default class Home extends Vue {}
+export default class Home extends Vue {
+  public mounted() {
+    console.log(this.$router);
+
+    if (this.$router.currentRoute.hash === "#firstAnchor") {
+      location.href = "#firstAnchor";
+    }
+  }
+}
 </script>
 
 <style lang="scss" scope="this api replaced by slot-scope in 2.5.0+">
@@ -258,8 +267,8 @@ export default class Home extends Vue {}
 
       @media screen and (max-width: 1024px) {
         position: relative;
-        width: 84%;
-        left: 8%;
+        width: 90%;
+        left: 5%;
         padding: 10vw 3vw 30vw;
         z-index: -2;
         box-sizing: border-box;
@@ -296,7 +305,7 @@ export default class Home extends Vue {}
   }
 
   .article-list {
-    width: 80%;
+    width: 90%;
     max-width: 1540px;
     margin: 9vw auto 45vw;
     position: relative;
@@ -374,6 +383,7 @@ export default class Home extends Vue {}
       right: 13vw;
       width: 30vw;
       opacity: 0.8;
+      user-select: none;
     }
   }
 
@@ -400,9 +410,10 @@ export default class Home extends Vue {}
 
     .home-xian2 {
       position: absolute;
-      bottom: -200px;
+      bottom: -130px;
       height: 50vw;
       right: 0;
+      user-select: none;
     }
 
     .home-white3 {
@@ -421,7 +432,7 @@ export default class Home extends Vue {}
       transform: translateX(-40px);
 
       @media screen and (max-width: 1024px) {
-        width: 80%;
+        width: 90%;
         transform: translateX(0px);
         left: 0;
       }
