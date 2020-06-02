@@ -30,7 +30,30 @@ class NewsController extends Controller {
     };
   }
 
-  async delete() {}
+  async delete() {
+    const { ctx } = this;
+    const errors = this.app.validator.validate(
+      {
+        id: "string",
+      },
+      ctx.request.body
+    );
+
+    if (errors != undefined || (errors && errors.length)) {
+      for (let e of errors) {
+        let err = new Error(`${API_ERR.INVALID_PARAM.MSG} '${e.field}'`);
+        err.code = API_ERR.INVALID_PARAM.CODE;
+        throw err;
+      }
+    }
+
+    const ret = await ctx.service.news.delete(ctx.request.body);
+
+    ctx.body = {
+      status: "success",
+      data: ret,
+    };
+  }
 
   async get() {
     const { ctx } = this;

@@ -8,33 +8,8 @@ class NewsService extends Service {
     return ret;
   }
 
-  async getContentByAddr(addr) {
-    return {
-      title: "test title",
-      auther: "linxincheng",
-      main: "test main",
-      main_desc: "test main",
-      address: addr,
-      publish_at: new Date("2020-06-01 12:44:20"),
-    };
-  }
-
   async createNews(data) {
     const { ctx } = this;
-    // const isExit = await ctx.model.News.findOne({
-    //   where: {
-    //     title: data.title,
-    //   },
-    // });
-    // if (isExit) {
-    //   err.code = "news is exit aync";
-    //   throw err;
-    // }
-    console.log(
-      Object.assign(data, {
-        id: uuidv1(),
-      })
-    );
     const id = uuidv1();
     const options = {
       where: {
@@ -50,6 +25,16 @@ class NewsService extends Service {
       },
     };
     const news = await ctx.model.News.findOrCreate(options);
+    ctx.body = news;
+  }
+
+  async delete(data) {
+    const { ctx } = this;
+    const news = await ctx.model.News.destroy({
+      where: {
+        id: data.id,
+      },
+    });
     ctx.body = news;
   }
 }
