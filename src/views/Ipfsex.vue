@@ -185,9 +185,11 @@ export default class Ipfsex extends Vue {
     .article {
       position: absolute;
       width: 47vw;
-      right: 8.5vw;
+      max-width: 764px;
+      left: calc(50% + 200px);
       top: 4vw;
       min-height: 50vw;
+      transform: translateX(-50%);
 
       @media screen and (max-width: 768px) {
         width: 80vw;
@@ -217,7 +219,9 @@ export default class Ipfsex extends Vue {
 
       & > .btn-theme {
         width: 30.7vw;
+        max-width: 350px;
         height: 6.1vw;
+        max-height: 70px;
         background: linear-gradient(
           217deg,
           rgba(155, 97, 247, 1) 0%,
@@ -236,6 +240,10 @@ export default class Ipfsex extends Vue {
         transition: all 0.2s ease;
         user-select: none;
 
+        @media screen and (min-width: 1200px) {
+          font-size: 20px;
+        }
+
         @media screen and (max-width: 435px) {
           top: 76.2vw;
         }
@@ -249,12 +257,20 @@ export default class Ipfsex extends Vue {
           font-size: 1.6vw;
           margin-right: 3vw;
           user-select: none;
+
+          @media screen and (min-width: 1200px) {
+            font-size: 20px;
+          }
         }
         .icongithub {
           //   font-size: 44px;
           font-size: 3vw;
           margin-left: 2.5vw;
           user-select: none;
+
+          @media screen and (min-width: 1200px) {
+            font-size: 30px;
+          }
         }
       }
     }
@@ -410,8 +426,10 @@ export default class Ipfsex extends Vue {
     .ipfsex-brings-wrap {
       margin-left: 9vw;
       width: 83vw;
-      margin-top: 13vw;
+      // margin-top: 13vw;
       position: relative;
+      max-width: 1200px;
+      margin: 13vw auto 0;
 
       @media screen and (max-width: 768px) {
         width: 100%;

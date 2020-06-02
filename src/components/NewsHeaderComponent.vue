@@ -57,7 +57,7 @@ export default class ClassName extends Vue {}
     // position: absolute;
     position: relative;
     // top: 30vw;
-    left: 10%;
+    left: 10vw;
     margin-top: -35vw;
     z-index: 9;
 
@@ -68,26 +68,29 @@ export default class ClassName extends Vue {}
     }
 
     & > h2 {
-      font-size: 13vw;
+      font-size: 12.5vw;
       color: rgba(47, 147, 255, 1);
       line-height: 17vw;
       position: relative;
-      top: -10vw;
-      left: 6.2vw;
+      top: -8.6vw;
+      left: 1.3vw;
       user-select: none;
     }
 
     & > section {
-      margin-top: 9vw;
+      // margin-top: 9vw;
 
       .header-content {
         margin-left: 0;
 
         & > img {
           float: left;
-          width: 30vw;
+          width: 35vw;
+          height: 20vw;
           min-width: 140px;
-          max-width: 400px;
+          min-height: 81px;
+          max-width: 420px;
+          max-height: 240px;
           display: inline-block;
           margin-right: 10px;
           margin-bottom: 10px;

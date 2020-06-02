@@ -3,7 +3,7 @@
     <transition :name="transitionName">
       <router-view />
     </transition>
-    <!-- <img class="test-img" src="./assets/img/1.webp" width="100%" alt="" /> -->
+    <!-- <img class="test-img" src="./assets/img/2.webp" width="100%" alt="" /> -->
   </div>
 </template>
 

@@ -76,10 +76,13 @@ export default class ExHeaderComponent extends Vue {
   }
 
   .ex-white-wrap {
-    width: 38%;
+    // width: 38%;
     position: absolute;
-    top: 30vw;
+    // top: 30vw;
     right: 0;
+
+    width: 57%;
+    top: 11vw;
 
     .ipfsex-bai {
       width: 100%;
@@ -96,38 +99,48 @@ export default class ExHeaderComponent extends Vue {
 
       .ipfslog {
         position: absolute;
-        top: -45vw;
-        left: 10vw;
-        transform: rotateZ(40deg);
-        width: 10.5vw;
+        top: -68vw;
+        left: 14.5vw;
+        transform: rotateZ(45deg);
+        width: 12.5vw;
       }
 
       .x {
         position: absolute;
-        top: -34vw;
-        left: 22vw;
-        width: 4vw;
-        transform: rotateZ(40deg);
+        top: -54.3vw;
+        left: 27.2vw;
+        width: 4.5vw;
+        transform: rotateZ(45deg);
       }
 
       .home-logo {
         position: absolute;
-        top: -29vw;
-        left: 27vw;
-        width: 8vw;
-        transform: rotateZ(40deg);
+        top: -48.7vw;
+        left: 32.6vw;
+        width: 11.8vw;
+        transform: rotateZ(45deg);
       }
     }
   }
 
   .header-title {
     position: absolute;
-    top: 25vw;
-    left: 8vw;
+    top: 23.5vw;
+    // left: 10vw;
     user-select: none;
 
+    width: 90%;
+    max-width: 1200px;
+    left: 5%;
+
     img {
-      width: 33vw;
+      width: 35vw;
+      max-width: 400px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 

@@ -207,9 +207,11 @@ export default class Ethfs extends Vue {
     .article {
       position: absolute;
       width: 47vw;
-      right: 8.5vw;
+      max-width: 764px;
+      left: calc(50% + 200px);
       top: 4vw;
       min-height: 50vw;
+      transform: translateX(-50%);
 
       @media screen and (max-width: 768px) {
         width: 80vw;
@@ -239,7 +241,9 @@ export default class Ethfs extends Vue {
 
       & > .btn-theme {
         width: 30.7vw;
+        max-width: 350px;
         height: 6.1vw;
+        max-height: 70px;
         background: linear-gradient(
           217deg,
           rgba(155, 97, 247, 1) 0%,
@@ -258,6 +262,14 @@ export default class Ethfs extends Vue {
         transition: all 0.2s ease;
         user-select: none;
 
+        @media screen and (min-width: 1200px) {
+          font-size: 20px;
+        }
+
+        @media screen and (max-width: 435px) {
+          top: 76.2vw;
+        }
+
         &:active {
           opacity: 0.8;
         }
@@ -273,6 +285,10 @@ export default class Ethfs extends Vue {
           font-size: 3vw;
           margin-left: 2.5vw;
           user-select: none;
+
+          @media screen and (min-width: 1200px) {
+            font-size: 30px;
+          }
         }
       }
     }
@@ -304,12 +320,10 @@ export default class Ethfs extends Vue {
   }
 
   .feature-content {
-    width: 94%;
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto 55vw;
 
-    @media screen and (max-width: 768px) {
-      width: 80%;
-    }
     li {
       width: 44%;
       margin: 30px 3%;
@@ -394,47 +408,45 @@ export default class Ethfs extends Vue {
     }
 
     .ethfs-brings-title {
-      font-size: 6.2vw;
+      font-size: 5.2vw;
       color: rgba(255, 255, 255, 1);
       line-height: 7.3vw;
       position: relative;
       z-index: 9;
-      width: 50vw;
+      // width: 50vw;
+      width: 90%;
+      max-width: 700px;
       padding-top: 12vw;
-      margin-left: 30.7vw;
+      // margin-left: 30.7vw;
+      margin: 0 auto;
       user-select: none;
 
-      @media screen and (max-width: 1024px) {
-        width: 80vw;
-        margin-left: 10vw;
+      @media screen and (min-width: 1200px) {
+        font-size: 62px;
       }
     }
 
     .ethfs-brings-distribution {
-      width: 45vw;
       margin-top: 5vw;
-      margin-left: 30.7vw;
       position: relative;
+      width: 90%;
+      max-width: 700px;
+      margin: 0 auto;
 
-      @media screen and (max-width: 1024px) {
-        width: 80vw;
-        margin-left: 10vw;
-      }
+      // @media screen and (max-width: 1024px) {
+      // }
 
-      h4 {
-        font-size: 22px;
-        color: rgba(255, 255, 255, 1);
-        line-height: 27px;
-      }
+      // h4 {
+      //   font-size: 22px;
+      //   color: rgba(255, 255, 255, 1);
+      //   line-height: 27px;
+      // }
 
       p {
-        font-size: 16px;
+        font-size: 18px;
         color: rgba(255, 255, 255, 1);
-        line-height: 24px;
-        margin-top: 1.3vw;
-        @media screen and (max-width: 1024px) {
-          margin-top: 24px;
-        }
+        line-height: 28px;
+        margin-top: 30px;
       }
 
       .ipfsx-brings-xiu1 {

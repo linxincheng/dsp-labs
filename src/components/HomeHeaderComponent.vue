@@ -9,15 +9,19 @@
 
     <NavComponent></NavComponent>
 
-    <div class="home-white-wrap">
-      <img
+    <canvas class="home-white-wrap" id="home-white-wrap">
+      <!-- <img
         src="../assets/img/home_white.svg"
         class="home-white"
         width="50%"
         alt=""
       />
       <img src="../assets/img/home_logo.png" class="home-logo" alt="" />
-      <img src="../assets/img/home_tu.svg" class="home-tu" alt="" />
+      <img src="../assets/img/home_tu.svg" class="home-tu" alt="" /> -->
+    </canvas>
+
+    <div v-show="false">
+      <img id="source" src="../assets/img/dsp.png" width="141" height="40" />
     </div>
 
     <div class="header-title white bold">
@@ -73,10 +77,21 @@ import NavComponent from "@/components/NavComponent.vue";
   components: { NavComponent },
 })
 export default class HeaderComponent extends Vue {
+  public canvasObj: any = null;
+
   public goHome(): void {
     this.$router.push({
       path: "/",
     });
+  }
+
+  public mounted() {
+    const CanvasObj: any = require("./globalRotate/index.js");
+    this.canvasObj = new CanvasObj();
+  }
+
+  public destroyed() {
+    this.canvasObj.destroyed();
   }
 }
 </script>
@@ -91,54 +106,57 @@ export default class HeaderComponent extends Vue {
   }
 
   .home-white-wrap {
-    width: 49%;
+    width: 40%;
     max-width: 720px;
+    height: 40vw;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 5%;
+    right: 10vw;
 
-    .home-white {
-      width: 100%;
-      height: 100%;
-      user-select: none;
-    }
+    // .home-white {
+    //   width: 100%;
+    //   height: 100%;
+    //   user-select: none;
+    // }
 
-    .home-logo {
-      position: absolute;
-      bottom: 22%;
-      left: 20%;
-      width: 29%;
-      user-select: none;
-    }
+    // .home-logo {
+    //   position: absolute;
+    //   bottom: 22%;
+    //   left: 20%;
+    //   width: 29%;
+    //   user-select: none;
+    // }
 
-    .home-tu {
-      position: absolute;
-      bottom: 46%;
-      left: 47%;
-      width: 35%;
-      user-select: none;
-    }
+    // .home-tu {
+    //   position: absolute;
+    //   bottom: 46%;
+    //   left: 47%;
+    //   width: 35%;
+    //   user-select: none;
+    // }
   }
 
   .header-title {
     position: absolute;
+    width: 90%;
+    left: 5%;
     top: 19.9%;
-    left: 9.4%;
+    left: 5%;
     user-select: none;
-    @media screen and (min-width: 1300px) {
-      left: 10.4%;
-    }
+    max-width: 1200px;
 
-    @media screen and (max-width: 768px) {
-      left: 5%;
+    @media screen and (min-width: 1320px) {
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     h1 {
       font-size: 10vw;
       line-height: 12.5vw;
 
-      @media screen and (min-width: 1300px) {
+      @media screen and (min-width: 1320px) {
         font-size: 130px;
+        line-height: 150px;
       }
     }
 
@@ -146,8 +164,9 @@ export default class HeaderComponent extends Vue {
       font-size: 2.75vw;
       line-height: 1.4vw;
 
-      @media screen and (min-width: 1300px) {
+      @media screen and (min-width: 1320px) {
         font-size: 36px;
+        line-height: 30px;
       }
     }
   }

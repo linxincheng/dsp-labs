@@ -68,6 +68,8 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     margin: 0 auto;
     height: 100%;
+    // max-width: 1200px;
+
     @media screen and (max-width: 1100px) {
       margin: 0 auto;
       padding: 15px 0;

@@ -44,6 +44,10 @@ const routes: Array<RouteConfig> = [
 ];
 
 const router = new VueRouter({
+  scrollBehavior(to, from, savedPosition) {
+    //to top
+    return { x: 0, y: 0 };
+  },
   mode: "hash",
   base: process.env.BASE_URL,
   routes,

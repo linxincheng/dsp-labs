@@ -73,12 +73,17 @@ export default class NewsList extends Vue {
   width: 90%;
   margin: 11vw auto 2vw;
 
+  @media screen and (min-width: 1024px) {
+    width: 90%;
+  }
+
   .news-list-content {
+    width: 100%;
     .news-list-item {
       width: 100%;
       margin-top: 7vw;
 
-      @media screen and (min-width: 1360px) {
+      @media screen and (min-width: 1024px) {
         width: 49%;
       }
 

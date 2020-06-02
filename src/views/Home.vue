@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <a name="homeAnchor"></a>
     <HomeHeaderComponent></HomeHeaderComponent>
     <div class="distributed-storage-protocol">
       <img src="../assets/img/home_white2.svg" class="home-white-2" alt="" />
@@ -157,8 +158,8 @@
       <img src="../assets/img/home_cai.svg" class="home-cai" alt="" />
       <img src="../assets/img/home_xian2.svg" class="home-xian2" alt="" />
       <img src="../assets/img/home_white3.svg" class="home-white3" alt="" />
+      <a name="firstAnchor"></a>
       <div class="dsp-labs-content">
-        <a name="firstAnchor"></a>
         <h3>DSP Labs</h3>
         <p>
           DSP Labs is a research, development and deployment organization that
@@ -193,10 +194,14 @@ import FooterComponent from "@/components/FooterComponent.vue";
 })
 export default class Home extends Vue {
   public mounted() {
-    console.log(this.$router);
-
     if (this.$router.currentRoute.hash === "#firstAnchor") {
-      location.href = "#firstAnchor";
+      this.$nextTick(() => {
+        location.href = "#firstAnchor";
+      });
+    } else if (this.$router.currentRoute.hash === "#homeAnchor") {
+      this.$nextTick(() => {
+        location.href = "#homeAnchor";
+      });
     }
   }
 }
@@ -258,7 +263,7 @@ export default class Home extends Vue {
     article {
       position: absolute;
       top: 24.8vw;
-      left: 38.5vw;
+      left: 38vw;
       min-height: 50vw;
 
       @media screen and (max-width: 1300px) {
@@ -269,7 +274,8 @@ export default class Home extends Vue {
         position: relative;
         width: 90%;
         left: 5%;
-        padding: 10vw 3vw 30vw;
+        // padding: 10vw 3vw 30vw;
+        padding: 0;
         z-index: -2;
         box-sizing: border-box;
         min-height: 0vw;
@@ -280,7 +286,7 @@ export default class Home extends Vue {
         color: rgba(47, 147, 255, 1);
         user-select: none;
 
-        @media screen and (max-width: 1300px) {
+        @media screen and (max-width: 1320px) {
           font-size: 22px;
         }
       }
@@ -290,11 +296,10 @@ export default class Home extends Vue {
         font-size: 22px;
         color: rgba(100, 100, 100, 1);
         line-height: 42px;
-        width: 46vw;
+        width: 43vw;
 
-        @media screen and (max-width: 1300px) {
+        @media screen and (max-width: 1320px) {
           font-size: 16px;
-          width: 43vw;
         }
 
         @media screen and (max-width: 1024px) {
@@ -306,7 +311,7 @@ export default class Home extends Vue {
 
   .article-list {
     width: 90%;
-    max-width: 1540px;
+    max-width: 1200px;
     margin: 9vw auto 45vw;
     position: relative;
     z-index: 2;
