@@ -6,6 +6,20 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "15099802",
+      "name": "tubiao--fs",
+      "font_class": "tubiao--fs",
+      "unicode": "e66b",
+      "unicode_decimal": 58987
+    },
+    {
+      "icon_id": "15099803",
+      "name": "tubiao--dns",
+      "font_class": "tubiao--dns",
+      "unicode": "e66c",
+      "unicode_decimal": 58988
+    },
+    {
       "icon_id": "14942681",
       "name": "jiantou",
       "font_class": "jiantou",

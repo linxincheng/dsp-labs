@@ -31,7 +31,8 @@
       <section class="footer-right flex ai-center">
         <img src="../assets/img/qr.png" class="qr" alt="" />
         <p>
-          <span>Email:</span> dsp@onchain.com <br /><span>Telegram:</span>
+          <span>Email:</span> <a href="mailto:@onchain.com">dsp@onchain.com</a>
+          <br /><span>Telegram:</span>
           <a href="t.me/DSP_Official" title="link to t.me/DSP_Official">
             t.me/DSP_Official
           </a>
@@ -152,6 +153,8 @@ footer {
 
         @media screen and (max-width: 768px) {
           margin-top: 15px;
+          font-size: 14px;
+          line-height: 28px;
         }
 
         & > a {

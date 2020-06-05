@@ -1,77 +1,46 @@
 <template>
   <header class="home-header">
-    <img
-      src="../assets/img/home_bg1.svg"
-      class="home-bg1"
-      width="100%"
-      alt=""
-    />
-
     <NavComponent></NavComponent>
 
-    <canvas class="home-white-wrap" id="home-white-wrap">
-      <!-- <img
-        src="../assets/img/home_white.svg"
-        class="home-white"
-        width="50%"
-        alt=""
-      />
-      <img src="../assets/img/home_logo.png" class="home-logo" alt="" />
-      <img src="../assets/img/home_tu.svg" class="home-tu" alt="" /> -->
-    </canvas>
+    <div class="home-header-wrap">
+      <canvas class="home-white-wrap" id="home-white-wrap"> </canvas>
+      <div v-show="false">
+        <img id="source" src="../assets/img/dsp.png" width="141" height="40" />
+      </div>
 
-    <div v-show="false">
-      <img id="source" src="../assets/img/dsp.png" width="141" height="40" />
+      <div class="header-title white">
+        <h1>Distributed Storage Protocol</h1>
+        <p>
+          DSP is the core infrastructure of<br />
+          Next Generation Internet
+        </p>
+      </div>
+
+      <div class="learn-more flex jc-center" @click="goLearnMore">
+        Learn more
+      </div>
+
+      <ul class="home-dsp-feature flex between wrap-wrap">
+        <li
+          class="flex column ai-center wow fadeIn"
+          data-wow-delay="0.2s"
+          v-for="(item, index) in list"
+          :key="index"
+        >
+          <img :src="item.src" alt="" />
+          <h4 class="white">{{ item.title }}</h4>
+          <p class="white">{{ item.content }}</p>
+        </li>
+      </ul>
     </div>
-
-    <div class="header-title white bold">
-      <h1>DSP</h1>
-      <p>Distributed Storage Protocol</p>
-    </div>
-
-    <div class="header-graph-wrap">
-      <div class="header-graph ab-1">
-        <div>
-          <i class="iconfont iconhome_icon_encryp"></i>
-        </div>
-        <p>ENCRYPTION</p>
-      </div>
-      <img src="../assets/img/home_bg2.svg" class="header-line-1" alt="" />
-      <div class="header-graph ab-2">
-        <div>
-          <i class="iconfont iconhome_icon_distrbution"></i>
-        </div>
-        <p>DISTRIBUTION</p>
-      </div>
-      <img src="../assets/img/home_bg2.svg" class="header-line-2" alt="" />
-
-      <div class="header-graph ab-3">
-        <div>
-          <i class="iconfont iconhome_icon_storage"></i>
-        </div>
-        <p>STORAGE</p>
-      </div>
-      <img src="../assets/img/home_bg2.svg" class="header-line-3" alt="" />
-
-      <div class="header-graph ab-4">
-        <div>
-          <i class="iconfont iconhome_icon_sharing"></i>
-        </div>
-        <p>SHARING</p>
-      </div>
-    </div>
-
-    <img src="../assets/img/home_dian.svg" class="home-dian" alt="" />
-
-    <img src="../assets/img/home_yuan1.svg" class="home-yuan" alt="" />
-
-    <img src="../assets/img/home_xian.svg" class="home-xian" alt="" />
   </header>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import NavComponent from "@/components/NavComponent.vue";
+import WOW from "wow.js";
+new WOW().init();
 
 @Component({
   components: { NavComponent },
@@ -79,10 +48,41 @@ import NavComponent from "@/components/NavComponent.vue";
 export default class HeaderComponent extends Vue {
   public canvasObj: any = null;
 
+  public list: Array<any> = [
+    {
+      src: `${process.env.BASE_URL}/img/home_icon_encryp.svg`,
+      title: "ENCRYPTION",
+      content:
+        "End-to-end encrypted storage to ensure network storage security",
+    },
+    {
+      src: `${process.env.BASE_URL}/img/home_icon_dis.svg`,
+      title: "DISTRIBUTION",
+      content:
+        "Multi-node distributed storage across the network to ensure network availability",
+    },
+    {
+      src: `${process.env.BASE_URL}/img/home_icon_storage.svg`,
+      title: "STORAGE",
+      content:
+        "Large capacity and efficient storage, providing a distributed storage environment for large files",
+    },
+    {
+      src: `${process.env.BASE_URL}/img/home_icon_sharing.svg`,
+      title: "SHARING",
+      content:
+        "Network-wide dynamic distribution mechanism, providing file sharing authority control",
+    },
+  ];
+
   public goHome(): void {
     this.$router.push({
       path: "/",
     });
+  }
+
+  public goLearnMore(): void {
+    location.href = "#homeValueAnchor";
   }
 
   public mounted() {
@@ -99,256 +99,186 @@ export default class HeaderComponent extends Vue {
 <style lang="scss" scope="this api replaced by slot-scope in 2.5.0+">
 .home-header {
   width: 100%;
+  height: 1570px;
   position: relative;
+  background: url("./../assets/img/home_2kbj.svg") center top no-repeat;
+  box-sizing: border-box;
 
-  .home-bg1 {
-    user-select: none;
+  @media screen and (max-width: 768px) {
+    height: 1900px;
+    background: url("./../assets/img/home_2kbj.svg") center -80px no-repeat;
+    background-size: auto 100%;
   }
 
-  .home-white-wrap {
-    width: 40%;
-    max-width: 720px;
-    height: 40vw;
-    position: absolute;
-    top: 5%;
-    right: 10vw;
-
-    // .home-white {
-    //   width: 100%;
-    //   height: 100%;
-    //   user-select: none;
-    // }
-
-    // .home-logo {
-    //   position: absolute;
-    //   bottom: 22%;
-    //   left: 20%;
-    //   width: 29%;
-    //   user-select: none;
-    // }
-
-    // .home-tu {
-    //   position: absolute;
-    //   bottom: 46%;
-    //   left: 47%;
-    //   width: 35%;
-    //   user-select: none;
-    // }
-  }
-
-  .header-title {
-    position: absolute;
-    width: 90%;
-    left: 5%;
-    top: 19.9%;
-    left: 5%;
-    user-select: none;
+  & > .home-header-wrap {
     max-width: 1200px;
+    margin: 0 auto;
+    width: 90%;
+    position: relative;
 
-    @media screen and (min-width: 1320px) {
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    h1 {
-      font-size: 10vw;
-      line-height: 12.5vw;
-
-      @media screen and (min-width: 1320px) {
-        font-size: 130px;
-        line-height: 150px;
-      }
-    }
-
-    p {
-      font-size: 2.75vw;
-      line-height: 1.4vw;
-
-      @media screen and (min-width: 1320px) {
-        font-size: 36px;
-        line-height: 30px;
-      }
-    }
-  }
-
-  .header-graph-wrap {
-    position: absolute;
-    left: 18%;
-    top: 50%;
-    width: 68%;
-    height: 34%;
-    user-select: none;
-
-    @media screen and (min-width: 1300px) {
-      width: 900px;
-      height: 560px;
-      left: 50%;
-      transform: translateX(-400px);
-      bottom: 10%;
-      top: auto;
-    }
-
-    .header-graph {
+    .home-white-wrap {
+      width: 40vw;
+      max-width: 720px;
+      height: 40vw;
+      max-height: 720px;
       position: absolute;
-      width: 25%;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      color: white;
+      top: -8vw;
+      right: -5vw;
+      margin-top: 290px;
 
-      div {
-        width: 5.2vw;
-        height: 5.2vw;
-        border-radius: 2.6vw;
-        border: 2px solid white;
-        line-height: 5.2vw;
+      @media screen and (max-width: 767px) {
+        top: -35vw;
+        right: auto;
+        left: -5vw;
+      }
 
-        @media screen and (min-width: 1300px) {
-          width: 70px;
-          height: 70px;
-          border-radius: 35px;
-          line-height: 70px;
-        }
+      @media screen and (max-width: 435px) {
+        top: -60vw;
+        right: auto;
+        left: -7vw;
+        width: 60vw;
+        height: 60vw;
+      }
+    }
+
+    .header-title {
+      user-select: none;
+      height: auto;
+      padding-top: 290px;
+
+      h1 {
+        font-size: 34px;
+        height: 143px;
+        line-height: 147px;
+        background: url("./../assets/img/dsp_bg.svg") no-repeat 4px 0;
 
         @media screen and (max-width: 768px) {
-          width: 30px;
-          height: 30px;
-          border-radius: 15px;
-          line-height: 26px;
+          font-size: 24px;
+          background: url("./../assets/img/dsp_bg.svg") no-repeat 4px 24px;
+          background-size: 242px, 88px;
         }
 
-        i {
-          font-size: 2.4vw;
-          @media screen and (min-width: 1300px) {
-            font-size: 30px;
-          }
-
-          @media screen and (max-width: 768px) {
-            font-size: 14px;
-          }
+        @media screen and (max-width: 435px) {
+          font-size: 18px;
         }
       }
 
       p {
-        font-size: 1.9vw;
-        margin-top: 1.8vw;
-
-        @media screen and (min-width: 1300px) {
-          font-size: 26px;
-          margin-top: 24px;
-        }
-      }
-
-      &.ab-1 {
-        left: -0.8vw;
-        top: 0.2vw;
-        @media screen and (min-width: 1300px) {
-          left: -12px;
-          top: 3px;
-        }
+        margin-top: 60px;
+        font-size: 22px;
+        line-height: 36px;
 
         @media screen and (max-width: 768px) {
-          left: 1vw;
-          top: -2vw;
-        }
-      }
-      &.ab-2 {
-        left: 14.4vw;
-        top: 20vw;
-
-        @media screen and (min-width: 1300px) {
-          left: 184px;
-          top: 260px;
-        }
-      }
-      &.ab-3 {
-        left: 37.6vw;
-        top: 5.8vw;
-        @media screen and (min-width: 1300px) {
-          left: 486px;
-          top: 73px;
-        }
-      }
-      &.ab-4 {
-        left: 52.7vw;
-        top: 24.5vw;
-
-        @media screen and (min-width: 1300px) {
-          left: 683px;
-          top: 319px;
+          font-size: 16px;
+          line-height: 28px;
+          margin-top: 30px;
         }
       }
     }
 
-    .header-line-1 {
-      position: absolute;
-      width: 10vw;
-      top: 11vw;
-      left: 5vw;
+    .learn-more {
+      margin-top: 64px;
+      width: 180px;
+      height: 50px;
+      background: url("./../assets/img/btn.svg") no-repeat center center;
+      font-size: 16px;
+      color: #0078fa;
+      line-height: 43px;
+      cursor: pointer;
       user-select: none;
+      transition: all 0.2s ease;
 
-      @media screen and (min-width: 1300px) {
-        left: 67px;
-        top: 144px;
-        width: 130px;
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &:active {
+        opacity: 1;
       }
     }
 
-    .header-line-2 {
+    .home-dsp-feature {
+      margin-top: 125px;
+
+      @media screen and (max-width: 768px) {
+        margin-top: 80px;
+        justify-content: center;
+      }
+
+      li {
+        width: 48%;
+        max-width: 470px;
+        margin-top: 96px;
+
+        @media screen and (max-width: 768px) {
+          width: 100%;
+          margin-top: 65px;
+          max-width: 100%;
+        }
+
+        img {
+          width: 115px;
+          height: 82px;
+          position: relative;
+          left: 10px;
+
+          @media screen and (max-width: 768px) {
+            width: 100px;
+            height: 71px;
+            left: 7px;
+          }
+        }
+
+        h4 {
+          font-size: 30px;
+
+          @media screen and (max-width: 768px) {
+            font-size: 20px;
+          }
+        }
+
+        p {
+          text-align: center;
+          height: 60px;
+          font-size: 18px;
+          line-height: 30px;
+          width: 100%;
+
+          @media screen and (max-width: 768px) {
+            font-size: 14px;
+            margin-top: 10px;
+            line-height: 26px;
+          }
+        }
+      }
+    }
+
+    .home-dian {
       position: absolute;
-      top: 14.4vw;
-      left: 31.5vw;
-      width: 9vw;
-      transform: rotateZ(250deg);
-
-      @media screen and (min-width: 1300px) {
-        left: 410px;
-        top: 190px;
-        width: 117px;
-      }
+      top: 80.5%;
+      left: 36.7%;
+      width: 50.4%;
+      opacity: 0.1;
+      user-select: none;
     }
 
-    .header-line-3 {
+    .home-yuan {
       position: absolute;
-      top: 10vw;
-      left: 52.3vw;
-      width: 11.2vw;
-      transform: rotateZ(280deg) rotateY(180deg);
-
-      @media screen and (min-width: 1300px) {
-        left: 683px;
-        top: 130px;
-        width: 144px;
-      }
+      width: 25vw;
+      top: 51vw;
+      left: 0;
+      user-select: none;
     }
-  }
 
-  .home-dian {
-    position: absolute;
-    top: 80.5%;
-    left: 36.7%;
-    width: 50.4%;
-    opacity: 0.1;
-    user-select: none;
-  }
-
-  .home-yuan {
-    position: absolute;
-    width: 25vw;
-    top: 51vw;
-    left: 0;
-    user-select: none;
-  }
-
-  .home-xian {
-    position: absolute;
-    width: 40vw;
-    top: 73vw;
-    left: -10vw;
-    z-index: -1;
-    transform: rotate(50deg);
-    user-select: none;
+    .home-xian {
+      position: absolute;
+      width: 40vw;
+      top: 73vw;
+      left: -10vw;
+      z-index: -1;
+      transform: rotate(50deg);
+      user-select: none;
+    }
   }
 }
 </style>

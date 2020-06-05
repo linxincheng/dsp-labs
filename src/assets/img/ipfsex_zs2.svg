@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="326px" height="774px" viewBox="0 0 326 774" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54 (76480) - https://sketchapp.com -->
+    <title>ipfsex_zs2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="116.475352%" y1="-58.6124%" x2="-38.9873215%" y2="161.859598%" id="linearGradient-1">
+            <stop stop-color="#4780FF" offset="0%"></stop>
+            <stop stop-color="#9B61F7" offset="100%"></stop>
+        </linearGradient>
+        <path d="M1493,2849 C1679.67225,2849 1831,2697.67225 1831,2511 C1831,2324.32775 1679.67225,2173 1493,2173 C1306.32775,2173 1155,2324.32775 1155,2511 C1155,2697.67225 1306.32775,2849 1493,2849 Z M1493,2724 C1375.36335,2724 1280,2628.63665 1280,2511 C1280,2393.36335 1375.36335,2298 1493,2298 C1610.63665,2298 1706,2393.36335 1706,2511 C1706,2628.63665 1610.63665,2724 1493,2724 Z" id="path-2"></path>
+        <filter x="-11.0%" y="-10.9%" width="125.3%" height="125.3%" filterUnits="objectBoundingBox" id="filter-3">
+            <feMorphology radius="3" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="11" dy="12" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="23.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.185405344   0 0 0 0 0.185405344   0 0 0 0 0.185405344  0 0 0 0.409801136 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ipfsex1.2" transform="translate(-1114.000000, -2136.000000)">
+            <g id="ipfsex_zs2">
+                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+            </g>
+        </g>
+    </g>
+</svg>

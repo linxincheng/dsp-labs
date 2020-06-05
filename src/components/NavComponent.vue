@@ -15,14 +15,16 @@
         </div>
         <ul class="nav_ul" :class="{ pop: pop }">
           <li>
-            <!-- <router-link active-class="nav-active" to="/" title="HOME"
-              >HOME</router-link
-            > -->
             <a @click="goHomeTopLabs">HOME</a>
           </li>
           <li>
             <a @click="goHomeDspLabs">
               DSP LABS
+            </a>
+          </li>
+          <li>
+            <a @click="goGithub">
+              GITHUB
             </a>
           </li>
           <li>
@@ -35,11 +37,6 @@
               >ETHFX</router-link
             >
           </li>
-          <!-- <li>
-            <router-link active-class="nav-active" to="/news" title="NEWS"
-              >NEWS</router-link
-            >
-          </li> -->
         </ul>
       </nav>
     </div>
@@ -91,6 +88,11 @@ export default class NavComponent extends Vue {
         this.scroll = false;
       }
     });
+  }
+
+  public goGithub(): void {
+    this.pop = false;
+    window.open("https://github.com/DSP-Labs");
   }
 }
 </script>

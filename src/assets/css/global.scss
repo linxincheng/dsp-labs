@@ -42,3 +42,21 @@
     flex-wrap: wrap;
   }
 }
+
+.theme-color-text-fill {
+  color: rgba(47, 147, 255, 1);
+  background: linear-gradient(
+    90deg,
+    rgba(69, 83, 237, 1) 0%,
+    rgba(56, 114, 248, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    background: rgba(0, 0, 0, 0);
+  }
+}

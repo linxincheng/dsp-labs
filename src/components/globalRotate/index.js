@@ -1,5 +1,3 @@
-// console.clear();
-
 // Get the canvas element from the DOM
 let width,
   height,
@@ -13,9 +11,9 @@ let width,
   DOT_RADIUS;
 let rotation = 0; // Rotation of the globe
 let dots = []; // Every dots in an array
-const CIRCLE_BG_COLOR = "#bebebe"; // circle color
+const CIRCLE_BG_COLOR = "#dddddd"; // circle color
 const R_SIZE = 0.5; // global size
-const LOGO_SIZE = 0.3; // logo size;
+const LOGO_SIZE = 0.35; // logo size;
 
 const DOTS_AMOUNT = 1000; // Amount of dots on the screen
 
@@ -38,10 +36,10 @@ function init() {
   height = canvas.clientHeight; // Height of the canvas
 
   if (width > 400) {
-    DOT_RADIUS = 4;
-  } else if (width > 300) {
-    DOT_RADIUS = 3;
-  } else if (width > 200) {
+    //   DOT_RADIUS = 4;
+    // } else if (width > 300) {
+    //   DOT_RADIUS = 3;
+    // } else if (width > 200) {
     DOT_RADIUS = 2;
   } else {
     DOT_RADIUS = 1;
@@ -141,11 +139,22 @@ function render(a) {
   var image = document.getElementById("source");
   ctx.drawImage(
     image,
-    canvas.width * ((1 - LOGO_SIZE) / 2),
-    canvas.height * ((1 - LOGO_SIZE) / 2),
-    canvas.width * LOGO_SIZE,
-    canvas.height * LOGO_SIZE
+    canvas.clientWidth * ((1 - LOGO_SIZE) / 2),
+    canvas.clientHeight * ((1 - LOGO_SIZE) / 2),
+    canvas.clientWidth * LOGO_SIZE,
+    canvas.clientHeight * LOGO_SIZE
   );
+  // ctx.drawImage(
+  //   image,
+  //   0,
+  //   0,
+  //   canvas.width / 4,
+  //   canvas.width / 4
+  //   // canvas.width * ((1 - LOGO_SIZE) / 2),
+  //   // canvas.height * ((1 - LOGO_SIZE) / 2),
+  //   // canvas.width * LOGO_SIZE,
+  //   // canvas.height * LOGO_SIZE
+  // );
 
   for (var i = 0; i < dots.length; i++) {
     dots[i].draw(sineRotation, cosineRotation, false);
@@ -174,11 +183,7 @@ function afterResize() {
   PROJECTION_CENTER_X = width / 2;
   PROJECTION_CENTER_Y = height / 2;
   FIELD_OF_VIEW = width * R_SIZE;
-  if (width > 400) {
-    DOT_RADIUS = 4;
-  } else if (width > 300) {
-    DOT_RADIUS = 3;
-  } else if (width > 200) {
+  if (width > 435) {
     DOT_RADIUS = 2;
   } else {
     DOT_RADIUS = 1;
@@ -198,6 +203,7 @@ class CanvasObj {
     // Populate the dots array with random dots
     createDots();
     // Render the scene
+    // cancel = true;
     cancel = false;
     window.requestAnimationFrame(render);
   }

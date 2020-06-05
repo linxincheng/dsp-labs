@@ -1,51 +1,45 @@
 <template>
   <div class="ex-header-component">
-    <img src="../assets/img/home_bg1.svg" class="ex-bg1" width="100%" alt="" />
-
     <NavComponent></NavComponent>
 
-    <div class="ex-white-wrap">
-      <img src="../assets/img/ipfsex_bai.svg" class="ipfsex-bai" alt="" />
-      <div class="home-white-icon">
+    <div class="header-title flex between wrap-wrap white bold">
+      <slot name="title"></slot>
+      <div class="flex between ai-center header-title-icon">
+        <!-- <img src="./../assets/img/" alt=""> -->
         <slot name="icon"></slot>
         <img src="../assets/img/x.svg" class="x" alt="" />
         <img src="../assets/img/home_logo.png" class="home-logo" alt="" />
       </div>
     </div>
 
-    <div class="header-title white bold">
-      <!-- slot a -->
-      <!-- <img src="../assets/img/ipfsex_logo.svg" alt="" /> -->
-      <slot name="title"></slot>
-    </div>
-
     <ul class="ex-feature flex between wrap-wrap">
       <li
-        class="ex-feature-item flex white ai-center"
+        class="ex-feature-item white wow fadeIn"
+        data-wow-delay="0.2s"
         v-for="(item, index) of list"
         :key="index"
       >
-        <i :class="item.src" class="iconfont"></i>
-        <p>
-          {{ item.sup }}<br />
-          {{ item.sub }}
-        </p>
+        <div>
+          <img :src="item.src" />
+          <p>
+            {{ item.sup }}<br />
+            {{ item.sub }}
+          </p>
+        </div>
       </li>
     </ul>
 
-    <img src="../assets/img/new_xiu1.svg" class="ex-xiu1" alt="" />
+    <img src="../assets/img/home_white2.svg" class="ex-header-white-2" alt="" />
 
-    <img src="../assets/img/home_dian.svg" class="ex-dian" alt="" />
-
-    <img src="../assets/img/home_yuan1.svg" class="ex-yuan" alt="" />
-
-    <img src="../assets/img/home_xian.svg" class="ex-xian" alt="" />
+    <img src="../assets/img/yuan.svg" class="ex-header-xian1" alt="" />
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue, Prop } from "vue-property-decorator";
 import NavComponent from "@/components/NavComponent.vue";
+import WOW from "wow.js";
+new WOW().init();
 
 interface FeatrueIconStru {
   src: string;
@@ -69,157 +63,175 @@ export default class ExHeaderComponent extends Vue {
 <style lang="scss" scoped>
 .ex-header-component {
   width: 100%;
+  overflow: hidden;
   position: relative;
+  height: auto;
+  background: url("./../assets/img/ex_bg.svg") center -110px no-repeat;
+  padding-top: 240px;
+
+  @media screen and (max-width: 1024px) {
+    background: url("./../assets/img/ex_bg.svg") center top no-repeat;
+  }
 
   .ex-bg1 {
     user-select: none;
   }
 
-  .ex-white-wrap {
-    // width: 38%;
-    position: absolute;
-    // top: 30vw;
-    right: 0;
+  .header-title {
+    user-select: none;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 
-    width: 57%;
-    top: 11vw;
-
-    .ipfsex-bai {
-      width: 100%;
-      user-select: none;
-      right: 0;
-      top: 0;
-    }
-
-    .home-white-icon {
-      position: relative;
-      width: 100%;
-      height: 0;
-      user-select: none;
-
-      .ipfslog {
-        position: absolute;
-        top: -68vw;
-        left: 14.5vw;
-        transform: rotateZ(45deg);
-        width: 12.5vw;
-      }
-
+    .header-title-icon {
       .x {
-        position: absolute;
-        top: -54.3vw;
-        left: 27.2vw;
-        width: 4.5vw;
-        transform: rotateZ(45deg);
+        width: 40px;
+        margin: 0 70px;
+
+        @media screen and (max-width: 768px) {
+          width: 4vw;
+          margin: 0 7vw;
+        }
       }
 
       .home-logo {
-        position: absolute;
-        top: -48.7vw;
-        left: 32.6vw;
-        width: 11.8vw;
-        transform: rotateZ(45deg);
+        width: 160px;
+        height: 160px;
+
+        @media screen and (max-width: 768px) {
+          width: 16vw;
+          height: 16vw;
+        }
       }
-    }
-  }
 
-  .header-title {
-    position: absolute;
-    top: 23.5vw;
-    // left: 10vw;
-    user-select: none;
-
-    width: 90%;
-    max-width: 1200px;
-    left: 5%;
-
-    img {
-      width: 35vw;
-      max-width: 400px;
-    }
-
-    @media screen and (min-width: 1200px) {
-      left: 50%;
-      transform: translateX(-50%);
+      @media screen and (max-width: 1366px) {
+        margin-top: 50px;
+      }
     }
   }
 
   .ex-feature {
-    position: absolute;
-    top: 64vw;
-    left: 28.9vw;
-    width: 58%;
+    width: 90%;
+    max-width: 1200px;
+    margin: 150px auto;
+
+    & > :nth-child(3n + 1) {
+      div {
+        margin: 0;
+      }
+    }
+
+    & > :nth-child(3n + 2) {
+      div {
+        margin: 0 auto;
+      }
+    }
+
+    & > :nth-child(3n + 3) {
+      div {
+        float: right;
+      }
+    }
 
     @media screen and (max-width: 768px) {
-      top: 56vw;
+      margin: 100px auto;
+
+      & > :nth-child(3n + 1) {
+        div {
+          margin: 0 auto;
+        }
+      }
+
+      & > :nth-child(3n + 3) {
+        div {
+          margin: 0 auto;
+          float: none;
+        }
+      }
     }
 
     .ex-feature-item {
-      margin-top: 4.2vw;
+      margin-top: 122px;
       width: 33%;
 
       @media screen and (max-width: 768px) {
         width: 50%;
-
-        &:nth-child(1),
-        &:nth-child(2) {
-          position: relative;
-          left: -8vw;
-        }
-
-        &:nth-child(5),
-        &:nth-child(6) {
-          position: relative;
-          left: 8vw;
-        }
+        margin-top: 50px;
       }
 
-      i {
-        font-size: 2.7vw;
-      }
+      & > div {
+        width: 240px;
+        text-align: center;
 
-      p {
-        font-size: 1.5vw;
-        margin-left: 1vw;
+        @media screen and (max-width: 768px) {
+          width: 100%;
+        }
+
+        img {
+          width: 140px;
+          @media screen and (max-width: 768px) {
+            width: 14vw;
+          }
+        }
+
+        p {
+          width: 240px;
+          font-size: 30px;
+          font-weight: bold;
+          color: rgba(56, 114, 249, 1);
+          line-height: 37px;
+          text-align: center;
+
+          @media screen and (max-width: 768px) {
+            width: 100%;
+            font-size: 18px;
+            line-height: 24px;
+            font-weight: 500;
+          }
+        }
       }
     }
   }
-
-  .ex-xiu1 {
+  .ex-header-white-2 {
+    width: 1000px;
     position: absolute;
-    top: 43vw;
-    left: 10vw;
-    width: 6vw;
-    opacity: 1;
-    transform: rotateX(180deg) rotateZ(-105deg);
-    user-select: none;
-  }
-
-  .ex-dian {
-    position: absolute;
-    top: 80.5%;
-    left: 36.7%;
-    width: 50.4%;
-    opacity: 0.1;
-    user-select: none;
-  }
-
-  .ex-yuan {
-    position: absolute;
-    width: 25vw;
-    top: 51vw;
-    left: 0;
-    user-select: none;
-  }
-
-  .ex-xian {
-    position: absolute;
-    width: 40vw;
-    top: 73vw;
-    left: -10vw;
+    right: -300px;
+    bottom: 90px;
     z-index: -1;
-    transform: rotate(50deg);
     user-select: none;
+
+    @media screen and (max-width: 768px) {
+      // display: none;
+      width: 80vw;
+      top: 68vw;
+      right: 0;
+    }
+
+    @media screen and (max-width: 435px) {
+      width: 80vw;
+      top: 500px;
+    }
+  }
+
+  .ex-header-xian1 {
+    width: 260px;
+    position: absolute;
+    right: 0;
+    top: 300px;
+    z-index: -1;
+    user-select: none;
+
+    @media screen and (max-width: 768px) {
+      width: 25vw;
+      // min-width: 150px;
+      top: 330px;
+      bottom: inherit;
+    }
+
+    @media screen and (max-width: 435px) {
+      top: 430px;
+      // min-width: 120px;
+    }
   }
 }
 </style>

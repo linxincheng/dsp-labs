@@ -5,11 +5,17 @@
     <div class="distributed-storage-protocol">
       <img src="../assets/img/home_white2.svg" class="home-white-2" alt="" />
       <img src="../assets/img/home_xian1.svg" class="home-xian1" alt="" />
-      <img src="../assets/img/home_xiu.svg" class="home-xiu" alt="" />
-      <img src="../assets/img/home_xiu2.svg" class="home-xiu2" alt="" />
       <article>
-        <h3>Distributed Storage Protocol</h3>
-        <p>
+        <h3 class="theme-color-text-fill wow fadeInLeft">
+          <span class="title-first theme-color-text-fill">
+            D
+            <img src="../assets/img/home_xiu2.svg" class="home-xiu" alt="" />
+          </span>
+          <span class="title-after">
+            istributed Storage Protocol
+          </span>
+        </h3>
+        <p class="wow fadeIn" data-wow-delay="0.3s">
           The DSP (Distributed Storage Protocol) protocol is a new-generation
           Internet protocol paradigm based on data file encryption,
           distribution, storage, sharing and other multi-dimensional new
@@ -19,14 +25,106 @@
         </p>
       </article>
     </div>
+    <div class="architecture flex between wrap-wrap">
+      <h2 class="theme-color-text-fill architecture-circle-1 wow fadeInLeft">
+        <span class="theme-color-text-fill"
+          >A<img src="../assets/img/home_xiu2.svg" class="home-xiu" alt=""
+        /></span>
+        rchitecture
+      </h2>
+      <div class="architecture-circle-wrap">
+        <div
+          class="architecture-circle-1 wow fadeInRight"
+          data-wow-duration="0.6s"
+        >
+          <div class="architecture-circle-1-desc-1">
+            <img src="./../assets/img/DSP_transaction.png" alt="" />
+          </div>
+          <div class="architecture-circle-1-desc-2">
+            <img src="./../assets/img/DSP_search.png" alt="" />
+          </div>
+          <div class="architecture-circle-1-desc-3">
+            <img src="./../assets/img/DSP_monitoring.png" alt="" />
+          </div>
+          <div class="architecture-circle-1-desc-4">
+            <img src="./../assets/img/DSP_payment.png" alt="" />
+          </div>
+          <div class="architecture-circle-1-title">
+            <div class="wow bounceInLeft" data-wow-delay="1.2s">DSP</div>
+          </div>
+        </div>
+        <div
+          class="architecture-circle-2 wow fadeInRight"
+          data-wow-delay="0.3s"
+          data-wow-duration="0.6s"
+        >
+          <div class="architecture-circle-2-wrap">
+            <i class="iconfont icontubiao--dns architecture-circle-icon-1"></i>
+            <i class="iconfont icontubiao--dns architecture-circle-icon-2"></i>
+            <i class="iconfont icontubiao--dns architecture-circle-icon-3"></i>
+            <div class="architecture-circle-2-title">
+              <div class="wow bounceInLeft" data-wow-delay="1.2s">DNS</div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="architecture-circle-3 wow fadeInRight"
+          data-wow-delay="0.6s"
+          data-wow-duration="0.6s"
+        >
+          <div class="architecture-circle-3-wrap">
+            <i class="iconfont icontubiao--fs architecture-circle-icon-1"></i>
+            <i class="iconfont icontubiao--fs architecture-circle-icon-2"></i>
+            <i class="iconfont icontubiao--fs architecture-circle-icon-3"></i>
+            <i class="iconfont icontubiao--fs architecture-circle-icon-4"></i>
+
+            <div class="architecture-circle-3-title">
+              <div class="wow bounceInLeft" data-wow-delay="1.2s">FS</div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="architecture-circle-4 flex ai-center jc-center wow fadeInRight"
+          data-wow-delay="0.9s"
+          data-wow-duration="0.6s"
+        >
+          Chain
+        </div>
+        <img src="../assets/img/home_xiu2.svg" class="home-xiu2" alt="" />
+      </div>
+    </div>
+    <a name="homeValueAnchor"></a>
     <section class="article-list">
+      <img
+        src="../assets/img/new_cai1.svg"
+        class="home-cai1 wow fadeIn"
+        alt=""
+      />
+      <img
+        src="../assets/img/home_xian4.svg"
+        class="home-xian4 wow fadeIn"
+        alt=""
+      />
+      <img
+        src="../assets/img/home_yuan.svg"
+        class="home-yuan wow fadeIn"
+        alt=""
+      />
+      <h2 class="theme-color-text-fill wow fadeInLeft">
+        <span class="theme-color-text-fill"
+          >V<img
+            src="../assets/img/home_xiu2.svg"
+            class="home-xiu"
+            alt=""/></span
+        >alue
+      </h2>
       <ul>
-        <li>
+        <li class="wow fadeInUp">
           <h4>
             <div>
               <i class="iconfont iconhome_icon_b1"></i>
             </div>
-            <span>
+            <span class="theme-color-text-fill">
               Internet of Everything
             </span>
           </h4>
@@ -37,12 +135,12 @@
             data transmission, sharing and storage.
           </p>
         </li>
-        <li>
+        <li class="wow fadeInUp">
           <h4 class="flex ai-center">
             <div>
               <i class="iconfont iconhome_icon_b2"></i>
             </div>
-            <span>
+            <span class="theme-color-text-fill">
               Copyright Control
             </span>
           </h4>
@@ -52,12 +150,12 @@
             be authorized. Nodes and others have no right to operate on files.
           </p>
         </li>
-        <li>
+        <li class="wow fadeInUp">
           <h4 class="flex ai-center">
             <div>
               <i class="iconfont iconhome_icon_b3"></i>
             </div>
-            <span>
+            <span class="theme-color-text-fill">
               Data Control
             </span>
           </h4>
@@ -67,12 +165,12 @@
             be authorized. Nodes and others have no right to operate on files.
           </p>
         </li>
-        <li>
+        <li class="wow fadeInUp">
           <h4 class="flex ai-center">
             <div>
               <i class="iconfont iconhome_icon_b4"></i>
             </div>
-            <span>
+            <span class="theme-color-text-fill">
               Avoid Data Leakage
             </span>
           </h4>
@@ -83,12 +181,12 @@
             leakage.
           </p>
         </li>
-        <li>
+        <li class="wow fadeInUp">
           <h4 class="flex ai-center">
             <div>
               <i class="iconfont iconhome_icon_b5"></i>
             </div>
-            <span>
+            <span class="theme-color-text-fill">
               Anti-Monitoring and Anti-Examination
             </span>
           </h4>
@@ -100,12 +198,12 @@
             privacy.
           </p>
         </li>
-        <li>
+        <li class="wow fadeInUp">
           <h4 class="flex ai-center">
             <div>
               <i class="iconfont iconhome_icon_b6"></i>
             </div>
-            <span>
+            <span class="theme-color-text-fill">
               Data Persistence
             </span>
           </h4>
@@ -117,12 +215,12 @@
             by a single point of failure.
           </p>
         </li>
-        <li>
+        <li class="wow fadeInUp">
           <h4 class="flex ai-center">
             <div>
               <i class="iconfont iconhome_icon_b7"></i>
             </div>
-            <span>
+            <span class="theme-color-text-fill">
               Link Intelligence Autonomous Optimization
             </span>
           </h4>
@@ -133,12 +231,12 @@
             optimization of the transmission status across the network.
           </p>
         </li>
-        <li>
+        <li class="wow fadeInUp">
           <h4 class="flex ai-center">
             <div>
               <i class="iconfont iconhome_icon_b8"></i>
             </div>
-            <span>
+            <span class="theme-color-text-fill">
               Developer Friendly
             </span>
           </h4>
@@ -150,18 +248,16 @@
           </p>
         </li>
       </ul>
-      <img src="../assets/img/home_xiu.svg" class="home-xiu-2" alt="" />
-      <img src="../assets/img/home_dian.svg" class="home-dian-2" alt="" />
     </section>
     <section class="dsp-labs-wrap">
-      <img src="../assets/img/home_dicai.svg" class="home-dicai" alt="" />
-      <img src="../assets/img/home_cai.svg" class="home-cai" alt="" />
+      <div class="home-bj2"></div>
+      <img src="../assets/img/home_zs1.svg" class="home-zs1" alt="" />
+      <img src="../assets/img/home_xiu3.svg" class="home-xiu3" alt="" />
       <img src="../assets/img/home_xian2.svg" class="home-xian2" alt="" />
-      <img src="../assets/img/home_white3.svg" class="home-white3" alt="" />
       <a name="firstAnchor"></a>
       <div class="dsp-labs-content">
-        <h3>DSP Labs</h3>
-        <p>
+        <h3 class="wow flipInX">DSP Labs</h3>
+        <p class="wow fadeIn" data-wow-delay="0.5s">
           DSP Labs is a research, development and deployment organization that
           improves next-generation Internet technologies. We hope to establish a
           new set of free and open network protocols-based on this set of
@@ -185,6 +281,8 @@
 import { Component, Vue } from "vue-property-decorator";
 import HomeHeaderComponent from "@/components/HomeHeaderComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
+import WOW from "wow.js";
+new WOW().init();
 
 @Component({
   components: {
@@ -193,12 +291,18 @@ import FooterComponent from "@/components/FooterComponent.vue";
   },
 })
 export default class Home extends Vue {
+  public canvasObj: any = null;
+
   public mounted() {
     if (this.$router.currentRoute.hash === "#firstAnchor") {
       this.$nextTick(() => {
         location.href = "#firstAnchor";
       });
     } else if (this.$router.currentRoute.hash === "#homeAnchor") {
+      this.$nextTick(() => {
+        location.href = "#homeAnchor";
+      });
+    } else if (this.$router.currentRoute.hash === "homeValueAnchor") {
       this.$nextTick(() => {
         location.href = "#homeAnchor";
       });
@@ -211,7 +315,7 @@ export default class Home extends Vue {
 .home {
   .distributed-storage-protocol {
     position: relative;
-    height: 75vw;
+    height: 870px;
 
     @media screen and (max-width: 1024px) {
       height: auto;
@@ -219,11 +323,11 @@ export default class Home extends Vue {
     }
 
     .home-white-2 {
-      width: 78.5vw;
+      width: 1069px;
       position: absolute;
-      top: -62vw;
-      z-index: -1;
       right: 0;
+      top: -440px;
+      z-index: -1;
       user-select: none;
 
       @media screen and (max-width: 1024px) {
@@ -232,62 +336,65 @@ export default class Home extends Vue {
     }
 
     .home-xian1 {
-      width: 19vw;
+      width: 377px;
       position: absolute;
       right: 0;
-      top: -25vw;
+      top: -490px;
       z-index: -1;
       user-select: none;
-    }
 
-    .home-xiu {
-      position: absolute;
-      top: 9vw;
-      right: 31vw;
-      width: 8.6vw;
-      user-select: none;
-    }
-
-    .home-xiu2 {
-      position: absolute;
-      bottom: 1.5vw;
-      z-index: 2;
-      right: 49.7vw;
-      height: 15vw;
-      user-select: none;
-      @media screen and (max-width: 1024px) {
-        bottom: -20vw;
+      @media screen and (max-width: 768px) {
+        width: 170px;
+        top: -290px;
       }
     }
 
     article {
-      position: absolute;
-      top: 24.8vw;
-      left: 38vw;
-      min-height: 50vw;
-
-      @media screen and (max-width: 1300px) {
-        top: 22vw;
-      }
+      width: 700px;
+      margin: 0 auto;
+      padding-top: 145px;
+      position: relative;
 
       @media screen and (max-width: 1024px) {
-        position: relative;
         width: 90%;
-        left: 5%;
-        // padding: 10vw 3vw 30vw;
-        padding: 0;
-        z-index: -2;
-        box-sizing: border-box;
-        min-height: 0vw;
+      }
+
+      @media screen and (max-width: 768px) {
+        padding-top: 15px;
       }
 
       h3 {
-        font-size: 26px;
-        color: rgba(47, 147, 255, 1);
+        font-size: 40px;
         user-select: none;
 
-        @media screen and (max-width: 1320px) {
-          font-size: 22px;
+        @media screen and (max-width: 768px) {
+          font-size: 20px;
+        }
+
+        .title-first {
+          font-size: 160px;
+          position: relative;
+          left: 5px;
+          display: inline-block;
+
+          @media screen and (max-width: 768px) {
+            font-size: 60px;
+          }
+
+          .home-xiu {
+            position: absolute;
+            top: -10px;
+            right: -88px;
+            height: 136px;
+            transform: rotate(270deg);
+            user-select: none;
+
+            @media screen and (max-width: 768px) {
+              height: 70px;
+              right: -44px;
+              top: -5px;
+            }
+          }
         }
       }
 
@@ -296,48 +403,595 @@ export default class Home extends Vue {
         font-size: 22px;
         color: rgba(100, 100, 100, 1);
         line-height: 42px;
-        width: 43vw;
 
-        @media screen and (max-width: 1320px) {
-          font-size: 16px;
+        @media screen and (max-width: 768px) {
+          font-size: 14px;
+          line-height: 26px;
+        }
+      }
+    }
+  }
+
+  .architecture {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 200px;
+    margin-bottom: 40px;
+
+    @media screen and (max-width: 1366px) {
+      display: block;
+      margin-top: 160px;
+    }
+
+    @media screen and (max-width: 1024px) {
+      margin-bottom: 250px;
+      margin-top: 0;
+    }
+
+    & > h2 {
+      font-size: 40px;
+      color: #2f93ff;
+      text-indent: 78px;
+
+      @media screen and (max-width: 768px) {
+        text-indent: 20px;
+        font-size: 20px;
+      }
+
+      span {
+        font-size: 160px;
+        position: relative;
+        left: 5px;
+
+        @media screen and (max-width: 768px) {
+          font-size: 60px;
+        }
+
+        .home-xiu {
+          position: absolute;
+          top: -10px;
+          right: -88px;
+          height: 136px;
+          transform: rotate(270deg);
+          user-select: none;
+
+          @media screen and (max-width: 768px) {
+            height: 70px;
+            top: -5px;
+            right: -44px;
+          }
+        }
+      }
+    }
+
+    & > .architecture-circle-wrap {
+      width: 720px;
+      height: 630px;
+      position: relative;
+
+      @media screen and (max-width: 1366px) {
+        margin: 0 auto;
+      }
+
+      @media screen and (max-width: 1024px) {
+        width: 72vw;
+        height: 63vw;
+      }
+
+      .architecture-circle-1 {
+        height: 630px;
+        width: 630px;
+        border-radius: 315px;
+        background: linear-gradient(220deg, #6374fb 10%, #7c6bf9 100%);
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.08);
+        position: relative;
+        z-index: 1;
+
+        @media screen and (max-width: 1024px) {
+          height: 63vw;
+          width: 63vw;
+        }
+
+        & > div {
+          color: white;
+          text-align: center;
+
+          & > img {
+            height: 40px;
+
+            @media screen and (max-width: 1024px) {
+              height: 4vw;
+            }
+          }
+
+          // & > h4 {
+          //   font-size: 24px;
+          //   line-height: 24px;
+
+          //   @media screen and (max-width: 1024px) {
+          //     font-size: 2.4vw;
+          //     line-height: 2.4vw;
+          //   }
+          // }
+
+          // & > p {
+          //   font-size: 16px;
+          //   line-height: 19px;
+
+          //   @media screen and (max-width: 1024px) {
+          //     font-size: 1.6vw;
+          //     line-height: 1.9vw;
+          //   }
+          // }
+
+          &.architecture-circle-1-desc-1 {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            @media screen and (max-width: 1024px) {
+              top: 2vw;
+            }
+          }
+
+          &.architecture-circle-1-desc-2 {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+
+            @media screen and (max-width: 1024px) {
+              left: 2vw;
+            }
+          }
+
+          &.architecture-circle-1-desc-3 {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            @media screen and (max-width: 1024px) {
+              bottom: 2vw;
+            }
+          }
+
+          &.architecture-circle-1-desc-4 {
+            position: absolute;
+            left: 550px;
+            top: 50%;
+            transform: translateY(-50%);
+
+            @media screen and (max-width: 1024px) {
+              left: 55vw;
+            }
+          }
+
+          &.architecture-circle-1-title {
+            position: absolute;
+            width: 412px;
+            height: 66px;
+            line-height: 66px;
+            top: 0;
+            left: 50%;
+            z-index: -1;
+            overflow: hidden;
+
+            @media screen and (max-width: 1024px) {
+              width: 41.2vw;
+              height: 6.6vw;
+              line-height: 6.6vw;
+            }
+
+            div {
+              background: #6673fb;
+              border-radius: 0 33px 33px 0;
+              width: 100%;
+              position: relative;
+              left: -10%;
+              height: 100%;
+              text-align: right;
+              box-sizing: border-box;
+              padding-right: 50px;
+              font-size: 36px;
+              font-weight: 600;
+              color: rgba(255, 255, 255, 1);
+              letter-spacing: 2px;
+              transform: translate(0%);
+
+              @media screen and (max-width: 1024px) {
+                padding-right: 5vw;
+                font-size: 3.6vw;
+                letter-spacing: 0.2vw;
+              }
+            }
+          }
+        }
+      }
+      .architecture-circle-2 {
+        width: 460px;
+        height: 460px;
+        background: #a1c2ff;
+        border-radius: 230px;
+        position: absolute;
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.08);
+        left: 85px;
+        top: 85px;
+        z-index: 2;
+
+        @media screen and (max-width: 1024px) {
+          width: 46vw;
+          height: 46vw;
+          left: 8.5vw;
+          top: 8.5vw;
+        }
+
+        & > .architecture-circle-2-wrap {
+          width: 100%;
+          height: 100%;
+          position: relative;
+
+          & > i {
+            font-size: 44px;
+            color: white;
+            position: absolute;
+
+            @media screen and (max-width: 1024px) {
+              font-size: 4.4vw;
+            }
+
+            &.architecture-circle-icon-1 {
+              left: 80px;
+              top: 60px;
+
+              @media screen and (max-width: 1024px) {
+                left: 8.8vw;
+                top: 6vw;
+              }
+            }
+            &.architecture-circle-icon-2 {
+              left: 330px;
+              top: 60px;
+
+              @media screen and (max-width: 1024px) {
+                left: 33vw;
+                top: 6vw;
+              }
+            }
+            &.architecture-circle-icon-3 {
+              left: 80px;
+              top: 350px;
+
+              @media screen and (max-width: 1024px) {
+                left: 8vw;
+                top: 35vw;
+              }
+            }
+          }
+
+          .architecture-circle-2-title {
+            position: absolute;
+            top: 40px;
+            left: 360px;
+            width: 368px;
+            height: 66px;
+            line-height: 66px;
+            z-index: -1;
+            overflow: hidden;
+
+            @media screen and (max-width: 1024px) {
+              top: 4vw;
+              left: 36vw;
+              height: 6.6vw;
+              line-height: 6.6vw;
+              width: 36.8vw;
+            }
+
+            div {
+              background: #a1c2ff;
+              border-radius: 0 33px 33px 0;
+              width: 100%;
+              position: relative;
+              left: -10%;
+              height: 100%;
+              text-align: right;
+              box-sizing: border-box;
+              padding-right: 50px;
+              font-size: 36px;
+              font-weight: 600;
+              color: rgba(255, 255, 255, 1);
+              letter-spacing: 2px;
+              transform: translate(0%);
+
+              @media screen and (max-width: 1024px) {
+                padding-right: 5vw;
+                font-size: 3.6vw;
+                letter-spacing: 0.2vw;
+              }
+            }
+          }
+        }
+      }
+      .architecture-circle-3 {
+        width: 330px;
+        height: 314px;
+        background: #edf4ff;
+        border-radius: 157px;
+        position: absolute;
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.08);
+        left: 158px;
+        top: 158px;
+        z-index: 3;
+
+        @media screen and (max-width: 1024px) {
+          width: 33vw;
+          height: 31.4vw;
+          left: 15.8vw;
+          top: 15.8vw;
+        }
+
+        & > .architecture-circle-3-wrap {
+          width: 100%;
+          height: 100%;
+          position: relative;
+
+          & > i {
+            font-size: 35px;
+            color: #c2ccdc;
+            position: absolute;
+
+            @media screen and (max-width: 1024px) {
+              font-size: 3.5vw;
+            }
+
+            &.architecture-circle-icon-1 {
+              top: 30px;
+              left: 50%;
+              transform: translateX(-50%);
+
+              @media screen and (max-width: 1024px) {
+                top: 3vw;
+              }
+            }
+            &.architecture-circle-icon-2 {
+              top: 50%;
+              left: 30px;
+              transform: translateY(-50%);
+
+              @media screen and (max-width: 1024px) {
+                left: 3vw;
+              }
+            }
+            &.architecture-circle-icon-3 {
+              bottom: 30px;
+              left: 50%;
+              transform: translateX(-50%);
+
+              @media screen and (max-width: 1024px) {
+                bottom: 3vw;
+              }
+            }
+            &.architecture-circle-icon-4 {
+              top: 50%;
+              right: 30px;
+              transform: translateY(-50%);
+
+              @media screen and (max-width: 1024px) {
+                right: 3vw;
+              }
+            }
+          }
+
+          & > .architecture-circle-3-title {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 430px;
+            height: 66px;
+            line-height: 66px;
+            z-index: -1;
+            overflow: hidden;
+
+            @media screen and (max-width: 1024px) {
+              width: 43vw;
+              height: 6.6vw;
+              line-height: 6.6vw;
+            }
+
+            div {
+              background: #edf4ff;
+              border-radius: 0 33px 33px 0;
+              width: 100%;
+              position: relative;
+              left: -10%;
+              height: 100%;
+              text-align: right;
+              box-sizing: border-box;
+              padding-right: 50px;
+              font-size: 36px;
+              font-weight: 600;
+              color: #c2ccdc;
+              letter-spacing: 2px;
+              transform: translate(0%);
+
+              @media screen and (max-width: 1024px) {
+                padding-right: 5vw;
+                font-size: 3.6vw;
+                letter-spacing: 0.2vw;
+              }
+            }
+          }
+        }
+      }
+      .architecture-circle-4 {
+        width: 136px;
+        height: 136px;
+        background: white;
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.08);
+        border-radius: 68px;
+        position: absolute;
+        left: 247px;
+        top: 247px;
+        z-index: 4;
+        font-size: 26px;
+        color: rgba(195, 195, 195, 1);
+
+        @media screen and (max-width: 1024px) {
+          width: 13.6vw;
+          height: 13.6vw;
+          left: 24.7vw;
+          top: 24.7vw;
+          font-size: 2.6vw;
+        }
+      }
+
+      .home-xiu2 {
+        position: absolute;
+        bottom: -260px;
+        z-index: 2;
+        right: 20px;
+        height: 220px;
+        user-select: none;
+
+        @media screen and (max-width: 1366px) {
+          bottom: -180px;
+          right: 100px;
+          height: 160px;
         }
 
         @media screen and (max-width: 1024px) {
-          width: 100%;
+          bottom: -130px;
+          height: 110px;
         }
       }
     }
   }
 
   .article-list {
-    width: 90%;
-    max-width: 1200px;
-    margin: 9vw auto 45vw;
     position: relative;
-    z-index: 2;
+    z-index: -1;
+    margin-top: -180px;
+    padding-top: 280px;
+
+    @media screen and (max-width: 768px) {
+      padding-top: 150px;
+    }
+
+    .home-cai1 {
+      position: absolute;
+      left: -70px;
+      top: 0px;
+      width: 260px;
+      transform: rotateZ(180deg);
+      z-index: -2;
+
+      @media screen and (max-width: 768px) {
+        width: 130px;
+        left: -35px;
+        top: -50px;
+      }
+    }
+
+    .home-xian4 {
+      position: absolute;
+      top: -200px;
+      left: -470px;
+      width: 900px;
+      z-index: -2;
+
+      @media screen and (max-width: 768px) {
+        width: 450px;
+        top: -150px;
+        left: -235px;
+      }
+    }
+
+    .home-yuan {
+      position: absolute;
+      right: 0;
+      width: 300px;
+      top: 660px;
+      z-index: -2;
+
+      @media screen and (max-width: 768px) {
+        width: 150px;
+      }
+    }
+
+    & > h2 {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      font-size: 40px;
+      color: #2f93ff;
+      text-indent: 78px;
+
+      @media screen and (max-width: 768px) {
+        text-indent: 20px;
+        font-size: 20px;
+      }
+
+      span {
+        font-size: 160px;
+        position: relative;
+        left: 5px;
+
+        @media screen and (max-width: 768px) {
+          font-size: 60px;
+        }
+
+        .home-xiu {
+          position: absolute;
+          top: -10px;
+          right: -88px;
+          height: 136px;
+          transform: rotate(270deg);
+          user-select: none;
+
+          @media screen and (max-width: 768px) {
+            height: 70px;
+            top: -5px;
+            right: -44px;
+          }
+        }
+      }
+    }
 
     ul {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+      width: 90%;
+      max-width: 1200px;
+      margin: 10px auto;
+
+      @media screen and (max-width: 768px) {
+        margin-top: 0;
+      }
 
       li {
         width: 43%;
-        margin-top: 50px;
+        margin-top: 80px;
 
         @media screen and (max-width: 1024px) {
           width: 100%;
         }
 
+        @media screen and (max-width: 768px) {
+          margin-top: 60px;
+        }
+
         h4 {
           font-size: 22px;
-          color: rgba(47, 147, 255, 1);
+          // color: rgba(47, 147, 255, 1);
           display: flex;
           align-items: center;
           user-select: none;
 
-          @media screen and (max-width: 1024px) {
-            font-size: 20px;
+          @media screen and (max-width: 768px) {
+            font-size: 18px;
           }
 
           div {
@@ -367,73 +1021,82 @@ export default class Home extends Vue {
         p {
           margin-top: 20px;
           font-size: 16px;
-          line-height: 26px;
+          line-height: 28px;
           color: rgba(100, 100, 100, 1);
+
+          @media screen and (max-width: 768px) {
+            font-size: 14px;
+          }
         }
       }
-    }
-
-    .home-xiu-2 {
-      position: absolute;
-      bottom: -18vw;
-      right: 7vw;
-      transform: rotateY(180deg);
-      width: 14vw;
-      user-select: none;
-    }
-
-    .home-dian-2 {
-      position: absolute;
-      bottom: -37vw;
-      right: 13vw;
-      width: 30vw;
-      opacity: 0.8;
-      user-select: none;
     }
   }
 
   .dsp-labs-wrap {
     position: relative;
-    margin-top: 30vw;
-    background: linear-gradient(#6763d7, #5171de);
+    z-index: -1;
+    margin-top: 220px;
+    width: 100%;
+    background: linear-gradient(#7659d2, #5171de);
 
-    .home-dicai {
-      position: absolute;
-      top: -36vw;
+    & > .home-bj2 {
+      height: 190px;
+      z-index: -1;
       width: 100%;
-      user-select: none;
+      background: url("../assets/img/home_bj2.svg") bottom center no-repeat;
+      background-size: 120%, 120%;
+      position: absolute;
+      bottom: 99%;
     }
 
-    .home-cai {
+    .home-zs1 {
       position: absolute;
-      top: -27.4vw;
       right: 0;
-      width: 27%;
-      user-select: none;
-      z-index: 2;
+      max-width: 605px;
+      width: 30%;
+      bottom: 100%;
+      transform: translateY(25%);
+      z-index: -1;
+
+      @media screen and (max-width: 768px) {
+        width: 40%;
+        transform: translateY(35%);
+      }
+    }
+
+    .home-xiu3 {
+      position: absolute;
+      right: 10%;
+      top: 10%;
+      transform: rotate(90deg);
+      max-width: 170px;
+      min-width: 100px;
+      width: 10%;
+      z-index: 9;
     }
 
     .home-xian2 {
       position: absolute;
-      bottom: -130px;
-      height: 50vw;
-      right: 0;
-      user-select: none;
-    }
+      width: 500px;
+      top: -480px;
+      left: -20px;
+      transform: rotate(180deg);
+      z-index: -1;
 
-    .home-white3 {
-      position: absolute;
-      top: -67.5vw;
-      width: 47%;
-      user-select: none;
+      @media screen and (max-width: 768px) {
+        width: 250px;
+        top: -240px;
+        left: -10px;
+      }
     }
 
     .dsp-labs-content {
       position: relative;
       width: 638px;
       margin: 0 auto;
-      left: -20px;
-      padding: 10vw 0 10vw;
+      // left: -20px;
+      padding: 160px 0 180px;
+      // padding: 10vw 0 10vw;
       transform: translateX(-40px);
 
       @media screen and (max-width: 1024px) {
@@ -446,8 +1109,13 @@ export default class Home extends Vue {
         color: white;
         font-size: 88px;
         user-select: none;
+
         @media screen and (max-width: 1024px) {
           font-size: 9vw;
+        }
+
+        @media screen and (max-width: 768px) {
+          font-size: 32px;
         }
       }
 
@@ -455,9 +1123,17 @@ export default class Home extends Vue {
         margin-top: 40px;
         color: white;
         font-size: 16px;
-        line-height: 30px;
+        line-height: 28px;
+
+        @media screen and (max-width: 768px) {
+          font-size: 14px;
+        }
       }
     }
   }
 }
+
+// @keyframes  {
+
+// }
 </style>

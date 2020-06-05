@@ -8607,6 +8607,11 @@ worker-rpc@^0.1.0:
   dependencies:
     microevent.ts "~0.1.1"
 
+wow.js@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.npm.taobao.org/wow.js/download/wow.js-1.2.2.tgz#247519b0a342319b1a63e22aea9acec1a9ea57f5"
+  integrity sha1-JHUZsKNCMZsaY+Iq6prOwanqV/U=
+
 wrap-ansi@^5.1.0:
   version "5.1.0"
   resolved "https://registry.npm.taobao.org/wrap-ansi/download/wrap-ansi-5.1.0.tgz#1fd1f67235d5b6d0fee781056001bfb694c03b09"
