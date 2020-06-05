@@ -1,19 +1,19 @@
 exports.cors = {
   enable: true,
-  package: 'egg-cors',
-}
+  package: "egg-cors",
+};
 
 exports.validate = {
   enable: true,
-  package: 'egg-validate',
-}
+  package: "egg-validate",
+};
 
 exports.sequelize = {
   enable: true,
-  package: 'egg-sequelize',
-}
+  package: "egg-sequelize",
+};
 
 exports.ejs = {
   enable: true,
-  package: 'egg-view-ejs',
-}
+  package: "egg-view-ejs",
+};

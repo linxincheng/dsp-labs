@@ -9,3 +9,46 @@
 2020-06-02 16:55:49,419 INFO 12800 [egg-watcher] Start watching: "D:\\workspace\\dsp-website\\server\\app.js"
 2020-06-02 16:55:49,419 INFO 12800 [egg-watcher:agent] watcher start success
 2020-06-02 16:55:49,475 INFO 12800 [egg:core] dump config after ready, 3ms
+2020-06-05 19:01:59,124 INFO 7800 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-05 19:01:58,520 INFO 7800 [egg:logger] init all loggers with options: {"dir":"D:\\workspace\\dsp-website\\server\\logs\\server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-06-05 19:01:59,018 INFO 7800 [egg:core] dump config after load, 11ms
+2020-06-05 19:01:59,074 INFO 7800 [egg-watcher] Start watching: ["D:\\workspace\\dsp-website\\server\\app","D:\\workspace\\dsp-website\\server\\config","D:\\workspace\\dsp-website\\server\\mocks","D:\\workspace\\dsp-website\\server\\mocks_proxy","D:\\workspace\\dsp-website\\server\\app.js"]
+2020-06-05 19:01:59,074 INFO 7800 [egg-watcher] Start watching: "D:\\workspace\\dsp-website\\server\\app"
+2020-06-05 19:01:59,074 INFO 7800 [egg-watcher] Start watching: "D:\\workspace\\dsp-website\\server\\config"
+2020-06-05 19:01:59,074 INFO 7800 [egg-watcher] Start watching: "D:\\workspace\\dsp-website\\server\\mocks"
+2020-06-05 19:01:59,075 INFO 7800 [egg-watcher] Start watching: "D:\\workspace\\dsp-website\\server\\mocks_proxy"
+2020-06-05 19:01:59,075 INFO 7800 [egg-watcher] Start watching: "D:\\workspace\\dsp-website\\server\\app.js"
+2020-06-05 19:01:59,075 INFO 7800 [egg-watcher:agent] watcher start success
+2020-06-05 19:01:59,131 INFO 7800 [egg:core] dump config after ready, 3ms
+2020-06-05 19:07:09,431 WARN 7800 [agent:development] reload worker because D:\workspace\dsp-website\server\app\controller\news.js change
+2020-06-05 19:07:09,227 INFO 7800 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"D:\\workspace\\dsp-website\\server\\app\\controller\\news.js","stat":{"dev":517663251,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"ino":844424931386705,"size":2274,"atimeMs":1591355229222.3467,"mtimeMs":1591355229222.3467,"ctimeMs":1591355229222.3467,"birthtimeMs":1590980365162.5608,"atime":"2020-06-05T11:07:09.222Z","mtime":"2020-06-05T11:07:09.222Z","ctime":"2020-06-05T11:07:09.222Z","birthtime":"2020-06-01T02:59:25.163Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-06-05 19:07:09,228 INFO 7800 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"D:\\workspace\\dsp-website\\server\\app\\controller\\news.js","stat":{"dev":517663251,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"ino":844424931386705,"size":2274,"atimeMs":1591355229222.3467,"mtimeMs":1591355229222.3467,"ctimeMs":1591355229222.3467,"birthtimeMs":1590980365162.5608,"atime":"2020-06-05T11:07:09.222Z","mtime":"2020-06-05T11:07:09.222Z","ctime":"2020-06-05T11:07:09.222Z","birthtime":"2020-06-01T02:59:25.163Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-06-05 19:07:09,230 INFO 7800 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"D:\\workspace\\dsp-website\\server\\app\\controller\\news.js","stat":{"dev":517663251,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"ino":844424931386705,"size":2274,"atimeMs":1591355229222.3467,"mtimeMs":1591355229222.3467,"ctimeMs":1591355229222.3467,"birthtimeMs":1590980365162.5608,"atime":"2020-06-05T11:07:09.222Z","mtime":"2020-06-05T11:07:09.222Z","ctime":"2020-06-05T11:07:09.222Z","birthtime":"2020-06-01T02:59:25.163Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-06-05 19:07:11,168 WARN 7800 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2020-06-05 19:10:12,688 INFO 872 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-05 19:10:12,127 INFO 872 [egg:logger] init all loggers with options: {"dir":"D:\\workspace\\dsp-website\\server\\logs\\server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-06-05 19:10:12,576 INFO 872 [egg:core] dump config after load, 5ms
+2020-06-05 19:10:12,635 INFO 872 [egg-watcher] Start watching: ["D:\\workspace\\dsp-website\\server\\app","D:\\workspace\\dsp-website\\server\\config","D:\\workspace\\dsp-website\\server\\mocks","D:\\workspace\\dsp-website\\server\\mocks_proxy","D:\\workspace\\dsp-website\\server\\app.js"]
+2020-06-05 19:10:12,635 INFO 872 [egg-watcher] Start watching: "D:\\workspace\\dsp-website\\server\\app"
+2020-06-05 19:10:12,635 INFO 872 [egg-watcher] Start watching: "D:\\workspace\\dsp-website\\server\\config"
+2020-06-05 19:10:12,635 INFO 872 [egg-watcher] Start watching: "D:\\workspace\\dsp-website\\server\\mocks"
+2020-06-05 19:10:12,636 INFO 872 [egg-watcher] Start watching: "D:\\workspace\\dsp-website\\server\\mocks_proxy"
+2020-06-05 19:10:12,636 INFO 872 [egg-watcher] Start watching: "D:\\workspace\\dsp-website\\server\\app.js"
+2020-06-05 19:10:12,636 INFO 872 [egg-watcher:agent] watcher start success
+2020-06-05 19:10:12,698 INFO 872 [egg:core] dump config after ready, 6ms
+2020-06-05 19:26:07,100 INFO 13568 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-05 19:26:06,670 INFO 13568 [egg:logger] init all loggers with options: {"dir":"D:\\workspace\\dsp-website\\server\\logs\\server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-06-05 19:26:07,019 INFO 13568 [egg:core] dump config after load, 5ms
+2020-06-05 19:26:07,058 INFO 13568 [egg-watcher] Start watching: ["D:\\workspace\\dsp-website\\server\\app","D:\\workspace\\dsp-website\\server\\config","D:\\workspace\\dsp-website\\server\\mocks","D:\\workspace\\dsp-website\\server\\mocks_proxy","D:\\workspace\\dsp-website\\server\\app.js"]
+2020-06-05 19:26:07,058 INFO 13568 [egg-watcher] Start watching: "D:\\workspace\\dsp-website\\server\\app"
+2020-06-05 19:26:07,058 INFO 13568 [egg-watcher] Start watching: "D:\\workspace\\dsp-website\\server\\config"
+2020-06-05 19:26:07,058 INFO 13568 [egg-watcher] Start watching: "D:\\workspace\\dsp-website\\server\\mocks"
+2020-06-05 19:26:07,059 INFO 13568 [egg-watcher] Start watching: "D:\\workspace\\dsp-website\\server\\mocks_proxy"
+2020-06-05 19:26:07,059 INFO 13568 [egg-watcher] Start watching: "D:\\workspace\\dsp-website\\server\\app.js"
+2020-06-05 19:26:07,059 INFO 13568 [egg-watcher:agent] watcher start success
+2020-06-05 19:26:07,107 INFO 13568 [egg:core] dump config after ready, 3ms
+2020-06-05 19:26:25,039 WARN 13568 [agent:development] reload worker because D:\workspace\dsp-website\server\config\config.default.js change
+2020-06-05 19:26:24,835 INFO 13568 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"D:\\workspace\\dsp-website\\server\\config\\config.default.js","stat":{"dev":517663251,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"ino":281474977964422,"size":1170,"atimeMs":1591356384834.2246,"mtimeMs":1591356384834.2246,"ctimeMs":1591356384834.2246,"birthtimeMs":1590978058585.6433,"atime":"2020-06-05T11:26:24.834Z","mtime":"2020-06-05T11:26:24.834Z","ctime":"2020-06-05T11:26:24.834Z","birthtime":"2020-06-01T02:20:58.586Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-06-05 19:26:24,836 INFO 13568 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"D:\\workspace\\dsp-website\\server\\config\\config.default.js","stat":{"dev":517663251,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"ino":281474977964422,"size":1170,"atimeMs":1591356384834.2246,"mtimeMs":1591356384834.2246,"ctimeMs":1591356384834.2246,"birthtimeMs":1590978058585.6433,"atime":"2020-06-05T11:26:24.834Z","mtime":"2020-06-05T11:26:24.834Z","ctime":"2020-06-05T11:26:24.834Z","birthtime":"2020-06-01T02:20:58.586Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-06-05 19:26:24,836 INFO 13568 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"D:\\workspace\\dsp-website\\server\\config\\config.default.js","stat":{"dev":517663251,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"ino":281474977964422,"size":1170,"atimeMs":1591356384834.2246,"mtimeMs":1591356384834.2246,"ctimeMs":1591356384834.2246,"birthtimeMs":1590978058585.6433,"atime":"2020-06-05T11:26:24.834Z","mtime":"2020-06-05T11:26:24.834Z","ctime":"2020-06-05T11:26:24.834Z","birthtime":"2020-06-01T02:20:58.586Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-06-05 19:26:26,648 WARN 13568 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer

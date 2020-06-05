@@ -4,6 +4,7 @@ const { API_ERR } = require("./../common/error");
 class NewsController extends Controller {
   async create() {
     const { ctx } = this;
+    console.log(ctx.request.body);
     const errors = this.app.validator.validate(
       {
         title: "string",

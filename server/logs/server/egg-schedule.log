@@ -4,3 +4,27 @@
 2020-06-02 16:55:50,480 INFO 12176 [egg-schedule]: register schedule D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
 2020-06-02 16:55:50,480 INFO 12176 [egg-schedule]: register schedule D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-logrotator\app\schedule\clean_log.js
 2020-06-02 16:55:50,480 INFO 12176 [egg-schedule]: register schedule D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2020-06-05 19:02:00,202 INFO 16616 [egg-schedule]: register schedule D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2020-06-05 19:02:00,202 INFO 16616 [egg-schedule]: register schedule D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-logrotator\app\schedule\clean_log.js
+2020-06-05 19:02:00,202 INFO 16616 [egg-schedule]: register schedule D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2020-06-05 19:02:00,747 INFO 7800 [Timer] D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 34079255ms at 2020-06-06 04:30:00.002
+2020-06-05 19:02:00,748 INFO 7800 [Timer] D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-logrotator\app\schedule\clean_log.js next time will execute after 17879252ms at 2020-06-06 00:00:00.000
+2020-06-05 19:02:00,748 INFO 7800 [Timer] D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 17880252ms at 2020-06-06 00:00:01.000
+2020-06-05 19:07:10,631 INFO 7172 [egg-schedule]: register schedule D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2020-06-05 19:07:10,631 INFO 7172 [egg-schedule]: register schedule D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-logrotator\app\schedule\clean_log.js
+2020-06-05 19:07:10,631 INFO 7172 [egg-schedule]: register schedule D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2020-06-05 19:10:14,029 INFO 9084 [egg-schedule]: register schedule D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2020-06-05 19:10:14,029 INFO 9084 [egg-schedule]: register schedule D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-logrotator\app\schedule\clean_log.js
+2020-06-05 19:10:14,029 INFO 9084 [egg-schedule]: register schedule D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2020-06-05 19:10:14,516 INFO 872 [Timer] D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 33585487ms at 2020-06-06 04:30:00.003
+2020-06-05 19:10:14,516 INFO 872 [Timer] D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-logrotator\app\schedule\clean_log.js next time will execute after 17385484ms at 2020-06-06 00:00:00.000
+2020-06-05 19:10:14,516 INFO 872 [Timer] D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 17386484ms at 2020-06-06 00:00:01.000
+2020-06-05 19:26:08,666 INFO 13568 [Timer] D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 32631336ms at 2020-06-06 04:30:00.002
+2020-06-05 19:26:08,667 INFO 13568 [Timer] D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-logrotator\app\schedule\clean_log.js next time will execute after 16431334ms at 2020-06-06 00:00:00.001
+2020-06-05 19:26:08,667 INFO 13568 [Timer] D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 16432333ms at 2020-06-06 00:00:01.000
+2020-06-05 19:26:08,154 INFO 15772 [egg-schedule]: register schedule D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2020-06-05 19:26:08,154 INFO 15772 [egg-schedule]: register schedule D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-logrotator\app\schedule\clean_log.js
+2020-06-05 19:26:08,154 INFO 15772 [egg-schedule]: register schedule D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2020-06-05 19:26:26,122 INFO 9176 [egg-schedule]: register schedule D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2020-06-05 19:26:26,122 INFO 9176 [egg-schedule]: register schedule D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-logrotator\app\schedule\clean_log.js
+2020-06-05 19:26:26,122 INFO 9176 [egg-schedule]: register schedule D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js

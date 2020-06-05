@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.a3695eec56585882fa9ada4dba9c221e.js"
+  "precache-manifest.fa6d85ff65c13db4c87af471577f138d.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "dsp-website"});

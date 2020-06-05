@@ -1,12 +1,21 @@
 import Vue from "vue";
 import App from "./App.vue";
-import { Select, Option, Pagination, Message, Loading } from "element-ui";
+import {
+  Select,
+  Option,
+  Pagination,
+  Message,
+  Loading,
+  Dialog,
+  Input,
+  Form,
+  FormItem,
+  Button,
+} from "element-ui";
 // import "./registerServiceWorker";
 import router from "./router";
 import store from "./store";
-import axios from "./axios/http";
 import "./assets/tool/filter";
-import API from "./assets/config/api";
 
 import "./assets/css/reset.scss";
 import "./assets/css/atom.scss";
@@ -21,9 +30,12 @@ Vue.use(Select);
 Vue.use(Option);
 Vue.use(Pagination);
 Vue.use(Loading);
+Vue.use(Dialog);
+Vue.use(Input);
+Vue.use(Form);
+Vue.use(FormItem);
+Vue.use(Button);
 
-Vue.prototype.$axios = axios;
-Vue.prototype.$api = API;
 Vue.prototype.$message = Message;
 
 new Vue({

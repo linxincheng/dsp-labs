@@ -8191,6 +8191,11 @@ vue-class-component@^7.1.0, vue-class-component@^7.2.3:
   resolved "https://registry.npm.taobao.org/vue-class-component/download/vue-class-component-7.2.3.tgz#a5b1abd53513a72ad51098752e2dedd499807cca"
   integrity sha1-pbGr1TUTpyrVEJh1Li3t1JmAfMo=
 
+vue-cropper@^0.5.4:
+  version "0.5.4"
+  resolved "https://registry.npm.taobao.org/vue-cropper/download/vue-cropper-0.5.4.tgz#0db3776894eea8673a3203a1513882a0eb4558ad"
+  integrity sha1-DbN3aJTuqGc6MgOhUTiCoOtFWK0=
+
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
   resolved "https://registry.npm.taobao.org/vue-hot-reload-api/download/vue-hot-reload-api-2.3.4.tgz#532955cc1eb208a3d990b3a9f9a70574657e08f2"
@@ -8249,6 +8254,11 @@ vuex@^3.1.3:
   version "3.4.0"
   resolved "https://registry.npm.taobao.org/vuex/download/vuex-3.4.0.tgz#20cc086062d750769fce1febb34e7fceeaebde45"
   integrity sha1-IMwIYGLXUHafzh/rs05/zurr3kU=
+
+wangeditor@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.npm.taobao.org/wangeditor/download/wangeditor-3.1.1.tgz#fbd3c1d4976923c9edebb85b29d30b35512ad039"
+  integrity sha1-+9PB1JdpI8nt67hbKdMLNVEq0Dk=
 
 watchpack-chokidar2@^2.0.0:
   version "2.0.0"

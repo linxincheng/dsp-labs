@@ -181,8 +181,8 @@ export default class Ethfs extends Vue {
     },
     {
       src: `${process.env.BASE_URL}/img/quanxiankongzhi.svg`,
-      sup: "No Storage",
-      sub: "Fee",
+      sup: "Low",
+      sub: "Storage Costs",
     },
     {
       src: `${process.env.BASE_URL}/img/iconquanxiankongzhi.svg`,

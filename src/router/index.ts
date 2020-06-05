@@ -33,13 +33,10 @@ const routes: Array<RouteConfig> = [
       import(/* webpackChunkName: "about" */ "../views/News.vue"),
   },
   {
-    path: "/test",
-    name: "Test",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+    path: "/publish",
+    name: "Publish",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Test.vue"),
+      import(/* webpackChunkName: "about" */ "../views/Publish.vue"),
   },
   {
     path: "*",
@@ -54,7 +51,7 @@ const router = new VueRouter({
     //to top
     return { x: 0, y: 0 };
   },
-  mode: "hash",
+  mode: "history",
   base: process.env.BASE_URL,
   routes,
 });

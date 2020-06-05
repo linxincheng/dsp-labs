@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="964px" height="1329px" viewBox="0 0 964 1329" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54 (76480) - https://sketchapp.com -->
+    <title>home_white2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="498.006312" y="110.239568" width="567" height="1526" rx="283.5"></rect>
+        <filter x="-15.2%" y="-10.9%" width="160.7%" height="122.1%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="89" dy="3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="41.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.518851902   0 0 0 0 0.518851902   0 0 0 0 0.518851902  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="home1.2" transform="translate(-476.000000, -1181.000000)">
+            <g id="home_white2" transform="translate(371.000000, 894.000000)">
+                <g id="DSP">
+                    <g id="矩形复制-37" transform="translate(781.506312, 873.239568) rotate(50.000000) translate(-781.506312, -873.239568) ">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
