@@ -4,20 +4,17 @@
 
     <NavComponent class="nav-component"></NavComponent>
 
+    <h2>News</h2>
+
     <div class="header-white-wrap">
-      <h2>News</h2>
       <section>
-        <!-- <section class="flex between"> -->
-        <div class="header-content">
-          <img src="../assets/img/new_tuda.png" />
-          <h4>
-            Proof of challenge
+        <div class="header-content" @click="previewNews(news)" v-if="news">
+          <img :src="news.banner" />
+          <h4 :title="news.title">
+            {{ news.title }}
           </h4>
           <p>
-            The data download node initiates the holding challenge of the data
-            to be downloaded as required. The data challenge exists in the form
-            of contract transactions; the storage node drives the submission of
-            the corresponding PDP certificate by monitoring the contract
+            {{ news.main_desc }}
           </p>
         </div>
       </section>
@@ -27,21 +24,48 @@
     <img src="../assets/img/new_cai1.svg" class="new-cai1" />
     <img src="../assets/img/new_xiu1.svg" class="new-xiu1" />
     <img src="../assets/img/new_xian.svg" class="new-xian" />
-    <img src="../assets/img/home_xiu2.svg" class="new-xiu2" />
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import NavComponent from "@/components/NavComponent.vue";
+import axios from "./../axios/http";
+import api from "./../assets/config/api";
 
 @Component({
   components: {
     NavComponent,
   },
 })
-export default class ClassName extends Vue {}
+export default class NewsHeaderComponenet extends Vue {
+  public news: any = null;
+
+  public mounted() {
+    this.getFirstNews();
+  }
+
+  public getFirstNews(): void {
+    axios.get(`${api.getList}/0/1`).then((res: any) => {
+      if (res.error === 0) {
+        if (res.result.total >= 1) {
+          this.news = res.result.list[0];
+        }
+      }
+    });
+  }
+
+  public previewNews(news: any): void {
+    this.$router.push({
+      path: "/article",
+      query: {
+        id: news.id,
+      },
+    });
+  }
+}
 </script>
+
 <style lang="scss" scoped>
 .news-header {
   width: 100%;
@@ -52,33 +76,31 @@ export default class ClassName extends Vue {}
     user-select: none;
   }
 
+  & > h2 {
+    font-size: 12.5vw;
+    color: rgba(47, 147, 255, 1);
+    line-height: 17vw;
+    position: absolute;
+    top: 30vw;
+    left: 12vw;
+    user-select: none;
+  }
+
   .header-white-wrap {
-    width: 61%;
-    // position: absolute;
-    position: relative;
-    // top: 30vw;
-    left: 10vw;
-    margin-top: -35vw;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: -10vw;
     z-index: 9;
 
     @media screen and (max-width: 768px) {
       width: 90%;
-      margin-top: -30vw;
-      left: 5%;
-    }
-
-    & > h2 {
-      font-size: 12.5vw;
-      color: rgba(47, 147, 255, 1);
-      line-height: 17vw;
-      position: relative;
-      top: -8.6vw;
-      left: 1.3vw;
-      user-select: none;
+      margin-top: 0;
     }
 
     & > section {
-      // margin-top: 9vw;
+      position: relative;
+      z-index: 9;
 
       .header-content {
         margin-left: 0;
@@ -89,12 +111,23 @@ export default class ClassName extends Vue {}
           height: 20vw;
           min-width: 140px;
           min-height: 81px;
-          max-width: 420px;
-          max-height: 240px;
+          max-width: 390px;
+          max-height: 225px;
           display: inline-block;
-          margin-right: 10px;
-          margin-bottom: 10px;
+          margin-right: 15px;
+          margin-bottom: 15px;
           user-select: none;
+          border: 1px solid black;
+          border-radius: 10px;
+
+          @media screen and (max-width: 768px) {
+            width: 43.75vw;
+            height: 25vw;
+            min-width: 130px;
+            min-height: 75px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+          }
         }
 
         & > h4 {
@@ -102,7 +135,9 @@ export default class ClassName extends Vue {}
           color: rgba(47, 147, 255, 1);
           line-height: 40px;
           user-select: none;
-
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
           @media screen and (max-width: 768px) {
             font-size: 20px;
           }
@@ -153,12 +188,12 @@ export default class ClassName extends Vue {}
     user-select: none;
   }
 
-  .new-xiu2 {
-    position: absolute;
-    top: 70.2vw;
-    height: 15.5vw;
-    right: 23.4vw;
-    user-select: none;
-  }
+  // .new-xiu2 {
+  //   position: absolute;
+  //   bottom: -10vw;
+  //   height: 155px;
+  //   right: 28.4vw;
+  //   user-select: none;
+  // }
 }
 </style>

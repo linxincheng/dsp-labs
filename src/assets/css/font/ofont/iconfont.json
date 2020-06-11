@@ -6,6 +6,55 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "4118922",
+      "name": "编辑",
+      "font_class": "bianji",
+      "unicode": "e68d",
+      "unicode_decimal": 59021
+    },
+    {
+      "icon_id": "4348462",
+      "name": "预览",
+      "font_class": "preview",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "8127236",
+      "name": "删 除 (1)",
+      "font_class": "delete",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "5437158",
+      "name": "telegram",
+      "font_class": "telegram",
+      "unicode": "e66d",
+      "unicode_decimal": 58989
+    },
+    {
+      "icon_id": "8262529",
+      "name": "medium",
+      "font_class": "medium",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "13487274",
+      "name": "email - fill",
+      "font_class": "email",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "14089449",
+      "name": "推特",
+      "font_class": "tuite",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
       "icon_id": "15099802",
       "name": "tubiao--fs",
       "font_class": "tubiao--fs",
@@ -200,20 +249,6 @@
       "font_class": "icon_reddit",
       "unicode": "e658",
       "unicode_decimal": 58968
-    },
-    {
-      "icon_id": "14867427",
-      "name": "icon_twitter",
-      "font_class": "icon_twitter",
-      "unicode": "e659",
-      "unicode_decimal": 58969
-    },
-    {
-      "icon_id": "14867428",
-      "name": "icon_medium",
-      "font_class": "icon_medium",
-      "unicode": "e65a",
-      "unicode_decimal": 58970
     },
     {
       "icon_id": "14867429",

@@ -17,8 +17,44 @@
       "POST"
     ],
     "paramNames": [],
+    "path": "/v1/news/update",
+    "regexp": "/^\\/v1\\/news\\/update(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "POST"
+    ],
+    "paramNames": [],
     "path": "/v1/news/delete",
     "regexp": "/^\\/v1\\/news\\/delete(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "POST"
+    ],
+    "paramNames": [],
+    "path": "/v1/login",
+    "regexp": "/^\\/v1\\/login(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "POST"
+    ],
+    "paramNames": [],
+    "path": "/v1/logout",
+    "regexp": "/^\\/v1\\/logout(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]
@@ -65,18 +101,18 @@
     ],
     "paramNames": [
       {
-        "name": 0,
+        "name": "id",
         "prefix": "/",
         "delimiter": "/",
         "optional": false,
         "repeat": false,
         "partial": false,
-        "asterisk": true,
-        "pattern": ".*"
+        "asterisk": false,
+        "pattern": "[^\\/]+?"
       }
     ],
-    "path": "/*",
-    "regexp": "/^\\/((?:.*))(?:\\/(?=$))?$/",
+    "path": "/v1/news/getInfo/:id",
+    "regexp": "/^\\/v1\\/news\\/getInfo\\/((?:[^\\/]+?))(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]

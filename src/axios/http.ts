@@ -6,6 +6,7 @@ axios.defaults.timeout = 60000;
 // http requst proxy
 axios.interceptors.request.use(
   (request: any) => {
+    console.log(request);
     return request;
   },
   (error: any) => {

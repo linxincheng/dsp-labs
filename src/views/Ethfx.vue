@@ -221,10 +221,10 @@ export default class Ethfs extends Vue {
 <style lang="scss" scoped>
 .ethfs {
   .ipfslog {
-    width: 160px;
+    width: 190px;
 
     @media screen and (max-width: 768px) {
-      width: 16vw;
+      width: 19vw;
     }
   }
 

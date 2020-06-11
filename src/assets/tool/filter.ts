@@ -1,10 +1,11 @@
 import Vue from "vue";
+import moment from "moment";
 
 const Filters: any = {
-  //   test: (content: number) => {
-  //     let much = (content * 1024) / 1000000000;
-  //     return much;
-  //   },
+  timeFormat: (content: number) => {
+    if (content === undefined) return "";
+    return moment(content * 1000).format("MMM-DD-YYYY");
+  },
 };
 
 for (const key in Filters) {

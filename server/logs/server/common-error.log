@@ -1,84 +1,218 @@
-2020-06-05 19:10:53,226 ERROR 9084 [-/127.0.0.1/-/39ms POST /v1/news/create] nodejs.Error: invalid parameter 'title'
-    at NewsController.create (D:\workspace\dsp-website\server\app\controller\news.js:20:19)
-    at Object.callFn (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-core\lib\utils\index.js:44:21)
-    at Object.classControllerMiddleware (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
-    at Object.callFn (D:\workspace\dsp-website\server\node_modules\egg\node_modules\@eggjs\router\lib\utils.js:12:21)
-    at wrappedController (D:\workspace\dsp-website\server\node_modules\egg\node_modules\@eggjs\router\lib\egg_router.js:322:18)
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa-compose\index.js:44:32)
-    at next (D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa-compose\index.js:45:18)
-    at D:\workspace\dsp-website\server\node_modules\egg\node_modules\@eggjs\router\lib\router.js:190:18
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa-compose\index.js:44:32)
-    at D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa-compose\index.js:36:12
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\@eggjs\router\lib\router.js:195:33)
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa\node_modules\koa-compose\index.js:42:32)
-    at D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-development\app\middleware\egg_loader_trace.js:9:56
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa\node_modules\koa-compose\index.js:42:32)
-    at i18n (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-i18n\app\middleware\i18n.js:13:12)
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa\node_modules\koa-compose\index.js:42:32)
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-security\node_modules\koa-compose\index.js:42:32)
-    at dta (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-security\lib\middlewares\dta.js:12:12)
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-security\node_modules\koa-compose\index.js:42:32)
-    at xframe (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-security\lib\middlewares\xframe.js:7:11)
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-security\node_modules\koa-compose\index.js:42:32)
-    at xssProtection (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-security\lib\middlewares\xssProtection.js:7:11)
-code: 13001
-headers: {"Access-Control-Allow-Origin":"*","vary":"Origin"}
-pid: 9084
+2020-06-08 16:22:34,466 ERROR 13772 [-/::1/-/20ms GET /v1/news/getList/0/2] nodejs.MODULE_NOT_FOUNDError: Cannot find module '../db/level'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:582:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:508:25)
+    at Module.require (internal/modules/cjs/loader.js:637:17)
+    at require (internal/modules/cjs/helpers.js:22:18)
+    at NewsController.get (D:\workspace\dsp-website\server\app\controller\news.js:90:13)
+code: "MODULE_NOT_FOUND"
+name: "MODULE_NOT_FOUNDError"
+pid: 13772
 hostname: linxincheng-windows
 
-2020-06-05 19:11:09,413 ERROR 9084 [-/127.0.0.1/-/44ms POST /v1/news/create] nodejs.Error: invalid parameter 'main'
-    at NewsController.create (D:\workspace\dsp-website\server\app\controller\news.js:20:19)
-    at Object.callFn (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-core\lib\utils\index.js:44:21)
-    at Object.classControllerMiddleware (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
-    at Object.callFn (D:\workspace\dsp-website\server\node_modules\egg\node_modules\@eggjs\router\lib\utils.js:12:21)
-    at wrappedController (D:\workspace\dsp-website\server\node_modules\egg\node_modules\@eggjs\router\lib\egg_router.js:322:18)
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa-compose\index.js:44:32)
-    at next (D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa-compose\index.js:45:18)
-    at D:\workspace\dsp-website\server\node_modules\egg\node_modules\@eggjs\router\lib\router.js:190:18
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa-compose\index.js:44:32)
-    at D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa-compose\index.js:36:12
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\@eggjs\router\lib\router.js:195:33)
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa\node_modules\koa-compose\index.js:42:32)
-    at D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-development\app\middleware\egg_loader_trace.js:9:56
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa\node_modules\koa-compose\index.js:42:32)
-    at i18n (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-i18n\app\middleware\i18n.js:13:12)
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa\node_modules\koa-compose\index.js:42:32)
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-security\node_modules\koa-compose\index.js:42:32)
-    at dta (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-security\lib\middlewares\dta.js:12:12)
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-security\node_modules\koa-compose\index.js:42:32)
-    at xframe (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-security\lib\middlewares\xframe.js:7:11)
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-security\node_modules\koa-compose\index.js:42:32)
-    at xssProtection (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-security\lib\middlewares\xssProtection.js:7:11)
-code: 13001
-headers: {"Access-Control-Allow-Origin":"*","vary":"Origin"}
-pid: 9084
+2020-06-08 16:28:59,060 ERROR 13772 nodejs.unhandledRejectionError: undefined
+    at Application._unhandledRejectionHandler (D:\workspace\dsp-website\server\node_modules\egg\lib\egg.js:344:24)
+    at process.emit (events.js:189:13)
+    at emitPromiseRejectionWarnings (internal/process/promises.js:119:20)
+    at process._tickCallback (internal/process/next_tick.js:69:34)
+name: "unhandledRejectionError"
+pid: 13772
 hostname: linxincheng-windows
 
-2020-06-05 19:11:26,683 ERROR 9084 [-/127.0.0.1/-/68ms POST /v1/news/create] nodejs.Error: invalid parameter 'main'
-    at NewsController.create (D:\workspace\dsp-website\server\app\controller\news.js:20:19)
-    at Object.callFn (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-core\lib\utils\index.js:44:21)
-    at Object.classControllerMiddleware (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
-    at Object.callFn (D:\workspace\dsp-website\server\node_modules\egg\node_modules\@eggjs\router\lib\utils.js:12:21)
-    at wrappedController (D:\workspace\dsp-website\server\node_modules\egg\node_modules\@eggjs\router\lib\egg_router.js:322:18)
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa-compose\index.js:44:32)
-    at next (D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa-compose\index.js:45:18)
-    at D:\workspace\dsp-website\server\node_modules\egg\node_modules\@eggjs\router\lib\router.js:190:18
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa-compose\index.js:44:32)
-    at D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa-compose\index.js:36:12
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\@eggjs\router\lib\router.js:195:33)
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa\node_modules\koa-compose\index.js:42:32)
-    at D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-development\app\middleware\egg_loader_trace.js:9:56
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa\node_modules\koa-compose\index.js:42:32)
-    at i18n (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-i18n\app\middleware\i18n.js:13:12)
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa\node_modules\koa-compose\index.js:42:32)
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-security\node_modules\koa-compose\index.js:42:32)
-    at dta (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-security\lib\middlewares\dta.js:12:12)
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-security\node_modules\koa-compose\index.js:42:32)
-    at xframe (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-security\lib\middlewares\xframe.js:7:11)
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-security\node_modules\koa-compose\index.js:42:32)
-    at xssProtection (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-security\lib\middlewares\xssProtection.js:7:11)
-code: 13001
-headers: {"Access-Control-Allow-Origin":"*","vary":"Origin"}
-pid: 9084
+2020-06-08 16:29:01,073 ERROR 16976 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:111:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 16976
+hostname: linxincheng-windows
+
+2020-06-08 16:29:15,351 ERROR 8884 nodejs.unhandledRejectionError: undefined
+    at Application._unhandledRejectionHandler (D:\workspace\dsp-website\server\node_modules\egg\lib\egg.js:344:24)
+    at process.emit (events.js:189:13)
+    at emitPromiseRejectionWarnings (internal/process/promises.js:119:20)
+    at process._tickCallback (internal/process/next_tick.js:69:34)
+name: "unhandledRejectionError"
+pid: 8884
+hostname: linxincheng-windows
+
+2020-06-09 10:20:48,083 ERROR 7180 nodejs.unhandledRejectionError: undefined
+    at Application._unhandledRejectionHandler (D:\workspace\dsp-website\server\node_modules\egg\lib\egg.js:344:24)
+    at process.emit (events.js:189:13)
+    at emitPromiseRejectionWarnings (internal/process/promises.js:119:20)
+    at process._tickCallback (internal/process/next_tick.js:69:34)
+name: "unhandledRejectionError"
+pid: 7180
+hostname: linxincheng-windows
+
+2020-06-09 10:20:51,480 ERROR 16132 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:111:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 16132
+hostname: linxincheng-windows
+
+2020-06-09 10:20:53,460 ERROR 16132 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:111:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 16132
+hostname: linxincheng-windows
+
+2020-06-09 10:20:55,285 ERROR 16132 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:111:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 16132
+hostname: linxincheng-windows
+
+2020-06-09 10:20:57,208 ERROR 9744 nodejs.unhandledRejectionError: undefined
+    at Application._unhandledRejectionHandler (D:\workspace\dsp-website\server\node_modules\egg\lib\egg.js:344:24)
+    at process.emit (events.js:189:13)
+    at emitPromiseRejectionWarnings (internal/process/promises.js:119:20)
+    at process._tickCallback (internal/process/next_tick.js:69:34)
+name: "unhandledRejectionError"
+pid: 9744
+hostname: linxincheng-windows
+
+2020-06-09 10:20:58,923 ERROR 16132 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:111:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 16132
+hostname: linxincheng-windows
+
+2020-06-09 10:21:00,784 ERROR 12504 nodejs.unhandledRejectionError: undefined
+    at Application._unhandledRejectionHandler (D:\workspace\dsp-website\server\node_modules\egg\lib\egg.js:344:24)
+    at process.emit (events.js:189:13)
+    at emitPromiseRejectionWarnings (internal/process/promises.js:119:20)
+    at process._tickCallback (internal/process/next_tick.js:69:34)
+name: "unhandledRejectionError"
+pid: 12504
+hostname: linxincheng-windows
+
+2020-06-09 10:21:02,472 ERROR 16132 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:111:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 16132
+hostname: linxincheng-windows
+
+2020-06-09 10:21:04,314 ERROR 10056 nodejs.unhandledRejectionError: undefined
+    at Application._unhandledRejectionHandler (D:\workspace\dsp-website\server\node_modules\egg\lib\egg.js:344:24)
+    at process.emit (events.js:189:13)
+    at emitPromiseRejectionWarnings (internal/process/promises.js:119:20)
+    at process._tickCallback (internal/process/next_tick.js:69:34)
+name: "unhandledRejectionError"
+pid: 10056
+hostname: linxincheng-windows
+
+2020-06-09 10:21:07,726 ERROR 14888 nodejs.unhandledRejectionError: undefined
+    at Application._unhandledRejectionHandler (D:\workspace\dsp-website\server\node_modules\egg\lib\egg.js:344:24)
+    at process.emit (events.js:189:13)
+    at emitPromiseRejectionWarnings (internal/process/promises.js:119:20)
+    at process._tickCallback (internal/process/next_tick.js:69:34)
+name: "unhandledRejectionError"
+pid: 14888
+hostname: linxincheng-windows
+
+2020-06-09 10:21:11,176 ERROR 8332 nodejs.unhandledRejectionError: undefined
+    at Application._unhandledRejectionHandler (D:\workspace\dsp-website\server\node_modules\egg\lib\egg.js:344:24)
+    at process.emit (events.js:189:13)
+    at emitPromiseRejectionWarnings (internal/process/promises.js:119:20)
+    at process._tickCallback (internal/process/next_tick.js:69:34)
+name: "unhandledRejectionError"
+pid: 8332
+hostname: linxincheng-windows
+
+2020-06-09 10:21:12,875 ERROR 16132 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:111:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 16132
+hostname: linxincheng-windows
+
+2020-06-10 10:06:40,470 ERROR 8160 nodejs.unhandledRejectionError: undefined
+    at Application._unhandledRejectionHandler (D:\workspace\dsp-website\server\node_modules\egg\lib\egg.js:344:24)
+    at process.emit (events.js:189:13)
+    at emitPromiseRejectionWarnings (internal/process/promises.js:119:20)
+    at process._tickCallback (internal/process/next_tick.js:69:34)
+name: "unhandledRejectionError"
+pid: 8160
+hostname: linxincheng-windows
+
+2020-06-10 10:06:44,030 ERROR 2504 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:111:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 2504
+hostname: linxincheng-windows
+
+2020-06-10 10:06:44,090 ERROR 15824 nodejs.unhandledRejectionError: undefined
+    at Application._unhandledRejectionHandler (D:\workspace\dsp-website\server\node_modules\egg\lib\egg.js:344:24)
+    at process.emit (events.js:189:13)
+    at emitPromiseRejectionWarnings (internal/process/promises.js:119:20)
+    at process._tickCallback (internal/process/next_tick.js:69:34)
+name: "unhandledRejectionError"
+pid: 15824
+hostname: linxincheng-windows
+
+2020-06-10 10:06:47,628 ERROR 7404 nodejs.unhandledRejectionError: undefined
+    at Application._unhandledRejectionHandler (D:\workspace\dsp-website\server\node_modules\egg\lib\egg.js:344:24)
+    at process.emit (events.js:189:13)
+    at emitPromiseRejectionWarnings (internal/process/promises.js:119:20)
+    at process._tickCallback (internal/process/next_tick.js:69:34)
+name: "unhandledRejectionError"
+pid: 7404
+hostname: linxincheng-windows
+
+2020-06-10 10:06:51,174 ERROR 14872 nodejs.unhandledRejectionError: undefined
+    at Application._unhandledRejectionHandler (D:\workspace\dsp-website\server\node_modules\egg\lib\egg.js:344:24)
+    at process.emit (events.js:189:13)
+    at emitPromiseRejectionWarnings (internal/process/promises.js:119:20)
+    at process._tickCallback (internal/process/next_tick.js:69:34)
+name: "unhandledRejectionError"
+pid: 14872
+hostname: linxincheng-windows
+
+2020-06-10 10:06:55,200 ERROR 2504 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:111:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 2504
+hostname: linxincheng-windows
+
+2020-06-10 10:06:55,270 ERROR 13144 nodejs.unhandledRejectionError: undefined
+    at Application._unhandledRejectionHandler (D:\workspace\dsp-website\server\node_modules\egg\lib\egg.js:344:24)
+    at process.emit (events.js:189:13)
+    at emitPromiseRejectionWarnings (internal/process/promises.js:119:20)
+    at process._tickCallback (internal/process/next_tick.js:69:34)
+name: "unhandledRejectionError"
+pid: 13144
+hostname: linxincheng-windows
+
+2020-06-10 10:06:57,479 ERROR 2504 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:111:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 2504
 hostname: linxincheng-windows
 

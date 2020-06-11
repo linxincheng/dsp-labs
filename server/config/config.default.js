@@ -10,19 +10,25 @@ module.exports = (appInfo) => {
       enable: false,
     },
   };
+
   config.cors = {
     origin: "*",
     allowMethods: "GET,HEAD,PUT,POST,DELETE",
   };
 
   // sql orm
-  config.sequelize = {
-    dialect: "mysql",
-    host: "127.0.0.1",
-    port: 3306,
-    database: "dsp-website",
-    username: "root",
-    password: "root",
+  // config.sequelize = {
+  //   dialect: "mysql",
+  //   host: "127.0.0.1",
+  //   port: 3306,
+  //   database: "dsp-website",
+  //   username: "root",
+  //   password: "root",
+  // };
+
+  config.bodyParser = {
+    jsonLimit: "100mb",
+    formLimit: "100mb",
   };
 
   config.onerror = {
@@ -37,24 +43,23 @@ module.exports = (appInfo) => {
       console.log("json err", err.message, err.code);
       // json hander
       ctx.body = {
-        status: "failed",
-        code: err.code,
-        msg: err.message,
+        error: err.code,
+        desc: err.message,
       };
       ctx.status = 200;
     },
   };
-  config.static = {
-    prefix: "/",
-    dir: path.join(appInfo.baseDir, "app/view/"),
-  };
-  config.view = {
-    defaultExt: ".html",
-    mapping: {
-      ".ejs": "ejs",
-      ".html": "ejs",
-    },
-  };
+  // config.static = {
+  //   prefix: "/",
+  //   dir: path.join(appInfo.baseDir, "app/view/"),
+  // };
+  // config.view = {
+  //   defaultExt: ".html",
+  //   mapping: {
+  //     ".ejs": "ejs",
+  //     ".html": "ejs",
+  //   },
+  // };
 
   return config;
 };

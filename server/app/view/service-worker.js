@@ -14,10 +14,10 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.fa6d85ff65c13db4c87af471577f138d.js"
+  "precache-manifest.d2a195ec1188bd9cc2ed38c9cc9413b5.js"
 );
 
-workbox.core.setCacheNameDetails({prefix: "dsp-website"});
+workbox.core.setCacheNameDetails({prefix: "dsplabs"});
 
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {

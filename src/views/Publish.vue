@@ -5,7 +5,7 @@
       class="public-form"
       max-width="400"
       :model="form"
-      label-width="120px"
+      label-width="80px"
     >
       <el-form-item label="Title" prop="title">
         <el-input v-model="form.title"></el-input>
@@ -24,7 +24,6 @@
             />
             <div class="flex ai-center jc-center" v-else>
               +
-              <!-- <i class="iconfont icon-tianjia"></i> -->
             </div>
           </label>
         </div>
@@ -39,8 +38,10 @@
         <div class="public-editor" id="editor"></div>
       </el-form-item>
     </el-form>
-    <el-button @click="pulishNews">confirm</el-button>
-    <el-button>reset</el-button>
+    <el-button @click="pulishNews" type="primary" v-if="!id">publish</el-button>
+    <el-button @click="editNews" type="primary" v-else>update</el-button>
+    <el-button @click="resetNews">reset</el-button>
+    <el-button @click="back">back</el-button>
   </div>
 </template>
 
@@ -51,6 +52,7 @@ import axios from "./../axios/http";
 import api from "./../assets/config/api";
 
 export default {
+  name: "Publish",
   components: {
     imageCut,
   },
@@ -69,8 +71,10 @@ export default {
         auther: "",
       },
       dialogVisible: false,
-      fileSrc: "",
       editor: null,
+      id: "",
+      publishAt: 0,
+      loadingObj: null,
     };
   },
   methods: {
@@ -81,8 +85,7 @@ export default {
       // this.option.img
       var file = e.target.files[0];
       if (!/\.(gif|jpg|jpeg|png|bmp|GIF|JPG|PNG)$/.test(e.target.value)) {
-        console.dir(this);
-        this.$msg.error("图片类型必须是.gif,jpeg,jpg,png,bmp中的一种");
+        this.$message.error("image typemust be .gif,jpeg,jpg,png,bmp中的一种");
         return false;
       }
       var reader = new FileReader();
@@ -97,15 +100,84 @@ export default {
       e.target.value = "";
     },
     pulishNews() {
+      const vm = this;
       let _desc = this.editor.txt.text();
-      console.log(_desc);
       let params = Object.assign(this.form, {
         main: this.editor.txt.html(),
         main_desc: _desc.slice(0, 100),
       });
-      console.log(params);
-      axios.post(api.create, params).then((data) => {
-        console.log(data);
+      this.loadingObj = this.$loading({
+        target: ".publish",
+        text: "Loading...",
+        lock: true,
+      });
+      axios
+        .post(api.create, params)
+        .then((res) => {
+          if (res.error === 0) {
+            this.$message.success("publish news success!!!");
+            this.resetNews();
+          } else {
+            this.$message.error("pulish failed!!!");
+          }
+        })
+        .finally(() => {
+          vm.loadingObj && vm.loadingObj.close();
+        });
+    },
+    editNews() {
+      const vm = this;
+      let _desc = this.editor.txt.text();
+      let params = Object.assign(this.form, {
+        main: this.editor.txt.html(),
+        main_desc: _desc.slice(0, 100),
+        id: vm.id,
+        publish_at: vm.publishAt,
+      });
+      this.loadingObj = this.$loading({
+        target: ".publish",
+        text: "Loading...",
+        lock: true,
+      });
+      axios
+        .post(api.update, params)
+        .then((res) => {
+          if (res.error === 0) {
+            this.$message.success("update news success!!!");
+            this.resetNews();
+          } else {
+            this.$message.error("edit failed!!!");
+          }
+        })
+        .finally(() => {
+          vm.loadingObj && vm.loadingObj.close();
+        });
+    },
+    resetNews() {
+      if (this.id) {
+        axios.get(`${api.getInfoById}/${this.id}`).then((res) => {
+          if (res.error === 0) {
+            this.form = {
+              title: res.result.title,
+              banner: res.result.banner,
+              auther: res.result.auther,
+            };
+            this.editor.txt.html(res.result.main);
+            this.publishAt = res.result.publish_at;
+          }
+        });
+      } else {
+        this.form = {
+          title: "",
+          banner: "",
+          auther: "",
+        };
+        this.editor.txt.clear();
+      }
+    },
+    back() {
+      this.$router.push({
+        path: "/edit",
       });
     },
   },
@@ -113,14 +185,20 @@ export default {
     this.editor = new E("#editor");
     this.editor.customConfig.uploadImgShowBase64 = true;
     this.editor.create();
+    this.id = this.$router.currentRoute.query.id;
+    this.resetNews();
   },
 };
 </script>
+
 <style lang="scss" scoped="this api replaced by slot-scope in 2.5.0+">
 .publish {
+  padding: 20px;
+  max-width: 1200px;
+
   .movie-pic {
-    width: 138px;
-    height: 138px;
+    width: 260px;
+    height: 150px;
     display: inline-block;
     border-radius: 4px;
     border: 1px solid #a6a6a6;

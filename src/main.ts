@@ -29,7 +29,6 @@ Vue.config.productionTip = false;
 Vue.use(Select);
 Vue.use(Option);
 Vue.use(Pagination);
-Vue.use(Loading);
 Vue.use(Dialog);
 Vue.use(Input);
 Vue.use(Form);
@@ -37,6 +36,7 @@ Vue.use(FormItem);
 Vue.use(Button);
 
 Vue.prototype.$message = Message;
+Vue.prototype.$loading = Loading.service;
 
 new Vue({
   router,

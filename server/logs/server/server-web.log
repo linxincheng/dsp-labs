@@ -1,98 +1,99 @@
-2020-06-02 16:55:50,944 INFO 12176 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
-2020-06-05 19:02:00,733 INFO 16616 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
-2020-06-05 19:07:11,155 INFO 7172 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
-2020-06-05 19:10:14,496 INFO 9084 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
-2020-06-05 19:10:53,246 ERROR 9084 [-/127.0.0.1/-/39ms POST /v1/news/create] nodejs.Error: invalid parameter 'title'
-    at NewsController.create (D:\workspace\dsp-website\server\app\controller\news.js:20:19)
-    at Object.callFn (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-core\lib\utils\index.js:44:21)
-    at Object.classControllerMiddleware (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
-    at Object.callFn (D:\workspace\dsp-website\server\node_modules\egg\node_modules\@eggjs\router\lib\utils.js:12:21)
-    at wrappedController (D:\workspace\dsp-website\server\node_modules\egg\node_modules\@eggjs\router\lib\egg_router.js:322:18)
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa-compose\index.js:44:32)
-    at next (D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa-compose\index.js:45:18)
-    at D:\workspace\dsp-website\server\node_modules\egg\node_modules\@eggjs\router\lib\router.js:190:18
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa-compose\index.js:44:32)
-    at D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa-compose\index.js:36:12
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\@eggjs\router\lib\router.js:195:33)
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa\node_modules\koa-compose\index.js:42:32)
-    at D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-development\app\middleware\egg_loader_trace.js:9:56
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa\node_modules\koa-compose\index.js:42:32)
-    at i18n (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-i18n\app\middleware\i18n.js:13:12)
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa\node_modules\koa-compose\index.js:42:32)
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-security\node_modules\koa-compose\index.js:42:32)
-    at dta (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-security\lib\middlewares\dta.js:12:12)
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-security\node_modules\koa-compose\index.js:42:32)
-    at xframe (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-security\lib\middlewares\xframe.js:7:11)
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-security\node_modules\koa-compose\index.js:42:32)
-    at xssProtection (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-security\lib\middlewares\xssProtection.js:7:11)
-code: 13001
-headers: {"Access-Control-Allow-Origin":"*","vary":"Origin"}
-pid: 9084
+2020-06-08 14:55:32,767 INFO 15936 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 14:55:42,861 INFO 16948 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 14:56:48,541 INFO 10924 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 14:57:40,734 INFO 6948 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 14:58:00,717 INFO 7980 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 14:58:55,569 INFO 2460 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:01:58,628 INFO 7820 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:02:13,692 INFO 1612 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:05:59,609 INFO 5352 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:12:28,607 INFO 15732 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:12:35,705 INFO 7712 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:12:39,059 INFO 2480 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:13:00,644 INFO 14912 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:13:31,561 INFO 6276 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:13:42,052 INFO 12528 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:14:29,006 INFO 1800 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:14:31,833 INFO 3692 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:14:33,732 INFO 18196 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:14:35,763 INFO 14024 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:14:37,723 INFO 10924 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:14:49,990 INFO 11556 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:14:51,147 INFO 3616 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:17:29,202 INFO 18136 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:18:01,203 INFO 6044 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:18:41,426 INFO 6196 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:18:50,714 INFO 12524 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:18:52,348 INFO 1344 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:18:54,305 INFO 5972 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:26:09,688 INFO 13908 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:27:15,102 INFO 1336 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:27:19,537 INFO 2660 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:27:24,353 INFO 128 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:27:41,596 INFO 9416 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:27:52,704 INFO 16264 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:30:26,548 INFO 12852 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:30:28,218 INFO 1344 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:30:30,140 INFO 5004 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:30:32,154 INFO 12824 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:30:33,893 INFO 13440 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:30:35,697 INFO 11108 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:30:37,390 INFO 1376 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:30:39,122 INFO 9984 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:30:40,968 INFO 1856 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:30:42,837 INFO 9448 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:30:44,668 INFO 14668 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:30:46,381 INFO 14664 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:30:48,209 INFO 10692 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:30:49,914 INFO 10308 [egg-sequelize](2ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:30:51,987 INFO 6032 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:30:53,738 INFO 18056 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:50:42,190 INFO 2028 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:22:11,749 INFO 13772 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:22:34,462 INFO 13772 [egg-sequelize](2ms) Executed (default): SELECT `id`, `title`, `auther`, `main_desc`, `main`, `banner`, `created_at`, `updated_at` FROM `news` AS `news`;
+2020-06-08 16:22:34,474 ERROR 13772 [-/::1/-/20ms GET /v1/news/getList/0/2] nodejs.MODULE_NOT_FOUNDError: Cannot find module '../db/level'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:582:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:508:25)
+    at Module.require (internal/modules/cjs/loader.js:637:17)
+    at require (internal/modules/cjs/helpers.js:22:18)
+    at NewsController.get (D:\workspace\dsp-website\server\app\controller\news.js:90:13)
+code: "MODULE_NOT_FOUND"
+name: "MODULE_NOT_FOUNDError"
+pid: 13772
 hostname: linxincheng-windows
 
-2020-06-05 19:11:09,430 ERROR 9084 [-/127.0.0.1/-/44ms POST /v1/news/create] nodejs.Error: invalid parameter 'main'
-    at NewsController.create (D:\workspace\dsp-website\server\app\controller\news.js:20:19)
-    at Object.callFn (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-core\lib\utils\index.js:44:21)
-    at Object.classControllerMiddleware (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
-    at Object.callFn (D:\workspace\dsp-website\server\node_modules\egg\node_modules\@eggjs\router\lib\utils.js:12:21)
-    at wrappedController (D:\workspace\dsp-website\server\node_modules\egg\node_modules\@eggjs\router\lib\egg_router.js:322:18)
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa-compose\index.js:44:32)
-    at next (D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa-compose\index.js:45:18)
-    at D:\workspace\dsp-website\server\node_modules\egg\node_modules\@eggjs\router\lib\router.js:190:18
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa-compose\index.js:44:32)
-    at D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa-compose\index.js:36:12
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\@eggjs\router\lib\router.js:195:33)
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa\node_modules\koa-compose\index.js:42:32)
-    at D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-development\app\middleware\egg_loader_trace.js:9:56
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa\node_modules\koa-compose\index.js:42:32)
-    at i18n (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-i18n\app\middleware\i18n.js:13:12)
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa\node_modules\koa-compose\index.js:42:32)
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-security\node_modules\koa-compose\index.js:42:32)
-    at dta (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-security\lib\middlewares\dta.js:12:12)
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-security\node_modules\koa-compose\index.js:42:32)
-    at xframe (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-security\lib\middlewares\xframe.js:7:11)
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-security\node_modules\koa-compose\index.js:42:32)
-    at xssProtection (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-security\lib\middlewares\xssProtection.js:7:11)
-code: 13001
-headers: {"Access-Control-Allow-Origin":"*","vary":"Origin"}
-pid: 9084
-hostname: linxincheng-windows
-
-2020-06-05 19:11:26,713 ERROR 9084 [-/127.0.0.1/-/68ms POST /v1/news/create] nodejs.Error: invalid parameter 'main'
-    at NewsController.create (D:\workspace\dsp-website\server\app\controller\news.js:20:19)
-    at Object.callFn (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-core\lib\utils\index.js:44:21)
-    at Object.classControllerMiddleware (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
-    at Object.callFn (D:\workspace\dsp-website\server\node_modules\egg\node_modules\@eggjs\router\lib\utils.js:12:21)
-    at wrappedController (D:\workspace\dsp-website\server\node_modules\egg\node_modules\@eggjs\router\lib\egg_router.js:322:18)
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa-compose\index.js:44:32)
-    at next (D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa-compose\index.js:45:18)
-    at D:\workspace\dsp-website\server\node_modules\egg\node_modules\@eggjs\router\lib\router.js:190:18
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa-compose\index.js:44:32)
-    at D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa-compose\index.js:36:12
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\@eggjs\router\lib\router.js:195:33)
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa\node_modules\koa-compose\index.js:42:32)
-    at D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-development\app\middleware\egg_loader_trace.js:9:56
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa\node_modules\koa-compose\index.js:42:32)
-    at i18n (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-i18n\app\middleware\i18n.js:13:12)
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\koa\node_modules\koa-compose\index.js:42:32)
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-security\node_modules\koa-compose\index.js:42:32)
-    at dta (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-security\lib\middlewares\dta.js:12:12)
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-security\node_modules\koa-compose\index.js:42:32)
-    at xframe (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-security\lib\middlewares\xframe.js:7:11)
-    at dispatch (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-security\node_modules\koa-compose\index.js:42:32)
-    at xssProtection (D:\workspace\dsp-website\server\node_modules\egg\node_modules\egg-security\lib\middlewares\xssProtection.js:7:11)
-code: 13001
-headers: {"Access-Control-Allow-Origin":"*","vary":"Origin"}
-pid: 9084
-hostname: linxincheng-windows
-
-2020-06-05 19:11:42,550 INFO 9084 [egg-sequelize](0ms) Executed (b0086fdc-9339-41a1-8534-0fd4d62ede77): START TRANSACTION;
-2020-06-05 19:11:42,570 INFO 9084 [egg-sequelize](2ms) Executed (b0086fdc-9339-41a1-8534-0fd4d62ede77): SELECT `id`, `title`, `auther`, `main_desc`, `main`, `banner`, `created_at`, `updated_at` FROM `news` AS `news` WHERE `news`.`id` = '55e91410-a71d-11ea-8a1a-6d192ee0920d';
-2020-06-05 19:11:42,589 INFO 9084 [egg-sequelize](2ms) Executed (b0086fdc-9339-41a1-8534-0fd4d62ede77): INSERT INTO `news` (`id`,`title`,`auther`,`main_desc`,`main`,`banner`,`created_at`,`updated_at`) VALUES ('55e91410-a71d-11ea-8a1a-6d192ee0920d','12','123','123213','<p>123213</p>','data:image/png;base64,AAABAAIAEBAAAAEAIABoBAAAJgAAACAgAAABACAAqBAAAI4EAAAoAAAAEAAAACAAAAABACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANifSBTYn0hu2J9IsNifSNDYn0jQ2J9IrtifSGrYn0gQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA2J9IAtifSG7Ynkjy155I/9eeSP/Xnkj/155I/9eeSP/Xnkj/2J5I7tifSGTYn0gCAAAAAAAAAAAAAAAA2J9IAtifSJjXnkf/155I/9eeR//Xnkj/155H/9eeSP/Xnkf/155I/9eeR//Xnkj/2J9IjNigSAIAAAAAAAAAANifSHDXnkj/155I/9eeSP/Xnkj/2J9I/9qlVP/Zok3/155I/9eeSP/Xnkj/2J9I/9eeSP/Yn0hkAAAAANifSBbYnkj0155I/9eeR//Yn0j/5sON//ry5//+/v7//v38//PiyP/dq2D/5b+G/+G2df/Xnkf/2J5I7tifSBDYn0h2155I/9eeSP/Xnkj/6cmZ//7+/v/+/v7//v7+//7+/v/+/fv/8d7A//79/P/iuHf/155I/9eeSP/Yn0hq2J9IuteeR//Xnkj/2qVU//379//+/v7//v7+//7+/v/+/fv/8t/C//79/P/+/v7/4rh3/9eeR//Xnkj/2J9IrtifSNrXnkj/155I/+O6fP/+/v7//v7+//7+/v/+/fv/8t/C//79/P/+/v7//v7+/+K4d//Xnkj/155I/9ifSNDYn0jc155H/9eeSP/kvoT//v7+//7+/v/+/fv/8t/C//79/P/+/v7//v7+//7+/v/gtHD/155H/9eeSP/Yn0jQ2J9IvNeeSP/Xnkj/5L6E//7+/v/+/fv/8t/C//79/P/+/v7//v7+//7+/v/8+fP/2aJO/9eeSP/Xnkj/2J9IsNifSHrXnkf/155I/+S+hP/+/fv/8d7C//79/P/+/v7//v7+//7+/v/+/v7/6MaT/9eeSP/Xnkf/155I/9ifSG7Yn0ga2J5I9teeSP/kvYH/5L6D/9+ybf/26tf//v7+//7+/v/69Ov/5sOO/9eeSP/Xnkj/155I/9ieSPLYn0gUAAAAANifSHjXnkj/2J9J/9eeSP/Xnkf/155I/9umVv/cql3/2J9J/9eeSP/Xnkf/155I/9eeR//Yn0huAAAAAAAAAADYn0gC2J9IoteeSP/Xnkj/155I/9eeSP/Xnkj/155I/9eeSP/Xnkj/155I/9eeSP/Yn0iY2J9IAgAAAAAAAAAAAAAAANifSALYn0h42J5I9teeR//Xnkj/155H/9eeSP/Xnkf/155I/9ieSPTYn0hw2J9IAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANifSBrYn0h62J9IvNifSNzYn0jc2J9IutifSHbYn0gWAAAAAAAAAAAAAAAAAAAAAPw/AADwDwAAwAMAAMADAACAAQAAgAEAAAAAAAAAAAAAAAAAAAAAAACAAQAAgAEAAMADAADAAwAA8A8AAPw/AAAoAAAAIAAAAEAAAAABACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADYn0gO2J9IStifSHrYn0ia2J9IqNifSKjYn0iY2J9IdtifSETYn0gKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANifSALYn0hK2J9IstifSPjYnkj/155H/9ieSP/Ynkj/2J5I/9eeR//Ynkj/2J5I/9ifSPbYn0io2J9IPtmfSQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADYn0g22J9IyNieR//Ynkf/2J5H/9ieR//Ynkf/2J5H/9ieR//Ynkf/2J5H/9ieR//Ynkf/2J5H/9ieR//Ynkj/2J9IvNifSCwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADYn0gE2J9IgNifSPzYnkj/2J5H/9ieSP/Ynkj/2J5I/9ieR//Ynkj/2J5I/9ieSP/Ynkf/2J5I/9ieSP/Ynkj/2J5H/9ieSP/Ynkj/2J9I+NifSG7Yn0gCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA2J9ICNifSKzYnkj/2J5I/9ieSP/Ynkj/2J5I/9ieSP/Ynkj/2J5I/9ieSP/Ynkj/2J5I/9ieSP/Ynkj/2J5I/9ieSP/Ynkj/2J5I/9ieSP/Ynkj/2J5I/9ifSJjYn0gEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANifSATYn0iu155H/9ieSP/Ynkj/2J5I/9eeR//Ynkj/2J5I/9ieSP/Xnkf/2J5I/9ieSP/Ynkj/155H/9ieSP/Ynkj/2J5I/9eeR//Ynkj/2J5I/9ieSP/Xnkf/2J5I/9ifSJjYoEgCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA2J9IhtieR//Ynkf/2J5H/9ieR//Ynkf/2J5H/9ieR//Ynkf/2J5H/9ieR//Ynkf/2J5H/9ieR//Ynkf/2J5H/9ieR//Ynkf/2J5H/9ieR//Ynkf/2J5H/9ieR//Ynkf/2J5H/9ifSG4AAAAAAAAAAAAAAAAAAAAAAAAAANifSD7Yn0j/2J5I/9ieR//Ynkj/2J5I/9ieSP/Ynkf/2J5I/9ieSP/Ynkj/2J9I/9ypW//er2f/3Kpe/9ifSf/Ynkj/2J5I/9ieSP/Ynkf/2J5I/9ieSP/YoEr/2J5H/9ieSP/Ynkj/2J9I+NifSCwAAAAAAAAAAAAAAADYn0gE2J9I0tieSP/Ynkj/2J5I/9ieSP/Ynkj/2J5I/9ieSP/Ynkj/3atf/+7Wsv/79u7//v7+//7+/v/+/v7//Pjz//Dbu//fsGn/2J5I/9ieSP/Ynkj/4LNv/+rLnP/Ynkj/2J5I/9ieSP/Ynkj/2J9IvNmhSQIAAAAAAAAAANifSFbYnkj/2J5I/9ieSP/Xnkf/2J5I/9ieSP/Ynkj/2J9I/+jHlf/9+/n//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//79/P/s0aj/2J9J/+Czb//8+fT/7NGn/9eeR//Ynkj/2J5I/9ieSP/Ynkj/2J9IPgAAAAAAAAAA2J9IwNieR//Ynkf/2J5H/9ieR//Ynkf/2J5H/9ieR//rzqL//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//z38f/lwIj//Pn0//7+/v/s0af/2J5H/9ieR//Ynkf/2J5H/9ieR//Yn0ioAAAAANifSBrYn0j/2J5I/9ieSP/Ynkj/2J5H/9ieSP/Ynkj/47p8//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/89/H/58aS//z59P/+/v7//v7+/+zRp//Ynkf/2J5I/9ieSP/Ynkj/2J5H/9ifSPbYn0gK2J9IXNieSP/Ynkj/2J5I/9ieSP/Ynkj/2J5I/9ifSf/48OL//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//Pfx/+fGkv/8+fT//v7+//7+/v/+/v7/7NGn/9ieSP/Ynkj/2J5I/9ieSP/Ynkj/2J5I/9ifSETYn0iO155H/9ieSP/Ynkj/2J5I/9eeR//Ynkj/4bd2//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//z38f/nxpL//Pn0//7+/v/+/v7//v7+//7+/v/s0af/155H/9ieSP/Ynkj/2J5I/9eeR//Ynkj/2J9IdtifSLDYnkf/2J5H/9ieR//Ynkf/2J5H/9ieR//r0KX//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/89/H/58aS//z59P/+/v7//v7+//7+/v/+/v7//v7+/+zRp//Ynkf/2J5H/9ieR//Ynkf/2J5H/9ieR//Yn0iY2J9IvtieR//Ynkj/2J5I/9ieSP/Ynkf/2J5I//Dcvf/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//Pfx/+fGkv/8+fT//v7+//7+/v/+/v7//v7+//7+/v/+/v7/7NGn/9ieR//Ynkj/2J5I/9ieSP/Ynkf/2J5I/9ifSKjYn0jA2J5I/9ieSP/Ynkj/2J5I/9ieSP/Ynkj/8d7B//7+/v/+/v7//v7+//7+/v/+/v7//v7+//z38f/nxpL//Pn0//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/rz6T/2J5I/9ieSP/Ynkj/2J5I/9ieSP/Ynkj/2J9IqNifSLLXnkf/2J5I/9ieSP/Ynkj/155H/9ieSP/x3sH//v7+//7+/v/+/v7//v7+//7+/v/89/H/58aS//z59P/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+/+fEjv/Xnkf/2J5I/9ieSP/Ynkj/155H/9ieSP/Yn0ia2J9IktieR//Ynkf/2J5H/9ieR//Ynkf/2J5H//Hewf/+/v7//v7+//7+/v/+/v7//Pfx/+fGkv/8+fT//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+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','2020-06-05 11:11:42','2020-06-05 11:11:42');
-2020-06-05 19:11:42,650 INFO 9084 [egg-sequelize](3ms) Executed (b0086fdc-9339-41a1-8534-0fd4d62ede77): COMMIT;
-2020-06-05 19:12:54,619 INFO 9084 [egg-sequelize](0ms) Executed (7aea9d24-c205-47b1-ae6c-8f2d8b844543): START TRANSACTION;
-2020-06-05 19:12:54,648 INFO 9084 [egg-sequelize](0ms) Executed (7aea9d24-c205-47b1-ae6c-8f2d8b844543): SELECT `id`, `title`, `auther`, `main_desc`, `main`, `banner`, `created_at`, `updated_at` FROM `news` AS `news` WHERE `news`.`id` = '80de3d80-a71d-11ea-8a1a-6d192ee0920d';
-2020-06-05 19:12:54,653 INFO 9084 [egg-sequelize](1ms) Executed (7aea9d24-c205-47b1-ae6c-8f2d8b844543): INSERT INTO `news` (`id`,`title`,`auther`,`main_desc`,`main`,`banner`,`created_at`,`updated_at`) VALUES ('80de3d80-a71d-11ea-8a1a-6d192ee0920d','12','123','123213qsafasf新搭了个vue项目，谢了几个页面，当添加路由时，发现总是提示错误\"[Vue warn]: Failed to mount component: template or ren','<p>123213qsafasf</p><p>新搭了个vue项目，谢了几个页面，当添加路由时，发现总是提示错误<br><br>\"[Vue warn]: Failed to mount component: template or render function not defined\"错误的解决<br><br>于是找到了两种解决方法<br><br>require 路径时 错误： component: require(’…/components/movie/movie.vue’)<br><br>1： component: (resolve) =&gt; require([’@/views/home/home.vue’], resolve),<br><br>2： component: require(’…/components/movie/movie.vue’).default<br><br>因为不知道什么原因，就先改了<br>————————————————<br>版权声明：本文为CSDN博主「逃跑小刀」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：https://blog.csdn.net/lishi9092/java/article/details/90904547</p>','data:image/png;base64,AAABAAIAEBAAAAEAIABoBAAAJgAAACAgAAABACAAqBAAAI4EAAAoAAAAEAAAACAAAAABACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANifSBTYn0hu2J9IsNifSNDYn0jQ2J9IrtifSGrYn0gQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA2J9IAtifSG7Ynkjy155I/9eeSP/Xnkj/155I/9eeSP/Xnkj/2J5I7tifSGTYn0gCAAAAAAAAAAAAAAAA2J9IAtifSJjXnkf/155I/9eeR//Xnkj/155H/9eeSP/Xnkf/155I/9eeR//Xnkj/2J9IjNigSAIAAAAAAAAAANifSHDXnkj/155I/9eeSP/Xnkj/2J9I/9qlVP/Zok3/155I/9eeSP/Xnkj/2J9I/9eeSP/Yn0hkAAAAANifSBbYnkj0155I/9eeR//Yn0j/5sON//ry5//+/v7//v38//PiyP/dq2D/5b+G/+G2df/Xnkf/2J5I7tifSBDYn0h2155I/9eeSP/Xnkj/6cmZ//7+/v/+/v7//v7+//7+/v/+/fv/8d7A//79/P/iuHf/155I/9eeSP/Yn0hq2J9IuteeR//Xnkj/2qVU//379//+/v7//v7+//7+/v/+/fv/8t/C//79/P/+/v7/4rh3/9eeR//Xnkj/2J9IrtifSNrXnkj/155I/+O6fP/+/v7//v7+//7+/v/+/fv/8t/C//79/P/+/v7//v7+/+K4d//Xnkj/155I/9ifSNDYn0jc155H/9eeSP/kvoT//v7+//7+/v/+/fv/8t/C//79/P/+/v7//v7+//7+/v/gtHD/155H/9eeSP/Yn0jQ2J9IvNeeSP/Xnkj/5L6E//7+/v/+/fv/8t/C//79/P/+/v7//v7+//7+/v/8+fP/2aJO/9eeSP/Xnkj/2J9IsNifSHrXnkf/155I/+S+hP/+/fv/8d7C//79/P/+/v7//v7+//7+/v/+/v7/6MaT/9eeSP/Xnkf/155I/9ifSG7Yn0ga2J5I9teeSP/kvYH/5L6D/9+ybf/26tf//v7+//7+/v/69Ov/5sOO/9eeSP/Xnkj/155I/9ieSPLYn0gUAAAAANifSHjXnkj/2J9J/9eeSP/Xnkf/155I/9umVv/cql3/2J9J/9eeSP/Xnkf/155I/9eeR//Yn0huAAAAAAAAAADYn0gC2J9IoteeSP/Xnkj/155I/9eeSP/Xnkj/155I/9eeSP/Xnkj/155I/9eeSP/Yn0iY2J9IAgAAAAAAAAAAAAAAANifSALYn0h42J5I9teeR//Xnkj/155H/9eeSP/Xnkf/155I/9ieSPTYn0hw2J9IAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANifSBrYn0h62J9IvNifSNzYn0jc2J9IutifSHbYn0gWAAAAAAAAAAAAAAAAAAAAAPw/AADwDwAAwAMAAMADAACAAQAAgAEAAAAAAAAAAAAAAAAAAAAAAACAAQAAgAEAAMADAADAAwAA8A8AAPw/AAAoAAAAIAAAAEAAAAABACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADYn0gO2J9IStifSHrYn0ia2J9IqNifSKjYn0iY2J9IdtifSETYn0gKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANifSALYn0hK2J9IstifSPjYnkj/155H/9ieSP/Ynkj/2J5I/9eeR//Ynkj/2J5I/9ifSPbYn0io2J9IPtmfSQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADYn0g22J9IyNieR//Ynkf/2J5H/9ieR//Ynkf/2J5H/9ieR//Ynkf/2J5H/9ieR//Ynkf/2J5H/9ieR//Ynkj/2J9IvNifSCwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADYn0gE2J9IgNifSPzYnkj/2J5H/9ieSP/Ynkj/2J5I/9ieR//Ynkj/2J5I/9ieSP/Ynkf/2J5I/9ieSP/Ynkj/2J5H/9ieSP/Ynkj/2J9I+NifSG7Yn0gCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA2J9ICNifSKzYnkj/2J5I/9ieSP/Ynkj/2J5I/9ieSP/Ynkj/2J5I/9ieSP/Ynkj/2J5I/9ieSP/Ynkj/2J5I/9ieSP/Ynkj/2J5I/9ieSP/Ynkj/2J5I/9ifSJjYn0gEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANifSATYn0iu155H/9ieSP/Ynkj/2J5I/9eeR//Ynkj/2J5I/9ieSP/Xnkf/2J5I/9ieSP/Ynkj/155H/9ieSP/Ynkj/2J5I/9eeR//Ynkj/2J5I/9ieSP/Xnkf/2J5I/9ifSJjYoEgCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA2J9IhtieR//Ynkf/2J5H/9ieR//Ynkf/2J5H/9ieR//Ynkf/2J5H/9ieR//Ynkf/2J5H/9ieR//Ynkf/2J5H/9ieR//Ynkf/2J5H/9ieR//Ynkf/2J5H/9ieR//Ynkf/2J5H/9ifSG4AAAAAAAAAAAAAAAAAAAAAAAAAANifSD7Yn0j/2J5I/9ieR//Ynkj/2J5I/9ieSP/Ynkf/2J5I/9ieSP/Ynkj/2J9I/9ypW//er2f/3Kpe/9ifSf/Ynkj/2J5I/9ieSP/Ynkf/2J5I/9ieSP/YoEr/2J5H/9ieSP/Ynkj/2J9I+NifSCwAAAAAAAAAAAAAAADYn0gE2J9I0tieSP/Ynkj/2J5I/9ieSP/Ynkj/2J5I/9ieSP/Ynkj/3atf/+7Wsv/79u7//v7+//7+/v/+/v7//Pjz//Dbu//fsGn/2J5I/9ieSP/Ynkj/4LNv/+rLnP/Ynkj/2J5I/9ieSP/Ynkj/2J9IvNmhSQIAAAAAAAAAANifSFbYnkj/2J5I/9ieSP/Xnkf/2J5I/9ieSP/Ynkj/2J9I/+jHlf/9+/n//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//79/P/s0aj/2J9J/+Czb//8+fT/7NGn/9eeR//Ynkj/2J5I/9ieSP/Ynkj/2J9IPgAAAAAAAAAA2J9IwNieR//Ynkf/2J5H/9ieR//Ynkf/2J5H/9ieR//rzqL//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//z38f/lwIj//Pn0//7+/v/s0af/2J5H/9ieR//Ynkf/2J5H/9ieR//Yn0ioAAAAANifSBrYn0j/2J5I/9ieSP/Ynkj/2J5H/9ieSP/Ynkj/47p8//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/89/H/58aS//z59P/+/v7//v7+/+zRp//Ynkf/2J5I/9ieSP/Ynkj/2J5H/9ifSPbYn0gK2J9IXNieSP/Ynkj/2J5I/9ieSP/Ynkj/2J5I/9ifSf/48OL//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//Pfx/+fGkv/8+fT//v7+//7+/v/+/v7/7NGn/9ieSP/Ynkj/2J5I/9ieSP/Ynkj/2J5I/9ifSETYn0iO155H/9ieSP/Ynkj/2J5I/9eeR//Ynkj/4bd2//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//z38f/nxpL//Pn0//7+/v/+/v7//v7+//7+/v/s0af/155H/9ieSP/Ynkj/2J5I/9eeR//Ynkj/2J9IdtifSLDYnkf/2J5H/9ieR//Ynkf/2J5H/9ieR//r0KX//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/89/H/58aS//z59P/+/v7//v7+//7+/v/+/v7//v7+/+zRp//Ynkf/2J5H/9ieR//Ynkf/2J5H/9ieR//Yn0iY2J9IvtieR//Ynkj/2J5I/9ieSP/Ynkf/2J5I//Dcvf/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//Pfx/+fGkv/8+fT//v7+//7+/v/+/v7//v7+//7+/v/+/v7/7NGn/9ieR//Ynkj/2J5I/9ieSP/Ynkf/2J5I/9ifSKjYn0jA2J5I/9ieSP/Ynkj/2J5I/9ieSP/Ynkj/8d7B//7+/v/+/v7//v7+//7+/v/+/v7//v7+//z38f/nxpL//Pn0//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/rz6T/2J5I/9ieSP/Ynkj/2J5I/9ieSP/Ynkj/2J9IqNifSLLXnkf/2J5I/9ieSP/Ynkj/155H/9ieSP/x3sH//v7+//7+/v/+/v7//v7+//7+/v/89/H/58aS//z59P/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+/+fEjv/Xnkf/2J5I/9ieSP/Ynkj/155H/9ieSP/Yn0ia2J9IktieR//Ynkf/2J5H/9ieR//Ynkf/2J5H//Hewf/+/v7//v7+//7+/v/+/v7//Pfx/+fGkv/8+fT//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+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','2020-06-05 11:12:54','2020-06-05 11:12:54');
-2020-06-05 19:12:54,706 INFO 9084 [egg-sequelize](3ms) Executed (7aea9d24-c205-47b1-ae6c-8f2d8b844543): COMMIT;
-2020-06-05 19:26:08,652 INFO 15772 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
-2020-06-05 19:26:26,636 INFO 9176 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:24:00,865 INFO 8048 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:27:16,978 INFO 11272 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:27:27,288 INFO 11648 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:27:49,136 INFO 13332 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:28:57,370 INFO 13456 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:28:59,109 INFO 13772 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:29:01,290 INFO 16956 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:29:13,719 INFO 6336 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:29:15,392 INFO 8884 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 10:20:46,515 INFO 13784 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 10:20:48,130 INFO 7180 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 10:20:49,816 INFO 17348 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 10:20:55,563 INFO 7612 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 10:20:57,247 INFO 9744 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 10:20:59,198 INFO 17720 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 10:21:00,832 INFO 12504 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 10:21:02,762 INFO 7840 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 10:21:04,347 INFO 10056 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 10:21:06,143 INFO 10028 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 10:21:07,770 INFO 14888 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 10:21:09,551 INFO 10824 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 10:21:11,210 INFO 8332 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 10:21:13,148 INFO 7148 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 10:21:51,129 INFO 6348 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-10 10:06:38,762 INFO 10428 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-10 10:06:40,506 INFO 8160 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-10 10:06:42,196 INFO 10484 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-10 10:06:44,127 INFO 15824 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-10 10:06:45,944 INFO 1972 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-10 10:06:47,663 INFO 7404 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-10 10:06:49,490 INFO 19140 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-10 10:06:51,223 INFO 14872 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-10 10:06:53,001 INFO 14772 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-10 10:06:55,330 INFO 13144 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-10 10:06:57,694 INFO 14432 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result

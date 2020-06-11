@@ -27,7 +27,12 @@
               GITHUB
             </a>
           </li>
-          <li>
+          <!-- <li>
+            <router-link active-class="nav-active" to="/news" title="NEWS"
+              >NEWS</router-link
+            >
+          </li> -->
+          <!-- <li>
             <router-link active-class="nav-active" to="/ipfsex" title="IPFSEX"
               >IPFSEX</router-link
             >
@@ -36,7 +41,7 @@
             <router-link active-class="nav-active" to="/ethfx" title="ETHFX"
               >ETHFX</router-link
             >
-          </li>
+          </li> -->
         </ul>
       </nav>
     </div>

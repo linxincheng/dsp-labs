@@ -1,6 +1,9 @@
 .DS_Store
 node_modules
 /dist
+/server/app/view
+/server/run
+/server/logs
 
 # local env files
 .env.local

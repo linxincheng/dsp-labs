@@ -6,12 +6,6 @@ Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
   {
-    path: "/",
-    name: "Home",
-    meta: { index: 0 },
-    component: Home,
-  },
-  {
     path: "/ipfsex",
     name: "Ipfsex",
     meta: { index: 1 },
@@ -33,10 +27,37 @@ const routes: Array<RouteConfig> = [
       import(/* webpackChunkName: "about" */ "../views/News.vue"),
   },
   {
-    path: "/publish",
-    name: "Publish",
+    path: "/edit",
+    // name: "Edit",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Publish.vue"),
+      import(/* webpackChunkName: "about" */ "../views/Edit.vue"),
+    children: [
+      {
+        path: "/publish",
+        name: "Publish",
+        component: () =>
+          import(/* webpackChunkName: "about" */ "../views/Publish.vue"),
+      },
+      {
+        path: "/edit",
+        name: "EditNewsList",
+        component: () =>
+          import(/* webpackChunkName: "about" */ "../views/EditNewsList.vue"),
+      },
+    ],
+  },
+  {
+    path: "/article",
+    name: "Article",
+    meta: { index: 5 },
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/Article.vue"),
+  },
+  {
+    path: "/",
+    name: "Home",
+    meta: { index: 0 },
+    component: Home,
   },
   {
     path: "*",
@@ -51,7 +72,7 @@ const router = new VueRouter({
     //to top
     return { x: 0, y: 0 };
   },
-  mode: "history",
+  mode: "hash",
   base: process.env.BASE_URL,
   routes,
 });

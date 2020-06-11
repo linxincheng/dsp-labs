@@ -21,7 +21,7 @@
       "value": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-security\\config\\config.default.js"
     },
     "hsts": {
-      "enable": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-security\\config\\config.local.js",
+      "enable": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-security\\config\\config.default.js",
       "maxAge": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-security\\config\\config.default.js",
       "includeSubdomains": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-security\\config\\config.default.js"
     },
@@ -58,13 +58,19 @@
     "origin": "D:\\workspace\\dsp-website\\server\\config\\config.default.js",
     "allowMethods": "D:\\workspace\\dsp-website\\server\\config\\config.default.js"
   },
-  "sequelize": {
-    "dialect": "D:\\workspace\\dsp-website\\server\\config\\config.default.js",
-    "host": "D:\\workspace\\dsp-website\\server\\config\\config.default.js",
-    "port": "D:\\workspace\\dsp-website\\server\\config\\config.default.js",
-    "database": "D:\\workspace\\dsp-website\\server\\config\\config.default.js",
-    "username": "D:\\workspace\\dsp-website\\server\\config\\config.default.js",
-    "password": "D:\\workspace\\dsp-website\\server\\config\\config.default.js"
+  "bodyParser": {
+    "jsonLimit": "D:\\workspace\\dsp-website\\server\\config\\config.default.js",
+    "formLimit": "D:\\workspace\\dsp-website\\server\\config\\config.default.js",
+    "enable": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js",
+    "encoding": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js",
+    "textLimit": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js",
+    "strict": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js",
+    "queryString": {
+      "arrayLimit": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js",
+      "depth": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js",
+      "parameterLimit": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js"
+    },
+    "onerror": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js"
   },
   "onerror": {
     "accepts": "D:\\workspace\\dsp-website\\server\\config\\config.default.js",
@@ -73,30 +79,11 @@
     "appErrorFilter": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-onerror\\config\\config.default.js",
     "templatePath": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-onerror\\config\\config.default.js"
   },
-  "static": {
-    "prefix": "D:\\workspace\\dsp-website\\server\\config\\config.default.js",
-    "dir": "D:\\workspace\\dsp-website\\server\\config\\config.default.js",
-    "dynamic": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-static\\config\\config.default.js",
-    "preload": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-static\\config\\config.default.js",
-    "buffer": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-static\\config\\config.default.js",
-    "maxFiles": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-static\\config\\config.default.js"
-  },
-  "view": {
-    "defaultExt": "D:\\workspace\\dsp-website\\server\\config\\config.default.js",
-    "mapping": {
-      ".ejs": "D:\\workspace\\dsp-website\\server\\config\\config.default.js",
-      ".html": "D:\\workspace\\dsp-website\\server\\config\\config.default.js"
-    },
-    "root": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-view\\config\\config.default.js",
-    "cache": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-view\\config\\config.local.js",
-    "defaultExtension": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-view\\config\\config.default.js",
-    "defaultViewEngine": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-view\\config\\config.default.js"
-  },
   "session": {
-    "maxAge": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-session\\config\\config.default.js",
-    "key": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-session\\config\\config.default.js",
-    "httpOnly": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-session\\config\\config.default.js",
-    "encrypt": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-session\\config\\config.default.js"
+    "maxAge": "D:\\workspace\\dsp-website\\server\\node_modules\\egg-session\\config\\config.default.js",
+    "key": "D:\\workspace\\dsp-website\\server\\node_modules\\egg-session\\config\\config.default.js",
+    "httpOnly": "D:\\workspace\\dsp-website\\server\\node_modules\\egg-session\\config\\config.default.js",
+    "encrypt": "D:\\workspace\\dsp-website\\server\\node_modules\\egg-session\\config\\config.default.js"
   },
   "helper": {
     "shtml": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-security\\config\\config.default.js"
@@ -115,7 +102,7 @@
     "cookieMaxAge": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-i18n\\config\\config.default.js"
   },
   "watcher": {
-    "type": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-watcher\\config\\config.local.js",
+    "type": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-watcher\\config\\config.default.js",
     "eventSources": {
       "default": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-watcher\\config\\config.default.js",
       "development": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-watcher\\config\\config.default.js"
@@ -146,13 +133,6 @@
       "cron": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-multipart\\config\\config.default.js"
     }
   },
-  "development": {
-    "watchDirs": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-development\\config\\config.default.js",
-    "ignoreDirs": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-development\\config\\config.default.js",
-    "fastReady": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-development\\config\\config.default.js",
-    "reloadOnDebug": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-development\\config\\config.default.js",
-    "overrideDefault": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-development\\config\\config.default.js"
-  },
   "logrotator": {
     "filesRotateByHour": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-logrotator\\config\\config.default.js",
     "hourDelimiter": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-logrotator\\config\\config.default.js",
@@ -162,10 +142,26 @@
     "rotateDuration": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-logrotator\\config\\config.default.js",
     "maxDays": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-logrotator\\config\\config.default.js"
   },
+  "static": {
+    "prefix": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-static\\config\\config.default.js",
+    "dir": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-static\\config\\config.default.js",
+    "dynamic": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-static\\config\\config.default.js",
+    "preload": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-static\\config\\config.default.js",
+    "buffer": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-static\\config\\config.prod.js",
+    "maxFiles": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-static\\config\\config.default.js",
+    "maxAge": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-static\\config\\config.prod.js"
+  },
+  "view": {
+    "root": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-view\\config\\config.default.js",
+    "cache": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-view\\config\\config.default.js",
+    "defaultExtension": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-view\\config\\config.default.js",
+    "defaultViewEngine": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-view\\config\\config.default.js",
+    "mapping": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-view\\config\\config.default.js"
+  },
   "validate": "D:\\workspace\\dsp-website\\server\\node_modules\\egg-validate\\config\\config.default.js",
   "ejs": {
     "root": "D:\\workspace\\dsp-website\\server\\node_modules\\egg-view-ejs\\config\\config.default.js",
-    "cache": "D:\\workspace\\dsp-website\\server\\node_modules\\egg-view-ejs\\config\\config.local.js",
+    "cache": "D:\\workspace\\dsp-website\\server\\node_modules\\egg-view-ejs\\config\\config.default.js",
     "debug": "D:\\workspace\\dsp-website\\server\\node_modules\\egg-view-ejs\\config\\config.default.js",
     "compileDebug": "D:\\workspace\\dsp-website\\server\\node_modules\\egg-view-ejs\\config\\config.default.js",
     "delimiter": "D:\\workspace\\dsp-website\\server\\node_modules\\egg-view-ejs\\config\\config.default.js",
@@ -187,6 +183,8 @@
     "license": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js",
     "scripts": {
       "dev": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js",
+      "stop": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js",
+      "start": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js",
       "test": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js",
       "debug": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js"
     },
@@ -195,10 +193,12 @@
       "egg-bin": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js",
       "egg-cors": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js",
       "egg-mock": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js",
-      "egg-sequelize": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js",
+      "egg-scripts": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js",
+      "egg-session": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js",
       "egg-validate": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js",
       "egg-view-ejs": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js",
-      "mysql2": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js",
+      "leveldown": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js",
+      "levelup": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js",
       "uuid": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js"
     }
   },
@@ -221,20 +221,6 @@
   "siteFile": {
     "/favicon.ico": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js"
   },
-  "bodyParser": {
-    "enable": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js",
-    "encoding": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js",
-    "formLimit": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js",
-    "jsonLimit": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js",
-    "textLimit": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js",
-    "strict": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js",
-    "queryString": {
-      "arrayLimit": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js",
-      "depth": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js",
-      "parameterLimit": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js"
-    },
-    "onerror": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js"
-  },
   "logger": {
     "dir": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js",
     "encoding": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js",
@@ -248,9 +234,7 @@
     "coreLogName": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js",
     "agentLogName": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js",
     "errorLogName": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js",
-    "coreLogger": {
-      "consoleLevel": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.local.js"
-    },
+    "coreLogger": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js",
     "allowDebugAtProd": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\config.default.js"
   },
   "httpclient": {

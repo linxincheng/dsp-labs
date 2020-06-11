@@ -4,7 +4,7 @@
     <NewsList></NewsList>
     <div class="news-under-ui">
       <img src="../assets/img/new_dicai.svg" class="new-dicai" />
-      <img src="../assets/img/new_cai2.svg" class="new-cai2" />
+      <img src="../assets/img/new_bai.svg" class="new-cai2" />
       <img src="../assets/img/new_cai3.svg" class="new-cai3" />
       <img src="../assets/img/home_xiu.svg" class="new-xiu" />
       <img src="../assets/img/home_dian.svg" class="new-dian" />
@@ -35,6 +35,7 @@ export default class News extends Vue {}
     position: relative;
     font-size: 0;
     margin-top: -12vw;
+
     .new-dicai {
       width: 100%;
       position: relative;
@@ -45,8 +46,9 @@ export default class News extends Vue {}
 
     .new-cai2 {
       position: absolute;
+      transform: rotateX(180deg);
       top: -9vw;
-      width: 43vw;
+      width: 22vw;
       left: 0;
       user-select: none;
     }

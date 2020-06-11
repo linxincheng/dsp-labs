@@ -117,24 +117,24 @@ export default class HeaderComponent extends Vue {
     position: relative;
 
     .home-white-wrap {
-      width: 40vw;
       max-width: 720px;
-      height: 40vw;
       max-height: 720px;
       position: absolute;
+      margin-top: 290px;
+      width: 40vw;
+      height: 40vw;
       top: -8vw;
       right: -5vw;
-      margin-top: 290px;
 
       @media screen and (max-width: 767px) {
-        top: -35vw;
         right: auto;
+        top: -35vw;
         left: -5vw;
       }
 
       @media screen and (max-width: 435px) {
-        top: -60vw;
         right: auto;
+        top: -60vw;
         left: -7vw;
         width: 60vw;
         height: 60vw;

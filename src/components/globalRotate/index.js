@@ -8,14 +8,17 @@ let width,
   PROJECTION_CENTER_X,
   PROJECTION_CENTER_Y,
   FIELD_OF_VIEW,
-  DOT_RADIUS;
+  DOT_RADIUS,
+  image;
 let rotation = 0; // Rotation of the globe
 let dots = []; // Every dots in an array
 const CIRCLE_BG_COLOR = "#dddddd"; // circle color
 const R_SIZE = 0.5; // global size
+// const R_SIZE = 1.4; // global size
 const LOGO_SIZE = 0.35; // logo size;
+// const LOGO_SIZE = 0.5; // logo size;
 
-const DOTS_AMOUNT = 1000; // Amount of dots on the screen
+const DOTS_AMOUNT = 750; // Amount of dots on the screen
 
 function init() {
   canvas = document.querySelector("#home-white-wrap");
@@ -44,6 +47,7 @@ function init() {
   } else {
     DOT_RADIUS = 1;
   }
+  image = document.getElementById("source");
 
   GLOBE_RADIUS = width * 0.7; // Radius of the globe
   GLOBE_CENTER_Z = -GLOBE_RADIUS; // Z value of the globe center
@@ -51,6 +55,7 @@ function init() {
   PROJECTION_CENTER_Y = height / 2; // Y center of the canvas HTML
   // FIELD_OF_VIEW = width * 0.8;
   FIELD_OF_VIEW = width * R_SIZE;
+  ctx.fillStyle = CIRCLE_BG_COLOR;
 }
 
 // init();
@@ -67,14 +72,12 @@ class Dot {
   }
   // Do some math to project the 3D position into the 2D canvas
   project(sin, cos, before = false) {
-    const rotX = cos * this.x + sin * (this.z - GLOBE_CENTER_Z);
     const rotZ =
       -sin * this.x + cos * (this.z - GLOBE_CENTER_Z) + GLOBE_CENTER_Z;
-    if (!before && FIELD_OF_VIEW / (FIELD_OF_VIEW - rotZ) < 0.5) {
-      return false;
-    } else if (before && FIELD_OF_VIEW / (FIELD_OF_VIEW - rotZ) >= 0.5) {
+    if (before && FIELD_OF_VIEW / (FIELD_OF_VIEW - rotZ) >= 0.4) {
       return false;
     }
+    const rotX = cos * this.x + sin * (this.z - GLOBE_CENTER_Z);
     this.sizeProjection = FIELD_OF_VIEW / (FIELD_OF_VIEW - rotZ);
     this.xProject = rotX * this.sizeProjection + PROJECTION_CENTER_X;
     this.yProject = this.y * this.sizeProjection + PROJECTION_CENTER_Y;
@@ -83,7 +86,7 @@ class Dot {
   // Draw the dot on the canvas
   draw(sin, cos, before) {
     let needdraw = this.project(sin, cos, before);
-    if (!needdraw) return;
+    if (!needdraw) return false;
     ctx.beginPath();
     ctx.arc(
       this.xProject,
@@ -93,8 +96,9 @@ class Dot {
       Math.PI * 2
     );
     ctx.closePath();
-    ctx.fillStyle = CIRCLE_BG_COLOR;
+    // ctx.fillStyle = CIRCLE_BG_COLOR;
     ctx.fill();
+    return true;
   }
 }
 
@@ -131,12 +135,20 @@ function render(a) {
   const sineRotation = Math.sin(rotation); // Sine of the rotation
   const cosineRotation = Math.cos(rotation); // Cosine of the rotation
 
-  for (var i = 0; i < dots.length; i++) {
-    dots[i].draw(sineRotation, cosineRotation, true);
+  let secondRenderArr = {};
+  // for (var i = 0; i < dots.length; i++) {
+  // for (let i = 0; i < dots.length; i++) {
+  let i = 0;
+  while (i < DOTS_AMOUNT) {
+    let isRender = dots[i].draw(sineRotation, cosineRotation, true);
+    if (!isRender) {
+      secondRenderArr[i] = true;
+    }
+    i++;
   }
 
+  // let image = document.getElementById("source");
   // Loop through the dots array and draw every dot
-  var image = document.getElementById("source");
   ctx.drawImage(
     image,
     canvas.clientWidth * ((1 - LOGO_SIZE) / 2),
@@ -156,16 +168,21 @@ function render(a) {
   //   // canvas.height * LOGO_SIZE
   // );
 
-  for (var i = 0; i < dots.length; i++) {
-    dots[i].draw(sineRotation, cosineRotation, false);
+  // for (var i = 0; i < dots.length; i++) {
+  i = 0;
+  while (i < DOTS_AMOUNT) {
+    if (secondRenderArr[i]) {
+      dots[i].draw(sineRotation, cosineRotation, false);
+    }
+    i++;
   }
 
+  secondRenderArr = null;
   // Load an image of intrinsic size 300x227 in CSS pixels
   if (cancel) return;
 
   window.requestAnimationFrame(render);
 }
-
 // Function called after the user resized its screen
 function afterResize() {
   width = canvas.offsetWidth;
@@ -188,8 +205,11 @@ function afterResize() {
   } else {
     DOT_RADIUS = 1;
   }
+  image = document.getElementById("source");
 
   createDots(); // Reset all dots
+
+  ctx.fillStyle = CIRCLE_BG_COLOR;
 }
 
 class CanvasObj {

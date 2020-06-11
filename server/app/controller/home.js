@@ -1,13 +1,8 @@
-const {
-  Controller
-} = require('egg');
+const { Controller } = require("egg");
 class HomeController extends Controller {
   async index() {
-    const {
-      ctx
-    } = this;
-    // render index.html
-    await ctx.render('index');
+    const { ctx } = this;
+    await ctx.render("index");
   }
 }
-module.exports = HomeController
+module.exports = HomeController;

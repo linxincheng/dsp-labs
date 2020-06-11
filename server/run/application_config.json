@@ -94,7 +94,7 @@
     "i18n": {
       "defaultLocale": "en_US",
       "dirs": [
-        "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-session\\config\\locales",
+        "D:\\workspace\\dsp-website\\server\\node_modules\\egg-session\\config\\locales",
         "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-security\\config\\locales",
         "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-jsonp\\config\\locales",
         "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-onerror\\config\\locales",
@@ -102,13 +102,11 @@
         "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-watcher\\config\\locales",
         "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-schedule\\config\\locales",
         "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-multipart\\config\\locales",
-        "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-development\\config\\locales",
         "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-logrotator\\config\\locales",
         "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-static\\config\\locales",
         "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-view\\config\\locales",
         "D:\\workspace\\dsp-website\\server\\node_modules\\egg-cors\\config\\locales",
         "D:\\workspace\\dsp-website\\server\\node_modules\\egg-validate\\config\\locales",
-        "D:\\workspace\\dsp-website\\server\\node_modules\\egg-sequelize\\config\\locales",
         "D:\\workspace\\dsp-website\\server\\node_modules\\egg-view-ejs\\config\\locales",
         "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\locales",
         "D:\\workspace\\dsp-website\\server\\config\\locales"
@@ -120,7 +118,7 @@
       "functionName": "__"
     },
     "watcher": {
-      "type": "development",
+      "type": "default",
       "eventSources": {
         "default": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-watcher\\lib\\event-sources\\default",
         "development": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-watcher\\lib\\event-sources\\development"
@@ -151,13 +149,6 @@
         "cron": "0 30 4 * * *"
       }
     },
-    "development": {
-      "watchDirs": [],
-      "ignoreDirs": [],
-      "fastReady": false,
-      "reloadOnDebug": true,
-      "overrideDefault": false
-    },
     "logrotator": {
       "filesRotateByHour": null,
       "hourDelimiter": "-",
@@ -168,48 +159,37 @@
       "maxDays": 31
     },
     "static": {
-      "prefix": "/",
-      "dir": "D:\\workspace\\dsp-website\\server\\app\\view\\",
+      "prefix": "/public/",
+      "dir": "D:\\workspace\\dsp-website\\server\\app\\public",
       "dynamic": true,
       "preload": false,
-      "buffer": false,
-      "maxFiles": 1000
+      "buffer": true,
+      "maxFiles": 1000,
+      "maxAge": 31536000
     },
     "view": {
       "root": [
         "D:\\workspace\\dsp-website\\server\\app\\view"
       ],
-      "cache": false,
+      "cache": true,
       "defaultExtension": ".html",
       "defaultViewEngine": "",
-      "mapping": {
-        ".ejs": "ejs",
-        ".html": "ejs"
-      },
-      "defaultExt": ".html"
+      "mapping": {}
     },
     "cors": {
       "origin": "*",
       "allowMethods": "GET,HEAD,PUT,POST,DELETE"
     },
     "validate": {},
-    "sequelize": {
-      "dialect": "mysql",
-      "database": "dsp-website",
-      "host": "127.0.0.1",
-      "port": 3306,
-      "username": "root",
-      "password": "<String len: 4>"
-    },
     "ejs": {
       "root": "D:\\workspace\\dsp-website\\server\\app\\view",
-      "cache": false,
+      "cache": true,
       "debug": false,
       "compileDebug": true,
       "delimiter": null,
       "strict": false
     },
-    "env": "local",
+    "env": "prod",
     "name": "server",
     "keys": "<String len: 16>",
     "cookies": {},
@@ -226,6 +206,8 @@
       "license": "MIT",
       "scripts": {
         "dev": "egg-bin dev",
+        "stop": "egg-scripts stop",
+        "start": "egg-scripts start --port=7001 --workers=1 --nohup --title=dsplabs-website-service",
         "test": "egg-bin test",
         "debug": "egg-bin debug"
       },
@@ -234,10 +216,12 @@
         "egg-bin": "^4.12.1",
         "egg-cors": "^2.2.0",
         "egg-mock": "^3.22.1",
-        "egg-sequelize": "^4.3.1",
+        "egg-scripts": "^2.13.0",
+        "egg-session": "^3.2.0",
         "egg-validate": "^2.0.2",
         "egg-view-ejs": "^2.0.0",
-        "mysql2": "^1.6.5",
+        "leveldown": "^5.6.0",
+        "levelup": "^4.4.0",
         "uuid": "^3.3.2"
       }
     },
@@ -263,8 +247,8 @@
     "bodyParser": {
       "enable": true,
       "encoding": "utf8",
-      "formLimit": "1mb",
-      "jsonLimit": "1mb",
+      "formLimit": "100mb",
+      "jsonLimit": "100mb",
       "textLimit": "1mb",
       "strict": true,
       "queryString": {
@@ -275,21 +259,19 @@
       "returnRawBody": true
     },
     "logger": {
-      "dir": "D:\\workspace\\dsp-website\\server\\logs\\server",
+      "dir": "C:\\Users\\qwews\\logs\\server",
       "encoding": "utf8",
-      "env": "local",
+      "env": "prod",
       "level": "INFO",
       "consoleLevel": "INFO",
-      "disableConsoleAfterReady": false,
+      "disableConsoleAfterReady": true,
       "outputJSON": false,
       "buffer": true,
       "appLogName": "server-web.log",
       "coreLogName": "egg-web.log",
       "agentLogName": "egg-agent.log",
       "errorLogName": "common-error.log",
-      "coreLogger": {
-        "consoleLevel": "WARN"
-      },
+      "coreLogger": {},
       "allowDebugAtProd": false,
       "type": "application"
     },
@@ -327,8 +309,7 @@
       "overrideMethod",
       "session",
       "securities",
-      "i18n",
-      "eggLoaderTrace"
+      "i18n"
     ],
     "workerStartTimeout": 600000,
     "serverTimeout": null,
@@ -368,8 +349,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\plugin.js",
-      "path": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-session",
+      "from": "D:\\workspace\\dsp-website\\server\\config\\plugin.js",
+      "path": "D:\\workspace\\dsp-website\\server\\node_modules\\egg-session",
       "version": "3.2.0"
     },
     "security": {
@@ -457,21 +438,6 @@
       "path": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-multipart",
       "version": "2.10.3"
     },
-    "development": {
-      "enable": true,
-      "package": "egg-development",
-      "name": "development",
-      "dependencies": [
-        "watcher"
-      ],
-      "optionalDependencies": [],
-      "env": [
-        "local"
-      ],
-      "from": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\config\\plugin.js",
-      "path": "D:\\workspace\\dsp-website\\server\\node_modules\\egg\\node_modules\\egg-development",
-      "version": "2.5.0"
-    },
     "logrotator": {
       "enable": true,
       "package": "egg-logrotator",
@@ -528,17 +494,6 @@
       "from": "D:\\workspace\\dsp-website\\server\\config\\plugin.js",
       "path": "D:\\workspace\\dsp-website\\server\\node_modules\\egg-validate",
       "version": "2.0.2"
-    },
-    "sequelize": {
-      "enable": true,
-      "package": "egg-sequelize",
-      "name": "sequelize",
-      "dependencies": [],
-      "optionalDependencies": [],
-      "env": [],
-      "from": "D:\\workspace\\dsp-website\\server\\config\\plugin.js",
-      "path": "D:\\workspace\\dsp-website\\server\\node_modules\\egg-sequelize",
-      "version": "4.3.1"
     },
     "ejs": {
       "enable": true,

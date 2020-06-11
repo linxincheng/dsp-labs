@@ -258,18 +258,19 @@
       <div class="dsp-labs-content">
         <h3 class="wow flipInX">DSP Labs</h3>
         <p class="wow fadeIn" data-wow-delay="0.5s">
-          DSP Labs is a research, development and deployment organization that
-          improves next-generation Internet technologies. We hope to establish a
-          new set of free and open network protocols-based on this set of
-          protocols, people can achieve true freedom of data and freedom of
-          interconnection. DSP Labs hopes to accelerate the creation of a
-          distributed, decentralized, and interconnected parallel world network
-          to create a higher performance, more economical, safer, and more open
-          data sharing transmission protocol and file storage network as the
-          next generation The foundation of the Internet provides fast, free and
-          safe interaction of information and data for the entire network,
-          reduces data transmission and storage costs, and accelerates the
-          revolution in the era of information freedom.
+          DSP Labs, established by Onchain, is a research, development and
+          deployment organization that improves next-generation Internet
+          technologies. We hope to establish a new set of free and open network
+          protocols-based on this set of protocols, people can achieve true
+          freedom of data and freedom of interconnection. DSP Labs hopes to
+          accelerate the creation of a distributed, decentralized, and
+          interconnected parallel world network to create a higher performance,
+          more economical, safer, and more open data sharing transmission
+          protocol and file storage network as the next generation The
+          foundation of the Internet provides fast, free and safe interaction of
+          information and data for the entire network, reduces data transmission
+          and storage costs, and accelerates the revolution in the era of
+          information freedom.
         </p>
       </div>
     </section>

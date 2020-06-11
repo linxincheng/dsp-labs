@@ -1,5 +1,5 @@
 {
-  "name": "dsp-website",
+  "name": "dsplabs",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,9 +9,11 @@
   },
   "dependencies": {
     "@types/axios": "^0.14.0",
+    "@types/moment": "^2.13.0",
     "axios": "^0.19.2",
     "core-js": "^3.6.4",
     "element-ui": "^2.13.2",
+    "moment": "^2.26.0",
     "register-service-worker": "^1.7.1",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",

@@ -8,7 +8,7 @@
           @click="linkTo('https://www.facebook.com/DSP-Labs-110430797334480/')"
         ></i>
         <i
-          class="iconfont iconicon_twitter"
+          class="iconfont icontuite"
           title="https://twitter.com/DSP_Labs"
           @click="linkTo('https://twitter.com/DSP_Labs')"
         ></i>
@@ -18,7 +18,7 @@
           @click="linkTo('https://www.reddit.com/user/DSP-Lab/')"
         ></i>
         <i
-          class="iconfont iconicon_medium"
+          class="iconfont iconmedium"
           title="https://medium.com/@dsplabs"
           @click="linkTo('https://medium.com/@dsplabs')"
         ></i>
@@ -31,8 +31,10 @@
       <section class="footer-right flex ai-center">
         <img src="../assets/img/qr.png" class="qr" alt="" />
         <p>
-          <span>Email:</span> <a href="mailto:@onchain.com">dsp@onchain.com</a>
-          <br /><span>Telegram:</span>
+          <span><i class="iconfont iconemail"></i> Email:</span>
+          <a href="mailto:@onchain.com">dsp@onchain.com</a> <br /><span
+            ><i class="iconfont icontelegram"></i> Telegram:</span
+          >
           <a href="t.me/DSP_Official" title="link to t.me/DSP_Official">
             t.me/DSP_Official
           </a>
@@ -106,14 +108,6 @@ footer {
 
         &:active {
           opacity: 1;
-        }
-
-        &.iconicon_twitter {
-          font-size: 48px;
-        }
-
-        &.iconicon_medium {
-          font-size: 46px;
         }
       }
     }

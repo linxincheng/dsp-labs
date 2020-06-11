@@ -3,7 +3,6 @@
     <transition :name="transitionName">
       <router-view />
     </transition>
-    <!-- <img class="test-img" src="./assets/img/2.webp" width="100%" alt="" /> -->
   </div>
 </template>
 
@@ -15,35 +14,13 @@ export default {
     };
   },
   watch: {
-    //使用watch 监听$router的变化
     $route(to, from) {
-      //如果to索引大于from索引,判断为前进状态,反之则为后退状态
       if (to.meta.index > from.meta.index) {
-        //设置动画名称
         this.transitionName = "slide-left";
       } else {
         this.transitionName = "slide-right";
       }
     },
-  },
-  mounted() {
-    //   this.$axios
-    //     .get(
-    //       "https://medium.com/dsp-labs/who-pried-the-cake-of-data-storage-46e2639d673e",
-    //       {},
-    //       {
-    //         Headers: {
-    //           "user-agent": "curl/7.54.0",
-    //           accept: "*/*",
-    //           host: "medium.com",
-    //           "content-type": "text/html",
-    //           connection: "keep-alive",
-    //         },
-    //       }
-    //     )
-    //     .then((data) => {
-    //       console.log(data);
-    //     });
   },
 };
 </script>
