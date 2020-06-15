@@ -34,10 +34,10 @@
           <p>WeChat</p>
         </div>
         <p>
-          <span><i class="iconfont iconemail"></i> Email:</span>
+          <span><i class="iconfont iconemail"></i> Email: </span>
           <a href="mailto:@onchain.com">dsp@onchain.com</a> <br /><span
-            ><i class="iconfont icontelegram"></i> Telegram:</span
-          >
+            ><i class="iconfont icontelegram"></i> Telegram:
+          </span>
           <a href="t.me/DSP_Official" title="link to t.me/DSP_Official">
             t.me/DSP_Official
           </a>

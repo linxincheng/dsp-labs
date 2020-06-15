@@ -10,7 +10,9 @@
         </div>
         <div class="edit-news-list-item-desc">
           <h4>
-            <div class="edit-news-list-item-title">{{ item.title }}</div>
+            <div class="edit-news-list-item-title" :title="item.title">
+              {{ item.title }}
+            </div>
             <div class="edit-news-list-icon">
               <i
                 class="iconfont iconpreview"
@@ -151,10 +153,8 @@ export default class EditNewsList extends Vue {
       width: 50%;
       height: 220px;
 
-      // @media screen and (max-width: 1200px) {
       width: 100%;
       padding: 20px;
-      // }
 
       .edit-news-list-item-img {
         position: relative;
@@ -164,9 +164,8 @@ export default class EditNewsList extends Vue {
         & > img {
           width: 312px;
           height: 180px;
-
-          border-radius: 10px;
-          border: 1px solid black;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          user-select: none;
         }
       }
 
@@ -176,8 +175,10 @@ export default class EditNewsList extends Vue {
         width: calc(100% - 352px);
 
         & > h4 {
-          font-size: 26px;
+          font-size: 22px;
           height: 40px;
+          line-height: 40px;
+          user-select: none;
 
           & > div {
             &.edit-news-list-item-title {
@@ -187,6 +188,7 @@ export default class EditNewsList extends Vue {
               text-overflow: ellipsis;
               display: block;
               width: calc(100% - 120px);
+              color: #2f93ff;
             }
 
             &.edit-news-list-icon {
@@ -208,7 +210,7 @@ export default class EditNewsList extends Vue {
           }
         }
         p {
-          font-size: 14px;
+          font-size: 16px;
           line-height: 22px;
           margin-top: 10px;
 

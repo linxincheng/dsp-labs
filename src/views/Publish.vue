@@ -35,13 +35,24 @@
         />
       </el-form-item>
       <el-form-item label="Content">
-        <div class="public-editor" id="editor"></div>
+        <div
+          class="public-editor"
+          id="editor"
+          :class="full ? 'full' : ''"
+        ></div>
       </el-form-item>
     </el-form>
     <el-button @click="pulishNews" type="primary" v-if="!id">publish</el-button>
     <el-button @click="editNews" type="primary" v-else>update</el-button>
     <el-button @click="resetNews">reset</el-button>
     <el-button @click="back">back</el-button>
+    <div
+      @click="fullScreen"
+      class="w-e-menu full-screen-icon"
+      style="z-index:10001;"
+    >
+      <i class="w-e-icon-redo"></i>
+    </div>
   </div>
 </template>
 
@@ -75,6 +86,7 @@ export default {
       id: "",
       publishAt: 0,
       loadingObj: null,
+      full: false,
     };
   },
   methods: {
@@ -180,6 +192,13 @@ export default {
         path: "/edit",
       });
     },
+    addFullBtn() {
+      let cover = document.querySelector(".full-screen-icon");
+      document.querySelector(".w-e-toolbar").appendChild(cover);
+    },
+    fullScreen() {
+      this.full = !this.full;
+    },
   },
   mounted() {
     this.editor = new E("#editor");
@@ -187,14 +206,15 @@ export default {
     this.editor.create();
     this.id = this.$router.currentRoute.query.id;
     this.resetNews();
+    this.addFullBtn();
   },
 };
 </script>
 
-<style lang="scss" scoped="this api replaced by slot-scope in 2.5.0+">
+<style lang="scss">
 .publish {
   padding: 20px;
-  max-width: 1200px;
+  width: 1400px;
 
   .movie-pic {
     width: 260px;
@@ -217,7 +237,33 @@ export default {
 
   .public-editor {
     width: 100%;
-    height: 500px;
+    height: 400px;
+    font-size: 16px;
+
+    &.full {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: white;
+      height: auto;
+
+      & > .w-e-text-container {
+        height: calc(100% - 55px) !important;
+      }
+    }
+
+    .w-e-text-container {
+      overflow-y: auto !important;
+
+      .w-e-text {
+        width: 700px !important;
+        height: auto !important;
+        overflow-y: hidden;
+        margin: 0 auto;
+      }
+    }
   }
 }
 </style>

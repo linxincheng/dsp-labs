@@ -215,11 +215,15 @@ export default class NewsList extends Vue {
 
   .paginate-wrap {
     overflow: hidden;
-    width: 100%;
+    width: 90%;
     position: relative;
     z-index: 999999;
-    max-width: 1200px;
-    margin: 8vw auto 0;
+    max-width: 1110px;
+    margin: 80px auto 0;
+    // transform: translateX(-44px);
+
+    @media screen and (max-width: 1336px) {
+    }
 
     & > .paginate {
       float: right;

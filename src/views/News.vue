@@ -5,7 +5,7 @@
     <section class="news-footer">
       <div class="home-bj2"></div>
       <img
-        src="../assets/img/home_zs1.svg"
+        src="../assets/img/home_white.svg"
         class="home-zs1 wow fadeIn"
         alt=""
       />
@@ -44,6 +44,7 @@ export default class News extends Vue {}
     height: 100px;
     width: 100%;
     background: linear-gradient(#7659d2, #5171de);
+    margin-top: 250px;
 
     & > .home-bj2 {
       height: 190px;
@@ -72,16 +73,16 @@ export default class News extends Vue {}
 
     .home-zs1 {
       position: absolute;
-      right: 0;
+      left: 0;
       max-width: 605px;
       width: 30%;
       bottom: 100%;
-      transform: translateY(25%);
+      transform: translateY(25%) rotateY(180deg) rotateZ(6deg);
       z-index: -1;
 
       @media screen and (max-width: 768px) {
         width: 40%;
-        transform: translateY(35%);
+        transform: translateY(35%) rotateY(180deg) rotateZ(6deg);
       }
     }
 

@@ -1,7 +1,7 @@
 <template>
   <div class="article">
     <NavComponent class="article-nav"></NavComponent>
-    <section class="article-wrap">
+    <div class="article-wrap">
       <div v-if="article">
         <h2 class="article-title">
           <!-- 分布式存储协议具有加速边缘计算技术规范的潜力 -->
@@ -14,16 +14,17 @@
           v-if="article"
           alt=""
         />
-        <div class="article-content" v-html="article.main"></div>
+        <!-- <div class="article-content" v-html="article.main"></div> -->
+        <div class="w-e-text" v-html="article.main"></div>
         <p class="article-time">
           {{ (article.publish_at / 1000) | timeFormat }}
         </p>
-        <p class="article-auther">auther: {{ article.auther }}</p>
+        <p class="article-auther">Auther: {{ article.auther }}</p>
       </div>
       <div v-else>
         loading...
       </div>
-    </section>
+    </div>
     <FooterComponent></FooterComponent>
   </div>
 </template>
