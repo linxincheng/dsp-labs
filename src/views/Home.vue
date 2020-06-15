@@ -1,37 +1,36 @@
 <template>
   <div class="home">
-    <a name="homeAnchor"></a>
+    <a name="home"></a>
     <HomeHeaderComponent></HomeHeaderComponent>
-    <div class="distributed-storage-protocol">
+    <div class="distributed-storage-protocol flex between">
       <img src="../assets/img/home_white2.svg" class="home-white-2" alt="" />
       <img src="../assets/img/home_xian1.svg" class="home-xian1" alt="" />
-      <article>
-        <h3 class="theme-color-text-fill wow fadeInLeft">
-          <span class="title-first theme-color-text-fill">
-            D
-            <img src="../assets/img/home_xiu2.svg" class="home-xiu" alt="" />
-          </span>
-          <span class="title-after">
-            istributed Storage Protocol
-          </span>
-        </h3>
-        <p class="wow fadeIn" data-wow-delay="0.3s">
-          The DSP (Distributed Storage Protocol) protocol is a new-generation
-          Internet protocol paradigm based on data file encryption,
-          distribution, storage, sharing and other multi-dimensional new
-          generation Internet protocol paradigms, the goal of the DSP protocol
-          is to become the core infrastructure of the next generation Internet
-          (NGI).
-        </p>
-      </article>
+      <div
+        class="distributed-storage-protocol-wrap flex between ai-center wrap-wrap"
+      >
+        <div class="video-banner-wrap wow fadeIn">
+          <i class="iconfont iconbofang circle" @click="playVideo"></i>
+          <img
+            src="./../assets/img/video_banner.png"
+            class="video-banner"
+            alt
+          />
+        </div>
+        <article>
+          <title-component msg="Distributed Storage Protocol"></title-component>
+          <p class="wow fadeIn" data-wow-delay="0.3s">
+            The DSP (Distributed Storage Protocol) protocol is a new-generation
+            Internet protocol paradigm based on data file encryption,
+            distribution, storage, sharing and other multi-dimensional new
+            generation Internet protocol paradigms, the goal of the DSP protocol
+            is to become the core infrastructure of the next generation Internet
+            (NGI).
+          </p>
+        </article>
+      </div>
     </div>
     <div class="architecture flex between wrap-wrap">
-      <h2 class="theme-color-text-fill architecture-circle-1 wow fadeInLeft">
-        <span class="theme-color-text-fill"
-          >A<img src="../assets/img/home_xiu2.svg" class="home-xiu" alt=""
-        /></span>
-        rchitecture
-      </h2>
+      <title-component msg="Architecture"></title-component>
       <div class="architecture-circle-wrap">
         <div
           class="architecture-circle-1 wow fadeInRight"
@@ -110,14 +109,7 @@
         class="home-yuan wow fadeIn"
         alt=""
       />
-      <h2 class="theme-color-text-fill wow fadeInLeft">
-        <span class="theme-color-text-fill"
-          >V<img
-            src="../assets/img/home_xiu2.svg"
-            class="home-xiu"
-            alt=""/></span
-        >alue
-      </h2>
+      <title-component msg="Value" class="article-list-title"></title-component>
       <ul>
         <li class="wow fadeInUp">
           <h4>
@@ -254,9 +246,9 @@
       <img src="../assets/img/home_zs1.svg" class="home-zs1" alt="" />
       <img src="../assets/img/home_xiu3.svg" class="home-xiu3" alt="" />
       <img src="../assets/img/home_xian2.svg" class="home-xian2" alt="" />
-      <a name="firstAnchor"></a>
+      <a name="dsplabs"></a>
       <div class="dsp-labs-content">
-        <h3 class="wow flipInX">DSP Labs</h3>
+        <title-component msg="DSP Labs" theme="white"></title-component>
         <p class="wow fadeIn" data-wow-delay="0.5s">
           DSP Labs, established by Onchain, is a research, development and
           deployment organization that improves next-generation Internet
@@ -275,6 +267,16 @@
       </div>
     </section>
     <FooterComponent></FooterComponent>
+    <div class="videoDialog" v-show="videoDialog">
+      <div
+        class="video-screen-mask"
+        v-show="videoDialog"
+        @click="pauseVideo"
+      ></div>
+      <div class="video-wrap">
+        <VideoComponent></VideoComponent>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -282,32 +284,48 @@
 import { Component, Vue } from "vue-property-decorator";
 import HomeHeaderComponent from "@/components/HomeHeaderComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
+import TitleComponent from "@/components/TitleComponent.vue";
+import VideoComponent from "@/components/VideoComponent.vue";
 import WOW from "wow.js";
 new WOW().init();
 
 @Component({
   components: {
     HomeHeaderComponent,
+    TitleComponent,
     FooterComponent,
+    VideoComponent,
   },
 })
 export default class Home extends Vue {
   public canvasObj: any = null;
 
+  public videoDialog: boolean = false;
+
   public mounted() {
-    if (this.$router.currentRoute.hash === "#firstAnchor") {
+    if (this.$router.currentRoute.hash === "#dsplabs") {
       this.$nextTick(() => {
-        location.href = "#firstAnchor";
+        location.href = "#dsplabs";
       });
-    } else if (this.$router.currentRoute.hash === "#homeAnchor") {
+    } else if (this.$router.currentRoute.hash === "#home") {
       this.$nextTick(() => {
-        location.href = "#homeAnchor";
+        location.href = "#home";
       });
     } else if (this.$router.currentRoute.hash === "homeValueAnchor") {
       this.$nextTick(() => {
-        location.href = "#homeAnchor";
+        location.href = "#home";
       });
     }
+  }
+
+  public playVideo() {
+    this.videoDialog = true;
+    window.player.play();
+  }
+
+  public pauseVideo() {
+    window.player.pause();
+    this.videoDialog = false;
   }
 }
 </script>
@@ -350,64 +368,83 @@ export default class Home extends Vue {
       }
     }
 
-    article {
-      width: 700px;
-      margin: 0 auto;
-      padding-top: 145px;
-      position: relative;
+    .distributed-storage-protocol-wrap {
+      width: 90%;
+      max-width: 1200px;
+      margin: 45px auto 0;
+      font-size: 0;
 
-      @media screen and (max-width: 1024px) {
-        width: 90%;
-      }
-
-      @media screen and (max-width: 768px) {
-        padding-top: 15px;
-      }
-
-      h3 {
-        font-size: 40px;
-        user-select: none;
+      .video-banner-wrap {
+        position: relative;
+        transition: all 0.3s ease;
+        margin: 240px auto 0;
 
         @media screen and (max-width: 768px) {
-          font-size: 20px;
+          width: 100%;
+          margin-top: 0;
+
+          .video-banner {
+            width: 100%;
+          }
         }
 
-        .title-first {
-          font-size: 160px;
-          position: relative;
-          left: 5px;
-          display: inline-block;
+        // &:hover {
+        // .circle {
+        //   opacity: 1;
+        // }
+
+        &:after {
+          content: "";
+          position: absolute;
+          background: rgba(0, 0, 0, 0.4);
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+        }
+        // }
+
+        .circle {
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          left: 50%;
+          top: 50%;
+          color: rgba(255, 255, 255, 1);
+          transform: translateX(-50%) translateY(-50%);
+          font-size: 50px;
+          opacity: 1;
+          transition: all 0.3s ease;
+          cursor: pointer;
+          z-index: 2;
+        }
+      }
+
+      article {
+        width: 700px;
+        margin: 0 auto;
+        // padding-top: 145px;
+        position: relative;
+
+        @media screen and (max-width: 1024px) {
+          width: 90%;
+        }
+
+        @media screen and (max-width: 768px) {
+          padding-top: 15px;
+        }
+
+        p {
+          margin-top: 3vw;
+          font-size: 22px;
+          color: rgba(100, 100, 100, 1);
+          line-height: 42px;
 
           @media screen and (max-width: 768px) {
-            font-size: 60px;
+            font-size: 14px;
+            line-height: 26px;
           }
-
-          .home-xiu {
-            position: absolute;
-            top: -10px;
-            right: -88px;
-            height: 136px;
-            transform: rotate(270deg);
-            user-select: none;
-
-            @media screen and (max-width: 768px) {
-              height: 70px;
-              right: -44px;
-              top: -5px;
-            }
-          }
-        }
-      }
-
-      p {
-        margin-top: 3vw;
-        font-size: 22px;
-        color: rgba(100, 100, 100, 1);
-        line-height: 42px;
-
-        @media screen and (max-width: 768px) {
-          font-size: 14px;
-          line-height: 26px;
         }
       }
     }
@@ -428,42 +465,6 @@ export default class Home extends Vue {
     @media screen and (max-width: 1024px) {
       margin-bottom: 250px;
       margin-top: 0;
-    }
-
-    & > h2 {
-      font-size: 40px;
-      color: #2f93ff;
-      text-indent: 78px;
-
-      @media screen and (max-width: 768px) {
-        text-indent: 20px;
-        font-size: 20px;
-      }
-
-      span {
-        font-size: 160px;
-        position: relative;
-        left: 5px;
-
-        @media screen and (max-width: 768px) {
-          font-size: 60px;
-        }
-
-        .home-xiu {
-          position: absolute;
-          top: -10px;
-          right: -88px;
-          height: 136px;
-          transform: rotate(270deg);
-          user-select: none;
-
-          @media screen and (max-width: 768px) {
-            height: 70px;
-            top: -5px;
-            right: -44px;
-          }
-        }
-      }
     }
 
     & > .architecture-circle-wrap {
@@ -505,26 +506,6 @@ export default class Home extends Vue {
               height: 4vw;
             }
           }
-
-          // & > h4 {
-          //   font-size: 24px;
-          //   line-height: 24px;
-
-          //   @media screen and (max-width: 1024px) {
-          //     font-size: 2.4vw;
-          //     line-height: 2.4vw;
-          //   }
-          // }
-
-          // & > p {
-          //   font-size: 16px;
-          //   line-height: 19px;
-
-          //   @media screen and (max-width: 1024px) {
-          //     font-size: 1.6vw;
-          //     line-height: 1.9vw;
-          //   }
-          // }
 
           &.architecture-circle-1-desc-1 {
             position: absolute;
@@ -921,43 +902,10 @@ export default class Home extends Vue {
       }
     }
 
-    & > h2 {
+    & > .article-list-title {
       width: 90%;
       max-width: 1200px;
       margin: 0 auto;
-      font-size: 40px;
-      color: #2f93ff;
-      text-indent: 78px;
-
-      @media screen and (max-width: 768px) {
-        text-indent: 20px;
-        font-size: 20px;
-      }
-
-      span {
-        font-size: 160px;
-        position: relative;
-        left: 5px;
-
-        @media screen and (max-width: 768px) {
-          font-size: 60px;
-        }
-
-        .home-xiu {
-          position: absolute;
-          top: -10px;
-          right: -88px;
-          height: 136px;
-          transform: rotate(270deg);
-          user-select: none;
-
-          @media screen and (max-width: 768px) {
-            height: 70px;
-            top: -5px;
-            right: -44px;
-          }
-        }
-      }
     }
 
     ul {
@@ -1108,15 +1056,40 @@ export default class Home extends Vue {
 
       h3 {
         color: white;
-        font-size: 88px;
+        font-size: 40px;
         user-select: none;
 
-        @media screen and (max-width: 1024px) {
-          font-size: 9vw;
+        @media screen and (max-width: 768px) {
+          font-size: 20px;
         }
 
-        @media screen and (max-width: 768px) {
-          font-size: 32px;
+        .home-title-first {
+          font-size: 160px;
+          position: relative;
+          left: 3px;
+
+          @media screen and (max-width: 768px) {
+            font-size: 60px;
+          }
+
+          .home-xiu {
+            position: absolute;
+            top: 50px;
+            right: -140px;
+            width: 136px;
+            user-select: none;
+
+            @media screen and (max-width: 768px) {
+              width: 70px;
+              top: 15px;
+              right: -74px;
+            }
+          }
+        }
+
+        span {
+          position: relative;
+          display: inline-block;
         }
       }
 
@@ -1134,7 +1107,36 @@ export default class Home extends Vue {
   }
 }
 
-// @keyframes  {
+.videoDialog {
+  position: fixed;
+  margin: 0;
+  z-index: 2001;
+  padding: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
 
-// }
+  .video-screen-mask {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    margin: 0;
+  }
+
+  .video-wrap {
+    max-width: 654px;
+    width: 100%;
+  }
+}
 </style>

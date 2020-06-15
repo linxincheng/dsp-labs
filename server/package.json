@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "egg-bin dev",
     "stop": "egg-scripts stop",
-    "start": "egg-scripts start --port=7001 --workers=1 --nohup --title=dsplabs-website-service",
+    "start": "egg-scripts start --port=12000 --workers=1 --nohup --title=dsplabs-website-service",
     "test": "egg-bin test",
     "debug": "egg-bin debug"
   },

@@ -6,3 +6,4 @@ declare module "*.vue" {
 declare module "wow.js";
 declare module "vue-cropper";
 declare module "wangeditor";
+declare module "video.js";

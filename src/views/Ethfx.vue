@@ -20,13 +20,14 @@
     </ExHeaderComponent>
     <div class="ex-introduce">
       <div class="article">
-        <h4 class="theme-color-text-fill  wow fadeInLeft">
+        <!-- <h4 class="theme-color-text-fill  wow fadeInLeft">
           <span class="title-first theme-color-text-fill"
             >W
             <img src="../assets/img/home_xiu2.svg" class="home-xiu" alt="" />
           </span>
           hat is ETHFSX
-        </h4>
+        </h4> -->
+        <TitleComponent msg="What is ETHFSX"></TitleComponent>
         <p class="wow fadeIn" data-wow-delay="0.3s">
           An extended communication and data storage network based on DSP
           protocol. The purpose is to provide a stable and safe file storage
@@ -82,12 +83,17 @@
         class="ipfsx-brings-white3"
         alt=""
       />
-      <h2 class="ethfs-brings-title wow fadeInLeft">
+      <!-- <h2 class="ethfs-brings-title wow fadeInLeft">
         <span
           >T<img src="../assets/img/home_xiu3.svg" class="home-xiu" alt="" />
         </span>
         he value of ETHFSX
-      </h2>
+      </h2> -->
+      <TitleComponent
+        msg="The value of ETHFSX"
+        theme="white"
+        class="ethfs-brings-title"
+      ></TitleComponent>
       <div class="ethfs-brings-distribution">
         <p class="wow fadeIn">
           1. DApp / Dweb can store large file data and service data in ETHFSX,
@@ -136,6 +142,7 @@
 import { Component, Vue } from "vue-property-decorator";
 import ExHeaderComponent from "@/components/ExHeaderComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
+import TitleComponent from "@/components/TitleComponent.vue";
 import WOW from "wow.js";
 new WOW().init();
 
@@ -154,6 +161,7 @@ interface FeatrueContentStru {
   components: {
     ExHeaderComponent,
     FooterComponent,
+    TitleComponent,
   },
 })
 export default class Ethfs extends Vue {
@@ -291,42 +299,42 @@ export default class Ethfs extends Vue {
         left: 0;
       }
 
-      & > h4 {
-        font-size: 40px;
-        font-weight: 600;
-        color: rgba(47, 147, 255, 1);
-        user-select: none;
+      // & > h4 {
+      //   font-size: 40px;
+      //   font-weight: 600;
+      //   color: rgba(47, 147, 255, 1);
+      //   user-select: none;
 
-        @media screen and (max-width: 768px) {
-          font-size: 22px;
-        }
+      //   @media screen and (max-width: 768px) {
+      //     font-size: 22px;
+      //   }
 
-        .title-first {
-          font-size: 160px;
-          position: relative;
-          left: 5px;
-          display: inline-block;
+      //   .title-first {
+      //     font-size: 160px;
+      //     position: relative;
+      //     left: 5px;
+      //     display: inline-block;
 
-          @media screen and (max-width: 768px) {
-            font-size: 60px;
-          }
+      //     @media screen and (max-width: 768px) {
+      //       font-size: 60px;
+      //     }
 
-          .home-xiu {
-            position: absolute;
-            top: -10px;
-            right: -88px;
-            height: 136px;
-            transform: rotate(270deg);
-            user-select: none;
+      //     .home-xiu {
+      //       position: absolute;
+      //       top: -10px;
+      //       right: -88px;
+      //       height: 136px;
+      //       transform: rotate(270deg);
+      //       user-select: none;
 
-            @media screen and (max-width: 768px) {
-              height: 70px;
-              right: -44px;
-              top: -5px;
-            }
-          }
-        }
-      }
+      //       @media screen and (max-width: 768px) {
+      //         height: 70px;
+      //         right: -44px;
+      //         top: -5px;
+      //       }
+      //     }
+      //   }
+      // }
 
       & > p {
         font-size: 24px;
@@ -559,40 +567,40 @@ export default class Ethfs extends Vue {
       min-width: 657px;
       width: 40%;
       margin: 0 auto;
-      user-select: none;
-      font-size: 40px;
-      color: rgba(255, 255, 255, 1);
+      // user-select: none;
+      // font-size: 40px;
+      // color: rgba(255, 255, 255, 1);
 
       @media screen and (max-width: 768px) {
         min-width: 0;
         width: 90%;
         padding-top: 180px;
-        font-size: 20px;
+        // font-size: 20px;
       }
 
-      span {
-        font-size: 160px;
-        position: relative;
-        left: 10px;
+      // span {
+      //   font-size: 160px;
+      //   position: relative;
+      //   left: 10px;
 
-        @media screen and (max-width: 768px) {
-          font-size: 80px;
-        }
+      //   @media screen and (max-width: 768px) {
+      //     font-size: 80px;
+      //   }
 
-        .home-xiu {
-          position: absolute;
-          top: 40px;
-          right: -148px;
-          width: 136px;
-          user-select: none;
-        }
+      //   .home-xiu {
+      //     position: absolute;
+      //     top: 40px;
+      //     right: -148px;
+      //     width: 136px;
+      //     user-select: none;
+      //   }
 
-        @media screen and (max-width: 768px) {
-          height: 70px;
-          top: -5px;
-          right: -44px;
-        }
-      }
+      //   @media screen and (max-width: 768px) {
+      //     height: 70px;
+      //     top: -5px;
+      //     right: -44px;
+      //   }
+      // }
     }
 
     .ethfs-brings-distribution {

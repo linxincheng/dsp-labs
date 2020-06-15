@@ -21,13 +21,14 @@
 
     <div class="ex-introduce">
       <div class="article">
-        <h4 class="theme-color-text-fill  wow fadeInLeft">
+        <!-- <h4 class="theme-color-text-fill  wow fadeInLeft">
           <span class="title-first theme-color-text-fill"
             >W
             <img src="../assets/img/home_xiu2.svg" class="home-xiu" alt="" />
           </span>
           hat is IPFSX
-        </h4>
+        </h4> -->
+        <title-component msg="What is IPFSX"></title-component>
         <p class="wow fadeIn" data-wow-delay="0.3s">
           IPFSX is a distributed storage protocol implementation project that
           upgrades the IPFS protocol network based on the DSP protocol. The goal
@@ -74,12 +75,17 @@
         class="ipfsx-brings-white3"
         alt=""
       />
-      <h2 class="ipfsex-brings-title wow fadeInLeft">
+      <!-- <h2 class="ipfsex-brings-title wow fadeInLeft">
         <span
           >T<img src="../assets/img/home_xiu3.svg" class="home-xiu" alt="" />
         </span>
         he value that IPFSX brings
-      </h2>
+      </h2> -->
+      <title-component
+        class="ipfsex-brings-title"
+        msg="The value that IPFSX brings"
+        theme="white"
+      ></title-component>
       <div class="ipfsex-brings-distribution ">
         <img
           src="../assets/img/new_xiu1.svg"
@@ -149,6 +155,7 @@
 import { Component, Vue } from "vue-property-decorator";
 import ExHeaderComponent from "@/components/ExHeaderComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
+import TitleComponent from "@/components/TitleComponent.vue";
 import WOW from "wow.js";
 new WOW().init();
 
@@ -162,6 +169,7 @@ interface FeatrueIconStru {
   components: {
     ExHeaderComponent,
     FooterComponent,
+    TitleComponent,
   },
 })
 export default class Ipfsex extends Vue {
@@ -532,9 +540,9 @@ export default class Ipfsex extends Vue {
       min-width: 657px;
       width: 40%;
       margin: 0 auto;
-      user-select: none;
-      font-size: 40px;
-      color: rgba(255, 255, 255, 1);
+      // user-select: none;
+      // font-size: 40px;
+      // color: rgba(255, 255, 255, 1);
 
       @media screen and (max-width: 768px) {
         min-width: 0;
@@ -543,35 +551,35 @@ export default class Ipfsex extends Vue {
         font-size: 20px;
       }
 
-      span {
-        font-size: 160px;
-        position: relative;
-        left: 5px;
+      // span {
+      //   font-size: 160px;
+      //   position: relative;
+      //   left: 5px;
 
-        @media screen and (max-width: 768px) {
-          font-size: 80px;
-        }
+      //   @media screen and (max-width: 768px) {
+      //     font-size: 80px;
+      //   }
 
-        .home-xiu {
-          position: absolute;
-          top: 40px;
-          right: -148px;
-          width: 136px;
-          user-select: none;
+      //   .home-xiu {
+      //     position: absolute;
+      //     top: 40px;
+      //     right: -148px;
+      //     width: 136px;
+      //     user-select: none;
 
-          @media screen and (max-width: 768px) {
-            top: 4vw;
-            right: -14.8vw;
-            width: 13.6vw;
-          }
-        }
+      //     @media screen and (max-width: 768px) {
+      //       top: 4vw;
+      //       right: -14.8vw;
+      //       width: 13.6vw;
+      //     }
+      //   }
 
-        // @media screen and (max-width: 768px) {
-        //   height: 70px;
-        //   top: -5px;
-        //   right: -44px;
-        // }
-      }
+      //   // @media screen and (max-width: 768px) {
+      //   //   height: 70px;
+      //   //   top: -5px;
+      //   //   right: -44px;
+      //   // }
+      // }
     }
 
     .ipfsex-brings-distribution {

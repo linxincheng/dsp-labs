@@ -9,7 +9,11 @@ let width,
   PROJECTION_CENTER_Y,
   FIELD_OF_VIEW,
   DOT_RADIUS,
-  image;
+  image,
+  image2,
+  image2Angular = -1,
+  image2Speed = 80,
+  sleepImage2Fps = 30;
 let rotation = 0; // Rotation of the globe
 let dots = []; // Every dots in an array
 const CIRCLE_BG_COLOR = "#dddddd"; // circle color
@@ -24,7 +28,6 @@ function init() {
   canvas = document.querySelector("#home-white-wrap");
   canvas.width = canvas.clientWidth;
   canvas.height = canvas.clientHeight;
-  // Store the 2D context
   ctx = canvas.getContext("2d");
 
   if (window.devicePixelRatio > 1) {
@@ -48,6 +51,7 @@ function init() {
     DOT_RADIUS = 1;
   }
   image = document.getElementById("source");
+  image2 = document.getElementById("source-huan");
 
   GLOBE_RADIUS = width * 0.7; // Radius of the globe
   GLOBE_CENTER_Z = -GLOBE_RADIUS; // Z value of the globe center
@@ -156,19 +160,36 @@ function render(a) {
     canvas.clientWidth * LOGO_SIZE,
     canvas.clientHeight * LOGO_SIZE
   );
-  // ctx.drawImage(
-  //   image,
-  //   0,
-  //   0,
-  //   canvas.width / 4,
-  //   canvas.width / 4
-  //   // canvas.width * ((1 - LOGO_SIZE) / 2),
-  //   // canvas.height * ((1 - LOGO_SIZE) / 2),
-  //   // canvas.width * LOGO_SIZE,
-  //   // canvas.height * LOGO_SIZE
-  // );
 
-  // for (var i = 0; i < dots.length; i++) {
+  if (image2Angular < 1) {
+    ctx.save();
+    let x = canvas.clientWidth * ((1 - LOGO_SIZE * 0.293) / 2.094);
+    ctx.translate(x, 0);
+    if (sleepImage2Fps > 0) {
+      sleepImage2Fps--;
+    } else {
+      image2Angular += image2Speed / 1000;
+    }
+    ctx.scale(image2Angular, 1);
+    ctx.translate(-x, 0);
+    ctx.drawImage(
+      image2,
+      canvas.clientWidth * ((1 - LOGO_SIZE * 0.293) / 2.094),
+      canvas.clientHeight * ((1 - LOGO_SIZE * 0.91) / 2),
+      canvas.clientWidth * LOGO_SIZE * 0.295,
+      canvas.clientHeight * LOGO_SIZE * 0.91
+    );
+    ctx.restore();
+  } else {
+    ctx.drawImage(
+      image2,
+      canvas.clientWidth * ((1 - LOGO_SIZE * 0.295) / 2.09),
+      canvas.clientHeight * ((1 - LOGO_SIZE * 0.91) / 2),
+      canvas.clientWidth * LOGO_SIZE * 0.295,
+      canvas.clientHeight * LOGO_SIZE * 0.91
+    );
+  }
+
   i = 0;
   while (i < DOTS_AMOUNT) {
     if (secondRenderArr[i]) {
@@ -206,6 +227,7 @@ function afterResize() {
     DOT_RADIUS = 1;
   }
   image = document.getElementById("source");
+  image2 = document.getElementById("source-huan");
 
   createDots(); // Reset all dots
 

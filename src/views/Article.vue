@@ -21,7 +21,7 @@
         <p class="article-auther">auther: {{ article.auther }}</p>
       </div>
       <div v-else>
-        no data
+        loading...
       </div>
     </section>
     <FooterComponent></FooterComponent>

@@ -5,7 +5,18 @@
     <div class="home-header-wrap">
       <canvas class="home-white-wrap" id="home-white-wrap"> </canvas>
       <div v-show="false">
-        <img id="source" src="../assets/img/dsp.png" width="141" height="40" />
+        <img
+          id="source"
+          src="../assets/img/logo_yuan.png"
+          width="141"
+          height="40"
+        />
+        <img
+          id="source-huan"
+          src="../assets/img/logo_huan.png"
+          width="141"
+          height="40"
+        />
       </div>
 
       <div class="header-title white">

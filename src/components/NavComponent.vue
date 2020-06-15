@@ -62,7 +62,7 @@ export default class NavComponent extends Vue {
 
   public goHomeTopLabs(): void {
     if (this.$router.currentRoute.name === "Home") {
-      location.href = "#homeAnchor";
+      location.href = "#home";
       this.pop = false;
     } else {
       this.$router.push({
@@ -73,12 +73,12 @@ export default class NavComponent extends Vue {
 
   public goHomeDspLabs(): void {
     if (this.$router.currentRoute.name === "Home") {
-      location.href = "#firstAnchor";
+      location.href = "#dsplabs";
       this.pop = false;
     } else {
       this.$router.push({
         path: "/",
-        hash: "#firstAnchor",
+        hash: "#dsplabs",
       });
     }
   }

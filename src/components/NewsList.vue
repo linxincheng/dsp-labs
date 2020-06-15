@@ -2,7 +2,7 @@
   <div class="news-list">
     <div class="news-list-content flex wrap-wrap">
       <section
-        class="news-list-item"
+        class="news-list-item wow fadeIn"
         v-for="(item, index) of list"
         :key="index"
         @click="previewNews(item)"
@@ -10,16 +10,20 @@
         <img :src="item.banner" alt="" />
         <div class="news-list-item-content">
           <img :src="item.banner" alt="" />
-          <h4>
+          <h4 class="theme-color-text-fill">
             {{ item.title }}
           </h4>
           <p>
             {{ item.main_desc }}
           </p>
+          <p class="news-bottom">
+            {{ item.auther }}<br />
+            {{ (item.publish_at / 1000) | timeFormat }}
+          </p>
         </div>
       </section>
     </div>
-    <div class="paginate-wrap">
+    <div class="paginate-wrap wow fadeIn">
       <el-pagination
         background
         class="paginate"
@@ -40,6 +44,8 @@
 import { Component, Vue, Model } from "vue-property-decorator";
 import axios from "./../axios/http";
 import api from "./../assets/config/api";
+import WOW from "wow.js";
+new WOW().init();
 
 @Component
 export default class NewsList extends Vue {
@@ -93,7 +99,7 @@ export default class NewsList extends Vue {
 .news-list {
   min-height: 40vw;
   width: 100%;
-  margin: 11vw auto 2vw;
+  margin: 0 auto 2vw;
   z-index: 2;
   position: relative;
 
@@ -108,7 +114,7 @@ export default class NewsList extends Vue {
 
     .news-list-item {
       width: 100%;
-      margin-top: 7vw;
+      margin-top: 80px;
       cursor: pointer;
 
       @media screen and (min-width: 768px) {
@@ -122,8 +128,7 @@ export default class NewsList extends Vue {
       & > img {
         flex-shrink: 0;
         user-select: none;
-        border-radius: 10px;
-        border: 1px solid black;
+        border: 1px solid rgba(0, 0, 0, 0.1);
         box-sizing: border-box;
         width: 315px;
         height: 180px;
@@ -139,9 +144,10 @@ export default class NewsList extends Vue {
         margin-left: 1vw;
         width: 315px;
         margin: 20px auto 0;
+        position: relative;
 
         @media screen and (max-width: 768px) {
-          margin: 20px 0 0;
+          // margin: 20px 0 0;
           width: 100%;
         }
 
@@ -150,22 +156,37 @@ export default class NewsList extends Vue {
           color: rgba(47, 147, 255, 1);
           line-height: 27px;
           user-select: none;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
+          margin-bottom: 8px;
 
           @media screen and (max-width: 768px) {
-            white-space: inherit;
-            overflow: inherit;
-            text-overflow: inherit;
+            font-size: 18px;
           }
+
+          // @media screen and (max-width: 768px) {
+          //   white-space: inherit;
+          //   overflow: inherit;
+          //   text-overflow: inherit;
+          // }
         }
 
         p {
           font-size: 16px;
           color: rgba(100, 100, 100, 1);
           line-height: 26px;
-          margin-top: 10px;
+
+          @media screen and (max-width: 768px) {
+            font-size: 14px;
+          }
+
+          &.news-bottom {
+            font-size: 14px;
+            margin-top: 16px;
+            opacity: 0.8;
+
+            @media screen and (max-width: 768px) {
+              font-size: 12px;
+            }
+          }
         }
         & > img {
           display: none;
@@ -173,8 +194,8 @@ export default class NewsList extends Vue {
           flex-shrink: 0;
           width: 315px;
           height: 180px;
-          border-radius: 10px;
-          border: 1px solid black;
+          // border-radius: 10px;
+          border: 1px solid rgba(0, 0, 0, 0.1);
           box-sizing: border-box;
 
           @media screen and (max-width: 768px) {

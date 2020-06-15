@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="2560px" height="393px" viewBox="0 0 2560 393" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54 (76480) - https://sketchapp.com -->
+    <title>news-bj</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="93.2473508%" y1="49.2488285%" x2="24.0316417%" y2="51.2850896%" id="linearGradient-1">
+            <stop stop-color="#8252CF" offset="0%"></stop>
+            <stop stop-color="#3A7FE5" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M2560,0 L2560,112.145204 C2270.35912,282.50509 1804.65206,393 1279.5,393 C754.951886,393 289.712132,282.759092 -1.10048859e-10,112.732731 L-1.10048859e-10,1.42108547e-14 L2560,0 Z" id="news-bj" fill="url(#linearGradient-1)"></path>
+    </g>
+</svg>

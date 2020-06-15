@@ -29,7 +29,10 @@
         ></i>
       </section>
       <section class="footer-right flex ai-center">
-        <img src="../assets/img/qr.png" class="qr" alt="" />
+        <div class="qr-wrap">
+          <img src="../assets/img/qr.png" class="qr" alt="" />
+          <p>WeChat</p>
+        </div>
         <p>
           <span><i class="iconfont iconemail"></i> Email:</span>
           <a href="mailto:@onchain.com">dsp@onchain.com</a> <br /><span
@@ -125,18 +128,32 @@ footer {
         align-items: center;
       }
 
-      .qr {
-        width: 100px;
-        height: 100px;
+      .qr-wrap {
+        position: relative;
         margin-right: 42px;
-        user-select: none;
 
-        @media screen and (max-width: 768px) {
-          margin-right: 0px;
+        .qr {
+          width: 100px;
+          height: 100px;
+          user-select: none;
+          position: relative;
+
+          @media screen and (max-width: 768px) {
+            margin-right: 0px;
+          }
+        }
+
+        p {
+          position: absolute;
+          bottom: -24px;
+          font-size: 14px;
+          color: white;
+          width: 100%;
+          text-align: center;
         }
       }
 
-      p {
+      & > p {
         font-size: 18px;
         line-height: 32px;
         color: white;
@@ -146,9 +163,9 @@ footer {
         }
 
         @media screen and (max-width: 768px) {
-          margin-top: 15px;
+          margin-top: 35px;
           font-size: 14px;
-          line-height: 28px;
+          line-height: 30px;
         }
 
         & > a {

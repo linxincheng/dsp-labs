@@ -24,6 +24,7 @@ import "./assets/css/ele-style.scss";
 import "./assets/css/font/ofont/iconfont.css";
 import "element-ui/lib/theme-chalk/index.css";
 import "./assets/css/animate.css";
+import "video.js/dist/video-js.css";
 
 Vue.config.productionTip = false;
 Vue.use(Select);

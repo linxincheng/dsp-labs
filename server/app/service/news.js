@@ -9,8 +9,8 @@ class NewsService extends Service {
     let _list = await global.news.getData(NEWS_LIST);
     let arr = _list.slice(offset, limit);
     for (let i = 0, len = arr.length; i < len; i++) {
-      // let info = await global.news.getData(arr[i]);
       let { result: info } = await this.getInfoById(arr[i]);
+      delete info["main"];
       arr[i] = info;
     }
     return {
