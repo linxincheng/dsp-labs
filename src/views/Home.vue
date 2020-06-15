@@ -2,7 +2,10 @@
   <div class="home">
     <a name="home"></a>
     <HomeHeaderComponent></HomeHeaderComponent>
-    <div class="distributed-storage-protocol flex between">
+    <div
+      class="distributed-storage-protocol flex between"
+      v-if="videoComponenetDialog"
+    >
       <img src="../assets/img/home_white2.svg" class="home-white-2" alt="" />
       <img src="../assets/img/home_xian1.svg" class="home-xian1" alt="" />
       <div
@@ -29,7 +32,10 @@
         </article>
       </div>
     </div>
-    <div class="architecture flex between wrap-wrap">
+    <div
+      class="architecture flex between wrap-wrap"
+      v-if="videoComponenetDialog"
+    >
       <title-component msg="Architecture"></title-component>
       <div class="architecture-circle-wrap">
         <div
@@ -93,7 +99,7 @@
       </div>
     </div>
     <a name="homeValueAnchor"></a>
-    <section class="article-list">
+    <section class="article-list" v-if="videoComponenetDialog">
       <img
         src="../assets/img/new_cai1.svg"
         class="home-cai1 wow fadeIn"
@@ -241,7 +247,7 @@
         </li>
       </ul>
     </section>
-    <section class="dsp-labs-wrap">
+    <section class="dsp-labs-wrap" v-if="videoComponenetDialog">
       <div class="home-bj2"></div>
       <img src="../assets/img/home_zs1.svg" class="home-zs1" alt="" />
       <img src="../assets/img/home_xiu3.svg" class="home-xiu3" alt="" />
@@ -267,7 +273,7 @@
       </div>
     </section>
     <FooterComponent></FooterComponent>
-    <div class="videoDialog" v-show="videoDialog">
+    <div class="videoDialog" v-show="videoDialog" v-if="videoComponenetDialog">
       <div
         class="video-screen-mask"
         v-show="videoDialog"
@@ -302,6 +308,8 @@ export default class Home extends Vue {
 
   public videoDialog: boolean = false;
 
+  public videoComponenetDialog: boolean = false;
+
   public mounted() {
     if (this.$router.currentRoute.hash === "#dsplabs") {
       this.$nextTick(() => {
@@ -316,6 +324,8 @@ export default class Home extends Vue {
         location.href = "#home";
       });
     }
+
+    this.videoComponenetDialog = true;
   }
 
   public playVideo() {
