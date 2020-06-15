@@ -4,7 +4,6 @@ node_modules
 /server/app/view
 /server/run
 /server/logs
-/server/app/db/dbFileDir
 /server/app/db/dbFileDir/News
 
 # local env files
