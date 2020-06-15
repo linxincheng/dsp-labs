@@ -11,6 +11,7 @@ let width,
   DOT_RADIUS,
   image,
   image2,
+  image3,
   image2Angular = -1,
   image2Speed = 80,
   sleepImage2Fps = 30;
@@ -52,6 +53,7 @@ function init() {
   }
   image = document.getElementById("source");
   image2 = document.getElementById("source-huan");
+  image3 = document.getElementById("source-huan2");
 
   GLOBE_RADIUS = width * 0.7; // Radius of the globe
   GLOBE_CENTER_Z = -GLOBE_RADIUS; // Z value of the globe center
@@ -133,15 +135,12 @@ function render(a) {
   ctx.clearRect(0, 0, width, height);
 
   // Increase the globe rotation
-  // rotation = a * 0.0004;
   rotation = a * 0.00006;
 
   const sineRotation = Math.sin(rotation); // Sine of the rotation
   const cosineRotation = Math.cos(rotation); // Cosine of the rotation
 
   let secondRenderArr = {};
-  // for (var i = 0; i < dots.length; i++) {
-  // for (let i = 0; i < dots.length; i++) {
   let i = 0;
   while (i < DOTS_AMOUNT) {
     let isRender = dots[i].draw(sineRotation, cosineRotation, true);
@@ -151,8 +150,6 @@ function render(a) {
     i++;
   }
 
-  // let image = document.getElementById("source");
-  // Loop through the dots array and draw every dot
   ctx.drawImage(
     image,
     canvas.clientWidth * ((1 - LOGO_SIZE) / 2),
@@ -161,7 +158,7 @@ function render(a) {
     canvas.clientHeight * LOGO_SIZE
   );
 
-  if (image2Angular < 1) {
+  if (image2Angular < 0.5) {
     ctx.save();
     let x = canvas.clientWidth * ((1 - LOGO_SIZE * 0.293) / 2.094);
     ctx.translate(x, 0);
@@ -180,13 +177,32 @@ function render(a) {
       canvas.clientHeight * LOGO_SIZE * 0.91
     );
     ctx.restore();
+  } else if (image2Angular < 1) {
+    ctx.save();
+    let x = canvas.clientWidth * ((1 - LOGO_SIZE * 0.293) / 2.094);
+    ctx.translate(x, 0);
+    if (sleepImage2Fps > 0) {
+      sleepImage2Fps--;
+    } else {
+      image2Angular += image2Speed / 1000;
+    }
+    ctx.scale(image2Angular, 1);
+    ctx.translate(-x, 0);
+    ctx.drawImage(
+      image3,
+      canvas.clientWidth * ((1 - LOGO_SIZE * 0.293) / 2.094),
+      canvas.clientHeight * ((1 - LOGO_SIZE * 1) / 2),
+      canvas.clientWidth * LOGO_SIZE * 0.293,
+      canvas.clientHeight * LOGO_SIZE * 1
+    );
+    ctx.restore();
   } else {
     ctx.drawImage(
-      image2,
-      canvas.clientWidth * ((1 - LOGO_SIZE * 0.295) / 2.09),
-      canvas.clientHeight * ((1 - LOGO_SIZE * 0.91) / 2),
-      canvas.clientWidth * LOGO_SIZE * 0.295,
-      canvas.clientHeight * LOGO_SIZE * 0.91
+      image3,
+      canvas.clientWidth * ((1 - LOGO_SIZE * 0.293) / 2.094),
+      canvas.clientHeight * ((1 - LOGO_SIZE * 1) / 2),
+      canvas.clientWidth * LOGO_SIZE * 0.293,
+      canvas.clientHeight * LOGO_SIZE * 1
     );
   }
 
@@ -228,6 +244,7 @@ function afterResize() {
   }
   image = document.getElementById("source");
   image2 = document.getElementById("source-huan");
+  image3 = document.getElementById("source-huan2");
 
   createDots(); // Reset all dots
 
@@ -251,7 +268,6 @@ class CanvasObj {
   }
 
   onResize() {
-    console.log(999);
     // Clear the timeout variable
     this.resizeTimeout = window.clearTimeout(this.resizeTimeout);
     // Store a new timeout to avoid calling afterResize for every resize event

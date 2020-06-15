@@ -17,6 +17,12 @@
           width="141"
           height="40"
         />
+        <img
+          id="source-huan2"
+          src="../assets/img/logo_huan2.png"
+          width="141"
+          height="40"
+        />
       </div>
 
       <div class="header-title white">

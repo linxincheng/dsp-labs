@@ -75,10 +75,12 @@ export default class Article extends Vue {
     max-width: 700px;
     margin: 50px auto 200px;
     min-height: calc(100vh - 400px);
+    font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman",
+      Times, serif;
 
     .article-title {
-      font-size: 30px;
-      line-height: 40px;
+      font-size: 40px;
+      line-height: 48px;
       font-weight: 500;
       margin-bottom: 30px;
     }
@@ -94,7 +96,7 @@ export default class Article extends Vue {
     .article-time {
       font-size: 16px;
       text-align: right;
-      margin-top: 30px;
+      margin-top: 120px;
     }
     .article-auther {
       font-size: 16px;

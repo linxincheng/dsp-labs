@@ -32,7 +32,7 @@
             </div>
           </h4>
           <p class="edit-news-list-item-content">
-            {{ item.main_desc }}
+            {{ item.main_desc.slice(0, -1) }}...
           </p>
           <p class="flex between edit-news-list-item-other">
             <span>{{ item.auther }}</span>

@@ -15,9 +15,7 @@
           <h4 class="theme-color-text-fill" :title="news.title">
             {{ news.title }}
           </h4>
-          <p class="news-desc">
-            {{ news.main_desc }}
-          </p>
+          <p class="news-desc">{{ news.main_desc.slice(0, -1) }}...</p>
           <p class="news-bottom">
             {{ news.auther }} <br />
             {{ (news.publish_at / 1000) | timeFormat }}

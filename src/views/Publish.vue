@@ -51,7 +51,8 @@
       class="w-e-menu full-screen-icon"
       style="z-index:10001;"
     >
-      <i class="w-e-icon-redo"></i>
+      <i class="iconfont icontuichuquanping" v-show="full"></i>
+      <i class="iconfont iconquanping" v-show="!full"></i>
     </div>
   </div>
 </template>
@@ -238,7 +239,6 @@ export default {
   .public-editor {
     width: 100%;
     height: 400px;
-    font-size: 16px;
 
     &.full {
       position: fixed;
@@ -262,6 +262,8 @@ export default {
         height: auto !important;
         overflow-y: hidden;
         margin: 0 auto;
+        border-left: 1px dotted rgba(0, 0, 0, 0.2);
+        border-right: 1px dotted rgba(0, 0, 0, 0.2);
       }
     }
   }

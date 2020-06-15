@@ -6,6 +6,20 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "15340410",
+      "name": "quanping",
+      "font_class": "quanping",
+      "unicode": "e659",
+      "unicode_decimal": 58969
+    },
+    {
+      "icon_id": "15340414",
+      "name": "tuichuquanping",
+      "font_class": "tuichuquanping",
+      "unicode": "e65a",
+      "unicode_decimal": 58970
+    },
+    {
       "icon_id": "9038009",
       "name": "播放",
       "font_class": "bofang",
