@@ -26,7 +26,7 @@
 import { Component, Vue } from "vue-property-decorator";
 import axios from "./../axios/http";
 import api from "./../assets/config/api";
-require("./../assets/tool/filter");
+import "./../assets/tool/filter";
 
 import {
   Pagination,
@@ -37,7 +37,7 @@ import {
   FormItem,
   Button,
 } from "element-ui";
-import "element-ui/lib/theme-chalk/index.css";
+require("element-ui/lib/theme-chalk/index.css");
 Vue.use(Pagination);
 Vue.use(Input);
 Vue.use(Form);

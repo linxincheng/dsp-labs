@@ -3,19 +3,6 @@ import VueRouter, { RouteConfig } from "vue-router";
 
 Vue.use(VueRouter);
 
-// function loadComponent(path: string) {
-//   // return (resolve: any) =>
-//   //   require.ensure(
-//   //     [],
-//   //     () => resolve(require(`@/views/${path}.vue`)),
-//   //     `view-${path}`
-//   //   );
-//   return () => {
-//     console.log(path);
-//     import(/* webpackChunkName: "view-[request]" */ `@/views/${path}.vue`);
-//   };
-// }
-
 const routes: Array<RouteConfig> = [
   {
     path: "/",
