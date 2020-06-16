@@ -16,5 +16,3 @@ new Vue({
   router,
   render: (h) => h(App),
 }).$mount("#app");
-
-import "video.js/dist/video-js.css";

@@ -1151,7 +1151,7 @@ export default class Home extends Vue {
   }
 
   .video-wrap {
-    max-width: 654px;
+    max-width: 1000px;
     width: 100%;
   }
 }

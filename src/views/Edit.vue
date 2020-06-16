@@ -37,7 +37,7 @@ import {
   FormItem,
   Button,
 } from "element-ui";
-require("element-ui/lib/theme-chalk/index.css");
+import "element-ui/lib/theme-chalk/index.css";
 Vue.use(Pagination);
 Vue.use(Input);
 Vue.use(Form);

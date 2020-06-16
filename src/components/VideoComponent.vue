@@ -9,6 +9,7 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import videojs from "video.js";
+import "video.js/dist/video-js.css";
 
 @Component
 export default class VideoComponent extends Vue {
@@ -31,4 +32,32 @@ export default class VideoComponent extends Vue {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scope>
+div,
+a,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+form,
+input,
+p,
+blockquote,
+table,
+th,
+td,
+embed {
+  word-break: inherit;
+}
+</style>
