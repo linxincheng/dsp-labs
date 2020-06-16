@@ -102,7 +102,13 @@ footer {
         transition: all 0.1s ease;
 
         @media screen and (max-width: 768px) {
-          margin: 10px 20px;
+          margin: 10px 15px;
+          font-size: 48px;
+        }
+
+        @media screen and (max-width: 435px) {
+          font-size: 36px;
+          margin: 10px 10px;
         }
 
         &:hover {

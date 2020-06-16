@@ -291,7 +291,7 @@ import { Component, Vue } from "vue-property-decorator";
 import HomeHeaderComponent from "@/components/HomeHeaderComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
 import TitleComponent from "@/components/TitleComponent.vue";
-import VideoComponent from "@/components/VideoComponent.vue";
+// import VideoComponent from "@/components/VideoComponent.vue";
 import WOW from "wow.js";
 new WOW().init();
 
@@ -300,7 +300,11 @@ new WOW().init();
     HomeHeaderComponent,
     TitleComponent,
     FooterComponent,
-    VideoComponent,
+    // VideoComponent,
+    VideoComponent: () =>
+      import(
+        /* webpackChunkName: "video-component" */ "@/components/VideoComponent.vue"
+      ),
   },
 })
 export default class Home extends Vue {

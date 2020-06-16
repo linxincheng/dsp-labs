@@ -4,7 +4,6 @@
     <div class="article-wrap">
       <div v-if="article">
         <h2 class="article-title">
-          <!-- 分布式存储协议具有加速边缘计算技术规范的潜力 -->
           {{ article.title }}
         </h2>
         <img
@@ -33,7 +32,7 @@
 import { Component, Vue } from "vue-property-decorator";
 import NavComponent from "@/components/NavComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
-require("./../assets/tool/filter");
+import "./../assets/tool/filter";
 import axios from "./../axios/http";
 import api from "./../assets/config/api";
 

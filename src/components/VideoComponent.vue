@@ -13,7 +13,6 @@ import videojs from "video.js";
 @Component
 export default class VideoComponent extends Vue {
   public mounted() {
-    console.log(123123);
     window.player = videojs(
       "dsp-video",
       {
