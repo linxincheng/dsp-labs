@@ -550,36 +550,6 @@ export default class Ipfsex extends Vue {
         padding-top: 180px;
         font-size: 20px;
       }
-
-      // span {
-      //   font-size: 160px;
-      //   position: relative;
-      //   left: 5px;
-
-      //   @media screen and (max-width: 768px) {
-      //     font-size: 80px;
-      //   }
-
-      //   .home-xiu {
-      //     position: absolute;
-      //     top: 40px;
-      //     right: -148px;
-      //     width: 136px;
-      //     user-select: none;
-
-      //     @media screen and (max-width: 768px) {
-      //       top: 4vw;
-      //       right: -14.8vw;
-      //       width: 13.6vw;
-      //     }
-      //   }
-
-      //   // @media screen and (max-width: 768px) {
-      //   //   height: 70px;
-      //   //   top: -5px;
-      //   //   right: -44px;
-      //   // }
-      // }
     }
 
     .ipfsex-brings-distribution {
@@ -728,9 +698,6 @@ export default class Ipfsex extends Vue {
 
         @media screen and (max-width: 768px) {
           display: none;
-          // opacity: 0;
-          // bottom: 2vw;
-          // top: auto;
         }
       }
     }

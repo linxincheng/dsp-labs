@@ -31,10 +31,11 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import axios from "./../axios/http";
-import api from "./../assets/config/api";
 import NavComponent from "@/components/NavComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
+require("./../assets/tool/filter");
+import axios from "./../axios/http";
+import api from "./../assets/config/api";
 
 @Component({
   components: { NavComponent, FooterComponent },

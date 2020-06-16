@@ -310,6 +310,8 @@ export default class Home extends Vue {
 
   public videoComponenetDialog: boolean = false;
 
+  public VideoComponent: any = null;
+
   public mounted() {
     if (this.$router.currentRoute.hash === "#dsplabs") {
       this.$nextTick(() => {

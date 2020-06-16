@@ -1,48 +1,72 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
-import Home from "../views/Home.vue";
 
 Vue.use(VueRouter);
 
+// function loadComponent(path: string) {
+//   // return (resolve: any) =>
+//   //   require.ensure(
+//   //     [],
+//   //     () => resolve(require(`@/views/${path}.vue`)),
+//   //     `view-${path}`
+//   //   );
+//   return () => {
+//     console.log(path);
+//     import(/* webpackChunkName: "view-[request]" */ `@/views/${path}.vue`);
+//   };
+// }
+
 const routes: Array<RouteConfig> = [
+  {
+    path: "/",
+    redirect: "Home",
+    meta: { index: 0 },
+  },
+  {
+    path: "/Home",
+    name: "Home",
+    component: () => import(/* webpackChunkName: "home" */ "../views/Home.vue"),
+  },
   {
     path: "/ipfsex",
     name: "Ipfsex",
     meta: { index: 1 },
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Ipfsex.vue"),
+      import(/* webpackChunkName: "ipfsex" */ "../views/Ipfsex.vue"),
   },
   {
     path: "/ethfx",
     name: "Ethfx",
     meta: { index: 2 },
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Ethfx.vue"),
+      import(/* webpackChunkName: "ethfx" */ "../views/Ethfx.vue"),
   },
   {
     path: "/news",
     name: "News",
     meta: { index: 3 },
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/News.vue"),
+    component: () => import(/* webpackChunkName: "news" */ "../views/News.vue"),
   },
   {
     path: "/edit",
-    // name: "Edit",
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Edit.vue"),
+    component: () => import(/* webpackChunkName: "edit" */ "../views/Edit.vue"),
+    meta: { index: 3 },
     children: [
       {
         path: "/publish",
         name: "Publish",
+        meta: { index: 4 },
         component: () =>
-          import(/* webpackChunkName: "about" */ "../views/Publish.vue"),
+          import(/* webpackChunkName: "publish" */ "../views/Publish.vue"),
       },
       {
         path: "/edit",
         name: "EditNewsList",
+        meta: { index: 4 },
         component: () =>
-          import(/* webpackChunkName: "about" */ "../views/EditNewsList.vue"),
+          import(
+            /* webpackChunkName: "editnewlist" */ "../views/EditNewsList.vue"
+          ),
       },
     ],
   },
@@ -51,19 +75,7 @@ const routes: Array<RouteConfig> = [
     name: "Article",
     meta: { index: 5 },
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Article.vue"),
-  },
-  {
-    path: "/",
-    name: "Home",
-    meta: { index: 0 },
-    component: Home,
-  },
-  {
-    path: "*",
-    name: "Home",
-    meta: { index: 0 },
-    component: Home,
+      import(/* webpackChunkName: "article" */ "../views/Article.vue"),
   },
 ];
 

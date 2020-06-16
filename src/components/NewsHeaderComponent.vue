@@ -34,6 +34,7 @@ import axios from "./../axios/http";
 import api from "./../assets/config/api";
 import WOW from "wow.js";
 new WOW().init();
+require("./../assets/tool/filter");
 
 @Component({
   components: {

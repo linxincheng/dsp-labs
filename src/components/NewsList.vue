@@ -39,7 +39,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Model } from "vue-property-decorator";
+import { Component, Vue } from "vue-property-decorator";
 import axios from "./../axios/http";
 import api from "./../assets/config/api";
 import WOW from "wow.js";
@@ -59,7 +59,6 @@ export default class NewsList extends Vue {
   }
 
   public pageChange(pageNumber: number): void {
-    //
     this.loadingObj = this.$loading({
       target: ".news-list-content",
       text: "Loading...",
@@ -72,7 +71,6 @@ export default class NewsList extends Vue {
           1}`
       )
       .then((res: any) => {
-        console.log(res);
         if (res.error === 0) {
           this.list = res.result.list;
           this.total = res.result.total - 1;

@@ -60,3 +60,11 @@
     background: rgba(0, 0, 0, 0);
   }
 }
+
+.edit {
+  .whitebg {
+    .el-form-item__label {
+      color: white;
+    }
+  }
+}

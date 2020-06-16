@@ -63,6 +63,7 @@ import { Component, Vue } from "vue-property-decorator";
 import axios from "./../axios/http";
 import api from "./../assets/config/api";
 import { MessageBox } from "element-ui";
+require("./../assets/tool/filter");
 
 @Component
 export default class EditNewsList extends Vue {

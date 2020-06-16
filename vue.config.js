@@ -1,5 +1,6 @@
 module.exports = {
   publicPath: "./",
+  outputDir: "./server/app/view",
   productionSourceMap: false,
   devServer: {
     proxy: {

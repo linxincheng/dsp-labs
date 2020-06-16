@@ -27,6 +27,12 @@ import FooterComponent from "@/components/FooterComponent.vue";
 import WOW from "wow.js";
 new WOW().init();
 
+require("./../assets/tool/filter");
+require("element-ui/lib/theme-chalk/index.css");
+import { Pagination, Loading } from "element-ui";
+Vue.use(Pagination);
+Vue.prototype.$loading = Loading.service;
+
 @Component({
   components: {
     NewsHeaderComponent,
@@ -112,60 +118,5 @@ export default class News extends Vue {}
       }
     }
   }
-  // .news-under-ui {
-  //   position: relative;
-  //   font-size: 0;
-  //   margin-top: -12vw;
-
-  //   .new-dicai {
-  //     width: 100%;
-  //     position: relative;
-  //     z-index: -1;
-  //     margin: 0px;
-  //     user-select: none;
-  //   }
-
-  //   .new-cai2 {
-  //     position: absolute;
-  //     transform: rotateX(180deg);
-  //     top: -9vw;
-  //     width: 22vw;
-  //     left: 0;
-  //     user-select: none;
-  //   }
-
-  //   .new-cai3 {
-  //     position: absolute;
-  //     top: 37.4vw;
-  //     transform: rotateZ(0deg);
-  //     width: 27vw;
-  //     right: 0;
-  //     z-index: 0;
-  //     user-select: none;
-  //   }
-
-  //   & > div {
-  //     height: 7vw;
-  //     width: 100%;
-  //     background: linear-gradient(180deg, #5865e2 0%, #5171de 100%);
-  //   }
-
-  //   .new-xiu {
-  //     position: absolute;
-  //     top: 12.8vw;
-  //     left: 37.6vw;
-  //     transform: rotateY(180deg);
-  //     width: 15vw;
-  //     user-select: none;
-  //   }
-
-  //   .new-dian {
-  //     position: absolute;
-  //     top: 31vw;
-  //     left: 43vw;
-  //     width: 35vw;
-  //     user-select: none;
-  //   }
-  // }
 }
 </style>
