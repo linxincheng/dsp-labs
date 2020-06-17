@@ -119,12 +119,13 @@ export default class HeaderComponent extends Vue {
   height: 1570px;
   position: relative;
   background: url("./../assets/img/home_2kbj.svg") center top no-repeat;
+  background-size: auto 100%;
   box-sizing: border-box;
 
   @media screen and (max-width: 768px) {
     height: 1900px;
     background: url("./../assets/img/home_2kbj.svg") center -80px no-repeat;
-    background-size: auto 100%;
+    // background-size: auto 100%;
   }
 
   & > .home-header-wrap {

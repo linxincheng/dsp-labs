@@ -138,15 +138,15 @@ footer {
         position: relative;
         margin-right: 42px;
 
+        @media screen and (max-width: 768px) {
+          margin-right: 0px;
+        }
+
         .qr {
           width: 100px;
           height: 100px;
           user-select: none;
           position: relative;
-
-          @media screen and (max-width: 768px) {
-            margin-right: 0px;
-          }
         }
 
         p {
