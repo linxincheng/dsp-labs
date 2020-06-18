@@ -1,6 +1,6 @@
 <template>
   <div class="ethfs">
-    <ExHeaderComponent :list="list">
+    <ExHeaderComponent :list="$t('ethfx.header.list')">
       <template slot="icon">
         <img src="../assets/img/ethlogo.png" class="ipfslog" alt="" />
       </template>
@@ -12,26 +12,16 @@
             alt=""
           />
           <p>
-            IPFSEX is a distributed storage protocol implementation project that
-            upgrades the IPFS protocol network based on DSP
+            {{ $t("ethfx.header.content") }}
           </p>
         </div>
       </template>
     </ExHeaderComponent>
     <div class="ex-introduce">
       <div class="article">
-        <!-- <h4 class="theme-color-text-fill  wow fadeInLeft">
-          <span class="title-first theme-color-text-fill"
-            >W
-            <img src="../assets/img/home_xiu2.svg" class="home-xiu" alt="" />
-          </span>
-          hat is ETHFSX
-        </h4> -->
-        <TitleComponent msg="What is ETHFSX"></TitleComponent>
+        <TitleComponent :msg="$t('ethfx.content1.sup')"></TitleComponent>
         <p class="wow fadeIn" data-wow-delay="0.3s">
-          An extended communication and data storage network based on DSP
-          protocol. The purpose is to provide a stable and safe file storage
-          network for DApp / Dweb of the Ethernet.
+          {{ $t("ethfx.content1.sub") }}
         </p>
         <button
           class="btn-theme flex ai-center jc-center wow fadeIn"
@@ -40,7 +30,7 @@
           @click="linkTo('https://github.com/ETHFSx')"
         >
           <i class="iconfont iconjiantou"></i>
-          Github
+          {{ $t("ethfx.content1.github") }}
           <i class="iconfont icongithub"></i>
         </button>
       </div>
@@ -62,7 +52,11 @@
     </div>
 
     <ul class="feature-content flex between wrap-wrap">
-      <li v-for="(item, index) of list2" class="wow fadeInUp" :key="index">
+      <li
+        v-for="(item, index) of $t('ethfx.content2')"
+        class="wow fadeInUp"
+        :key="index"
+      >
         <div class="title flex ai-center">
           <div class="order-number white flex ai-center jc-center">
             {{ index + 1 }}
@@ -83,48 +77,29 @@
         class="ipfsx-brings-white3"
         alt=""
       />
-      <!-- <h2 class="ethfs-brings-title wow fadeInLeft">
-        <span
-          >T<img src="../assets/img/home_xiu3.svg" class="home-xiu" alt="" />
-        </span>
-        he value of ETHFSX
-      </h2> -->
       <TitleComponent
-        msg="The value of ETHFSX"
+        :msg="$t('ethfx.content3.title')"
         theme="white"
         class="ethfs-brings-title"
       ></TitleComponent>
       <div class="ethfs-brings-distribution">
         <p class="wow fadeIn">
-          1. DApp / Dweb can store large file data and service data in ETHFSX,
-          no need to record, no review and no server.
+          {{ $t("ethfx.content3.sub1") }}
         </p>
         <p class="wow fadeIn">
-          2. The introduction of the ETH incentive layer ensures that the
-          storage node has sufficient power to continue to provide stable data
-          services, so that the data files in the network will be copied in
-          large numbers throughout the network, even if the initial DApp / Dweb
-          server is shut down It still exists around the world, and others
-          cannot close DApp / Dweb and delete user data. It can realize the
-          self-running state of no host mode of DApp / Dweb.
+          {{ $t("ethfx.content3.sub2") }}
         </p>
         <p class="wow fadeIn">
-          3. By optimizing the storage structure of distributed storage, the
-          storage cost is extremely low, about 1/10 or less of the ordinary
-          storage cost.
+          {{ $t("ethfx.content3.sub3") }}
         </p>
         <p class="wow fadeIn">
-          4. The mechanism of cross-regional multi-node storage through data
-          files will greatly improve the stability and speed of data
-          transmission in different parts of the world.
+          {{ $t("ethfx.content3.sub4") }}
         </p>
         <p class="wow fadeIn">
-          5. The account system built under the more mature Ethernet can greatly
-          ensure the security and stability of the account.
+          {{ $t("ethfx.content3.sub5") }}
         </p>
         <p class="wow fadeIn">
-          6. Integrated ENS service to help provide a more friendly file site
-          index
+          {{ $t("ethfx.content3.sub6") }}
         </p>
         <img
           src="../assets/img/ipfsex_yuan.svg"
@@ -146,11 +121,11 @@ import TitleComponent from "@/components/TitleComponent.vue";
 import WOW from "wow.js";
 new WOW().init();
 
-interface FeatrueIconStru {
-  src: string;
-  sup: string;
-  sub: string;
-}
+// interface FeatrueIconStru {
+//   src: string;
+//   sup: string;
+//   sub: string;
+// }
 
 interface FeatrueContentStru {
   title: string;
@@ -165,61 +140,61 @@ interface FeatrueContentStru {
   },
 })
 export default class Ethfs extends Vue {
-  public list: Array<FeatrueIconStru> = [
-    {
-      src: `${process.env.BASE_URL}/img/disabled.svg`,
-      sup: "Open and",
-      sub: "Free",
-    },
-    {
-      src: `${process.env.BASE_URL}/img/jiedian_1.svg`,
-      sup: "No Hosting",
-      sub: "Fee",
-    },
+  // public list: Array<FeatrueIconStru> = [
+  //   {
+  //     src: `${process.env.BASE_URL}/img/disabled.svg`,
+  //     sup: "Open and",
+  //     sub: "Free",
+  //   },
+  //   {
+  //     src: `${process.env.BASE_URL}/img/jiedian_1.svg`,
+  //     sup: "No Hosting",
+  //     sub: "Fee",
+  //   },
 
-    {
-      src: `${process.env.BASE_URL}/img/jiamicaogaoxiang.svg`,
-      sup: "Stable Data",
-      sub: "Sorage",
-    },
-    {
-      src: `${process.env.BASE_URL}/img/disabled.svg`,
-      sup: "Safe and",
-      sub: "Efficient",
-    },
-    {
-      src: `${process.env.BASE_URL}/img/quanxiankongzhi.svg`,
-      sup: "Low",
-      sub: "Storage Costs",
-    },
-    {
-      src: `${process.env.BASE_URL}/img/iconquanxiankongzhi.svg`,
-      sup: "ENS Service",
-      sub: "",
-    },
-  ];
+  //   {
+  //     src: `${process.env.BASE_URL}/img/jiamicaogaoxiang.svg`,
+  //     sup: "Stable Data",
+  //     sub: "Sorage",
+  //   },
+  //   {
+  //     src: `${process.env.BASE_URL}/img/disabled.svg`,
+  //     sup: "Safe and",
+  //     sub: "Efficient",
+  //   },
+  //   {
+  //     src: `${process.env.BASE_URL}/img/quanxiankongzhi.svg`,
+  //     sup: "Low",
+  //     sub: "Storage Costs",
+  //   },
+  //   {
+  //     src: `${process.env.BASE_URL}/img/iconquanxiankongzhi.svg`,
+  //     sup: "ENS Service",
+  //     sub: "",
+  //   },
+  // ];
 
-  public list2: Array<FeatrueContentStru> = [
-    {
-      title: "Staking",
-      content: `In order to restrict the storage node to provide stable and reliable storage distribution service, the system will require the storage node to pledge a certain amount of Token to the ETH network;
-  When a node in the ETHFSX network stores a file, it will actively broadcast to the entire network, and other storage nodes can also actively obtain the file to be stored through the Pubsub mode. At the same time, the node stake a certain amount of token to the Ethernet for the file;`,
-    },
-    {
-      title: "Proof of challenge",
-      content: `The data download node initiates the holding challenge of the data to be downloaded as required. The data challenge exists in the form of contract transactions; the storage node drives the submission of the corresponding PDP certificate by monitoring the contract transactions. And through the smart contract of the ETH network to verify the authenticity of the storage node to store a file.
-  `,
-    },
-    {
-      title: "Verification and Share Profit",
-      content: `Based on the storage node's competition mechanism, for the same file, the PDP verification contract will prioritize (up to) the first three challenge proofs. If the verification is passed and the storage staking behavior of the node is valid, the node will be rewarded for storing token according to the size of the file to be challenged while the Ethernet is generating blocks; when the staking token of a specific file is consumed, the storage node may choose to ignore Challenge response.`,
-    },
-    {
-      title: "Punishment",
-      content: `When the storage node sends malicious data to the download node, the download node can initiate a penalty request through the ETH appeal contract. After the ETH contract verification appeal request is passed, the Token compensation will be paid to the file storage party by a certain amount based on the staking token of the storage node.
-  Based on the above file distribution strategy and incentive strategy, the number of file backups exists in the network as much as possible. Gradually make files, websites, Dapp data into a state that can never be deleted and can run on the entire network, and finally achieve a truly complete business decentralized network world.`,
-    },
-  ];
+  // public list2: Array<FeatrueContentStru> = [
+  //   {
+  //     title: "Staking",
+  //     content: `In order to restrict the storage node to provide stable and reliable storage distribution service, the system will require the storage node to pledge a certain amount of Token to the ETH network;
+  // When a node in the ETHFSX network stores a file, it will actively broadcast to the entire network, and other storage nodes can also actively obtain the file to be stored through the Pubsub mode. At the same time, the node stake a certain amount of token to the Ethernet for the file;`,
+  //   },
+  //   {
+  //     title: "Proof of challenge",
+  //     content: `The data download node initiates the holding challenge of the data to be downloaded as required. The data challenge exists in the form of contract transactions; the storage node drives the submission of the corresponding PDP certificate by monitoring the contract transactions. And through the smart contract of the ETH network to verify the authenticity of the storage node to store a file.
+  // `,
+  //   },
+  //   {
+  //     title: "Verification and Share Profit",
+  //     content: `Based on the storage node's competition mechanism, for the same file, the PDP verification contract will prioritize (up to) the first three challenge proofs. If the verification is passed and the storage staking behavior of the node is valid, the node will be rewarded for storing token according to the size of the file to be challenged while the Ethernet is generating blocks; when the staking token of a specific file is consumed, the storage node may choose to ignore Challenge response.`,
+  //   },
+  //   {
+  //     title: "Punishment",
+  //     content: `When the storage node sends malicious data to the download node, the download node can initiate a penalty request through the ETH appeal contract. After the ETH contract verification appeal request is passed, the Token compensation will be paid to the file storage party by a certain amount based on the staking token of the storage node.
+  // Based on the above file distribution strategy and incentive strategy, the number of file backups exists in the network as much as possible. Gradually make files, websites, Dapp data into a state that can never be deleted and can run on the entire network, and finally achieve a truly complete business decentralized network world.`,
+  //   },
+  // ];
 
   public linkTo(url: string): void {
     window.open(url);

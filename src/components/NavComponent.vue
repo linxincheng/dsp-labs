@@ -25,7 +25,7 @@
               {{ $t("nav.github") }}
             </a>
           </li>
-          <!-- <li>
+          <li>
             <el-select @change="setLanguage" v-model="lang" style="width: 40px">
               <el-option
                 v-for="item in options"
@@ -35,7 +35,7 @@
               >
               </el-option>
             </el-select>
-          </li> -->
+          </li>
         </ul>
       </nav>
     </div>

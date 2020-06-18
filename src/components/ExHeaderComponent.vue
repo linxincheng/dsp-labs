@@ -5,7 +5,6 @@
     <div class="header-title flex between wrap-wrap white bold">
       <slot name="title"></slot>
       <div class="flex between ai-center header-title-icon">
-        <!-- <img src="./../assets/img/" alt=""> -->
         <slot name="icon"></slot>
         <img src="../assets/img/x.svg" class="x" alt="" />
         <img src="../assets/img/home_logo.png" class="home-logo" alt="" />
@@ -169,6 +168,8 @@ export default class ExHeaderComponent extends Vue {
 
         img {
           width: 140px;
+          user-select: none;
+
           @media screen and (max-width: 768px) {
             width: 14vw;
           }

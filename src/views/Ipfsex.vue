@@ -1,6 +1,6 @@
 <template>
   <div class="ipfsex">
-    <ExHeaderComponent :list="list">
+    <ExHeaderComponent :list="$t('ipfsex.header.list')">
       <template slot="icon">
         <img src="../assets/img/ipfslogo.svg" class="ipfslogo" alt="" />
       </template>
@@ -12,8 +12,7 @@
             alt=""
           />
           <p>
-            IPFSEX is a distributed storage protocol implementation project that
-            upgrades the IPFS protocol network based on DSP
+            {{ $t("ipfsex.header.content") }}
           </p>
         </div>
       </template>
@@ -21,21 +20,9 @@
 
     <div class="ex-introduce">
       <div class="article">
-        <!-- <h4 class="theme-color-text-fill  wow fadeInLeft">
-          <span class="title-first theme-color-text-fill"
-            >W
-            <img src="../assets/img/home_xiu2.svg" class="home-xiu" alt="" />
-          </span>
-          hat is IPFSX
-        </h4> -->
-        <title-component msg="What is IPFSX"></title-component>
+        <title-component :msg="$t('ipfsex.content1.title')"></title-component>
         <p class="wow fadeIn" data-wow-delay="0.3s">
-          IPFSX is a distributed storage protocol implementation project that
-          upgrades the IPFS protocol network based on the DSP protocol. The goal
-          is to bring more complete core protocol capabilities such as data file
-          active distribution, file encryption, and authority control to the
-          IPFS network. Finally, a more complete distributed storage network is
-          established.
+          {{ $t("ipfsex.content1.content") }}
         </p>
         <button
           class="btn-theme flex ai-center jc-center wow fadeIn"
@@ -44,7 +31,7 @@
           @click="linkTo('https://github.com/IPFS-eX')"
         >
           <i class="iconfont iconjiantou"></i>
-          Github
+          {{ $t("ipfsex.content1.github") }}
           <i class="iconfont icongithub"></i>
         </button>
       </div>
@@ -75,15 +62,9 @@
         class="ipfsx-brings-white3"
         alt=""
       />
-      <!-- <h2 class="ipfsex-brings-title wow fadeInLeft">
-        <span
-          >T<img src="../assets/img/home_xiu3.svg" class="home-xiu" alt="" />
-        </span>
-        he value that IPFSX brings
-      </h2> -->
       <title-component
         class="ipfsex-brings-title"
-        msg="The value that IPFSX brings"
+        :msg="$t('ipfsex.content2.title')"
         theme="white"
       ></title-component>
       <div class="ipfsex-brings-distribution ">
@@ -92,51 +73,25 @@
           class="ipfsx-brings-xiu1"
           alt=""
         />
-        <h4 class="wow fadeIn">1. Distribution</h4>
+        <h4 class="wow fadeIn">{{ $t("ipfsex.content2.sup1") }}</h4>
         <p class="wow fadeIn">
-          IPFSX provides end-to-end active distribution and sharing of data
-          files. Data files can be actively distributed through protocols
-          according to certain rules, so that file sources can be actively
-          spread among network nodes, rather than relying on active downloading
-          of data nodes. Therefore, it has the ability to actively control and
-          adjust the security and stability of files in the network. You can
-          flexibly customize different schemes to store and distribute files
-          according to the importance of the files, hot and cold, and
-          sensitivity. Make each file get enough spread to improve the
-          transmission efficiency, safe storage status and availability of the
-          file itself in the network.
+          {{ $t("ipfsex.content2.sub1") }}
         </p>
       </div>
       <div class="ipfsex-brings-wrap flex between">
         <div class="ipfsex-brings-privacy-protection">
           <h4 class="wow fadeIn">
-            2. Privacy protection
+            {{ $t("ipfsex.content2.sup2") }}
+            <!-- 2. Privacy protection -->
           </h4>
           <p class="wow fadeIn">
-            IPFSX increases the encryption of files from the terminal by
-            introducing an encryption algorithm, which means that files uploaded
-            to the network based on the IPFSX protocol can be encrypted and
-            sharding. The user has absolute control over this data file and
-            Access. Even if other people obtain the file Hash through irregular
-            means and find the file, they cannot access the file itself. In this
-            way, the ownership of the data is completely returned to the user.
+            {{ $t("ipfsex.content2.sub2") }}
           </p>
         </div>
         <div class="ipfsex-brings-authority-control">
-          <h4 class="wow fadeIn">3. Authority Control</h4>
+          <h4 class="wow fadeIn">{{ $t("ipfsex.content2.sup3") }}</h4>
           <p class="wow fadeIn">
-            Based on current application cryptography, the IPFSX protocol also
-            supports the ability to control access rights to the same file, that
-            is, the owner of the file has the ability to direct authorization to
-            some end users to have access rights. Through such directional
-            encryption capabilities, it actually brings the ability of copyright
-            control to file storage to a certain extent. For example, the same
-            movie file can be opened to users with copyrights according to the
-            purchase and sale of copyright. And restrict authority to other
-            users. In this way, from a certain point of view, it will also avoid
-            a large amount of redundant content appearing on the network at the
-            same time due to the singleness of the permissions of the file
-            itself, and unnecessary storage resource waste.
+            {{ $t("ipfsex.content2.sub3") }}
           </p>
         </div>
         <img
@@ -159,11 +114,11 @@ import TitleComponent from "@/components/TitleComponent.vue";
 import WOW from "wow.js";
 new WOW().init();
 
-interface FeatrueIconStru {
-  src: string;
-  sup: string;
-  sub: string;
-}
+// interface FeatrueIconStru {
+//   src: string;
+//   sup: string;
+//   sub: string;
+// }
 
 @Component({
   components: {
@@ -173,39 +128,39 @@ interface FeatrueIconStru {
   },
 })
 export default class Ipfsex extends Vue {
-  public list: Array<FeatrueIconStru> = [
-    {
-      src: `${process.env.BASE_URL}/img/disabled.svg`,
-      sup: "Redundancy",
-      sub: "Control",
-    },
-    {
-      src: `${process.env.BASE_URL}/img/jiedian_1.svg`,
-      sup: "End-to-End",
-      sub: "Sharing",
-    },
+  // public list: Array<FeatrueIconStru> = [
+  //   {
+  //     src: `${process.env.BASE_URL}/img/disabled.svg`,
+  //     sup: "Redundancy",
+  //     sub: "Control",
+  //   },
+  //   {
+  //     src: `${process.env.BASE_URL}/img/jiedian_1.svg`,
+  //     sup: "End-to-End",
+  //     sub: "Sharing",
+  //   },
 
-    {
-      src: `${process.env.BASE_URL}/img/jiamicaogaoxiang.svg`,
-      sup: "Data",
-      sub: "Security",
-    },
-    {
-      src: `${process.env.BASE_URL}/img/disabled.svg`,
-      sup: "Privacy",
-      sub: "Protection",
-    },
-    {
-      src: `${process.env.BASE_URL}/img/quanxiankongzhi.svg`,
-      sup: "Permission",
-      sub: "Control",
-    },
-    {
-      src: `${process.env.BASE_URL}/img/iconquanxiankongzhi.svg`,
-      sup: "Copyright",
-      sub: "Control",
-    },
-  ];
+  //   {
+  //     src: `${process.env.BASE_URL}/img/jiamicaogaoxiang.svg`,
+  //     sup: "Data",
+  //     sub: "Security",
+  //   },
+  //   {
+  //     src: `${process.env.BASE_URL}/img/disabled.svg`,
+  //     sup: "Privacy",
+  //     sub: "Protection",
+  //   },
+  //   {
+  //     src: `${process.env.BASE_URL}/img/quanxiankongzhi.svg`,
+  //     sup: "Permission",
+  //     sub: "Control",
+  //   },
+  //   {
+  //     src: `${process.env.BASE_URL}/img/iconquanxiankongzhi.svg`,
+  //     sup: "Copyright",
+  //     sub: "Control",
+  //   },
+  // ];
 
   public linkTo(url: string): void {
     window.open(url);

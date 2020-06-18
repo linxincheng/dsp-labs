@@ -1,19 +1,28 @@
 <template>
   <div class="video-component">
     <video id="dsp-video" class="video-js vjs-16-9" controls>
-      <source :src="`${_static}/DSP_2.mp4`" type="video/mp4" />
+      <source :src="videoSrc" type="video/mp4" />
     </video>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue, Watch } from "vue-property-decorator";
 import videojs from "video.js";
 import "video.js/dist/video-js.css";
 
 @Component
 export default class VideoComponent extends Vue {
   public mounted() {
+    this.initPlay();
+  }
+
+  public initPlay(): void {
+    if (window.player) {
+      window.player.src(this.videoSrc);
+      window.player.load(this.videoSrc);
+      return;
+    }
     window.player = videojs(
       "dsp-video",
       {
@@ -26,8 +35,13 @@ export default class VideoComponent extends Vue {
     );
   }
 
-  get _static(): string {
-    return process.env.BASE_URL;
+  @Watch("videoSrc")
+  public videoSrcChange(): void {
+    this.initPlay();
+  }
+
+  get videoSrc(): any {
+    return this.$t("videoSrc");
   }
 }
 </script>

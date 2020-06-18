@@ -4,7 +4,7 @@ const Filters: any = {
   timeFormat: (content: number) => {
     if (content === undefined) return "";
     const moment = require("moment");
-    return moment(content * 1000).format("MMM-DD-YYYY");
+    return moment(content * 1000).format("YYYY-MM-DD");
   },
 };
 
