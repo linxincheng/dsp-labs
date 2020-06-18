@@ -6,8 +6,8 @@ module.exports = {
   },
   homeHeader: {
     title: "Distributed Storage Protocol",
-    descSup: "DSP是下一代互联网的",
-    descSub: "核心基础设施",
+    descSup: "DSP是下一代互联网的核心基础设施",
+    descSub: "",
     learnMore: "了解更多",
     feature1t: "加密",
     feature1c: "端到端加密存储，确保网络存储安全",
