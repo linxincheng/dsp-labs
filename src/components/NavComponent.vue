@@ -18,15 +18,24 @@
             <a @click="goHomeTopLabs">HOME</a>
           </li>
           <li>
-            <a @click="goHomeDspLabs">
-              DSP LABS
-            </a>
+            <a @click="goHomeDspLabs"> DSP LABS </a>
           </li>
           <li>
             <a @click="goGithub">
               GITHUB
             </a>
           </li>
+          <!-- <li>
+            <el-select @change="setLanguage" v-model="lang" style="width: 40px">
+              <el-option
+                v-for="item in options"
+                :key="item.value"
+                :label="item.label"
+                :value="item.value"
+              >
+              </el-option>
+            </el-select>
+          </li> -->
           <!-- <li>
             <router-link active-class="nav-active" to="/news" title="NEWS"
               >NEWS</router-link
@@ -54,6 +63,17 @@ import { Component, Vue } from "vue-property-decorator";
 export default class NavComponent extends Vue {
   public pop: boolean = false;
   public scroll: boolean = false;
+  public lang: string = localStorage.getItem("lang") || "en";
+  public options: Array<any> = [
+    {
+      value: "en",
+      label: "EN",
+    },
+    {
+      value: "zh",
+      label: "中文",
+    },
+  ];
   public goHome(): void {
     this.$router.push({
       path: "/",
@@ -98,6 +118,11 @@ export default class NavComponent extends Vue {
   public goGithub(): void {
     this.pop = false;
     window.open("https://github.com/DSP-Labs");
+  }
+
+  public setLanguage(lang: string): void {
+    localStorage.setItem("lang", lang || "en");
+    this.$i18n.locale = localStorage.getItem("lang") || "en";
   }
 }
 </script>
@@ -305,6 +330,37 @@ export default class NavComponent extends Vue {
             }
           }
         }
+      }
+    }
+  }
+}
+</style>
+
+<style lang="scss">
+.nav {
+  .el-select {
+    .el-input {
+      user-select: none;
+      input {
+        font-size: 16px;
+      }
+
+      .el-input__suffix {
+        right: -15px;
+      }
+
+      .el-select__caret {
+        color: #fff;
+      }
+
+      .el-input__inner {
+        padding-left: 0px;
+        padding-right: 0px;
+        border: none !important;
+        background: none;
+        color: #ffffff !important;
+        text-align: center;
+        font-family: Montserrat-Medium;
       }
     }
   }

@@ -27,11 +27,11 @@ import FooterComponent from "@/components/FooterComponent.vue";
 import WOW from "wow.js";
 new WOW().init();
 
-require("./../assets/tool/filter");
-require("element-ui/lib/theme-chalk/index.css");
-import { Pagination, Loading } from "element-ui";
-Vue.use(Pagination);
-Vue.prototype.$loading = Loading.service;
+import "./../assets/tool/filter";
+// require("element-ui/lib/theme-chalk/index.css");
+// import { Pagination, Loading } from "element-ui";
+// Vue.use(Pagination);
+// Vue.prototype.$loading = Loading.service;
 
 @Component({
   components: {

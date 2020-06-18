@@ -28,23 +28,23 @@ import axios from "./../axios/http";
 import api from "./../assets/config/api";
 import "./../assets/tool/filter";
 
-import {
-  Pagination,
-  Message,
-  Loading,
-  Input,
-  Form,
-  FormItem,
-  Button,
-} from "element-ui";
-import "element-ui/lib/theme-chalk/index.css";
-Vue.use(Pagination);
-Vue.use(Input);
-Vue.use(Form);
-Vue.use(FormItem);
-Vue.use(Button);
-Vue.prototype.$message = Message;
-Vue.prototype.$loading = Loading.service;
+// import {
+//   Pagination,
+//   Message,
+//   Loading,
+//   Input,
+//   Form,
+//   FormItem,
+//   Button,
+// } from "element-ui";
+// import "element-ui/lib/theme-chalk/index.css";
+// Vue.use(Pagination);
+// Vue.use(Input);
+// Vue.use(Form);
+// Vue.use(FormItem);
+// Vue.use(Button);
+// Vue.prototype.$message = Message;
+// Vue.prototype.$loading = Loading.service;
 
 @Component
 export default class Edit extends Vue {
