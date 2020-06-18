@@ -15,14 +15,14 @@
         </div>
         <ul class="nav_ul" :class="{ pop: pop }">
           <li>
-            <a @click="goHomeTopLabs">HOME</a>
+            <a @click="goHomeTopLabs">{{ $t("nav.home") }}</a>
           </li>
           <li>
-            <a @click="goHomeDspLabs"> DSP LABS </a>
+            <a @click="goHomeDspLabs">{{ $t("nav.dsplabs") }}</a>
           </li>
           <li>
             <a @click="goGithub">
-              GITHUB
+              {{ $t("nav.github") }}
             </a>
           </li>
           <!-- <li>
@@ -35,21 +35,6 @@
               >
               </el-option>
             </el-select>
-          </li> -->
-          <!-- <li>
-            <router-link active-class="nav-active" to="/news" title="NEWS"
-              >NEWS</router-link
-            >
-          </li> -->
-          <!-- <li>
-            <router-link active-class="nav-active" to="/ipfsex" title="IPFSEX"
-              >IPFSEX</router-link
-            >
-          </li>
-          <li>
-            <router-link active-class="nav-active" to="/ethfx" title="ETHFX"
-              >ETHFX</router-link
-            >
           </li> -->
         </ul>
       </nav>
@@ -67,7 +52,7 @@ export default class NavComponent extends Vue {
   public options: Array<any> = [
     {
       value: "en",
-      label: "EN",
+      label: "En",
     },
     {
       value: "zh",
@@ -339,6 +324,10 @@ export default class NavComponent extends Vue {
 <style lang="scss">
 .nav {
   .el-select {
+    @media screen and (max-width: 768px) {
+      padding: 5px 0;
+    }
+
     .el-input {
       user-select: none;
       input {
@@ -347,6 +336,7 @@ export default class NavComponent extends Vue {
 
       .el-input__suffix {
         right: -15px;
+        top: 2px;
       }
 
       .el-select__caret {
@@ -361,6 +351,7 @@ export default class NavComponent extends Vue {
         color: #ffffff !important;
         text-align: center;
         font-family: Montserrat-Medium;
+        line-height: 100%;
       }
     }
   }

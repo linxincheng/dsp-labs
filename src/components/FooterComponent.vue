@@ -31,12 +31,14 @@
       <section class="footer-right flex ai-center">
         <div class="qr-wrap">
           <img src="../assets/img/qr.png" class="qr" alt="" />
-          <p>WeChat</p>
+          <p>{{ $t("footer.wechat") }}</p>
         </div>
         <p>
-          <span><i class="iconfont iconemail"></i> Email: </span>
+          <span
+            ><i class="iconfont iconemail"></i> {{ $t("footer.email") }}:
+          </span>
           <a href="mailto:@onchain.com">dsp@onchain.com</a> <br /><span
-            ><i class="iconfont icontelegram"></i> Telegram:
+            ><i class="iconfont icontelegram"></i> {{ $t("footer.telegram") }}:
           </span>
           <a href="t.me/DSP_Official" title="link to t.me/DSP_Official">
             t.me/DSP_Official

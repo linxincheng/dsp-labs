@@ -36,7 +36,6 @@ Vue.use(VueI18n);
 
 const i18n = new VueI18n({
   locale: localStorage.getItem("lang") || "en",
-  // locale: "en",
   messages: {
     zh: require("./assets/i18n/zh"),
     en: require("./assets/i18n/en"),

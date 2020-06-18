@@ -26,27 +26,40 @@
       </div>
 
       <div class="header-title white">
-        <h1>Distributed Storage Protocol</h1>
+        <h1>{{ $t("homeHeader.title") }}</h1>
         <p>
-          DSP is the core infrastructure of<br />
-          Next Generation Internet
+          <!-- DSP is the core infrastructure of<br /> -->
+          {{ $t("homeHeader.descSup") }}<br />
+          <!-- Next Generation Internet -->
+          {{ $t("homeHeader.descSub") }}
         </p>
       </div>
 
       <div class="learn-more flex jc-center" @click="goLearnMore">
-        Learn more
+        <!-- Learn more -->
+        {{ $t("homeHeader.learnMore") }}
       </div>
 
       <ul class="home-dsp-feature flex between wrap-wrap">
-        <li
-          class="flex column ai-center wow fadeIn"
-          data-wow-delay="0.2s"
-          v-for="(item, index) in list"
-          :key="index"
-        >
-          <img :src="item.src" alt="" />
-          <h4 class="white">{{ item.title }}</h4>
-          <p class="white">{{ item.content }}</p>
+        <li class="flex column ai-center wow fadeIn" data-wow-delay="0.2s">
+          <img src="./../assets/img/home_icon_encryp.svg" alt="" />
+          <h4 class="white">{{ $t("homeHeader.feature1t") }}</h4>
+          <p class="white">{{ $t("homeHeader.feature1c") }}</p>
+        </li>
+        <li class="flex column ai-center wow fadeIn" data-wow-delay="0.2s">
+          <img src="./../assets/img/home_icon_dis.svg" alt="" />
+          <h4 class="white">{{ $t("homeHeader.feature2t") }}</h4>
+          <p class="white">{{ $t("homeHeader.feature2c") }}</p>
+        </li>
+        <li class="flex column ai-center wow fadeIn" data-wow-delay="0.2s">
+          <img src="./../assets/img/home_icon_storage.svg" alt="" />
+          <h4 class="white">{{ $t("homeHeader.feature3t") }}</h4>
+          <p class="white">{{ $t("homeHeader.feature3c") }}</p>
+        </li>
+        <li class="flex column ai-center wow fadeIn" data-wow-delay="0.2s">
+          <img src="./../assets/img/home_icon_sharing.svg" alt="" />
+          <h4 class="white">{{ $t("homeHeader.feature4t") }}</h4>
+          <p class="white">{{ $t("homeHeader.feature4c") }}</p>
         </li>
       </ul>
     </div>
@@ -64,33 +77,6 @@ new WOW().init();
 })
 export default class HeaderComponent extends Vue {
   public canvasObj: any = null;
-
-  public list: Array<any> = [
-    {
-      src: `${process.env.BASE_URL}/img/home_icon_encryp.svg`,
-      title: "ENCRYPTION",
-      content:
-        "End-to-end encrypted storage to ensure network storage security",
-    },
-    {
-      src: `${process.env.BASE_URL}/img/home_icon_dis.svg`,
-      title: "DISTRIBUTION",
-      content:
-        "Multi-node distributed storage across the network to ensure network availability",
-    },
-    {
-      src: `${process.env.BASE_URL}/img/home_icon_storage.svg`,
-      title: "STORAGE",
-      content:
-        "Large capacity and efficient storage, providing a distributed storage environment for large files",
-    },
-    {
-      src: `${process.env.BASE_URL}/img/home_icon_sharing.svg`,
-      title: "SHARING",
-      content:
-        "Network-wide dynamic distribution mechanism, providing file sharing authority control",
-    },
-  ];
 
   public goHome(): void {
     this.$router.push({

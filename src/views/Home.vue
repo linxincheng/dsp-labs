@@ -20,14 +20,9 @@
           />
         </div>
         <article>
-          <title-component msg="Distributed Storage Protocol"></title-component>
+          <title-component :msg="$t('home.content1.title')"></title-component>
           <p class="wow fadeIn" data-wow-delay="0.3s">
-            The DSP (Distributed Storage Protocol) protocol is a new-generation
-            Internet protocol paradigm based on data file encryption,
-            distribution, storage, sharing and other multi-dimensional new
-            generation Internet protocol paradigms, the goal of the DSP protocol
-            is to become the core infrastructure of the next generation Internet
-            (NGI).
+            {{ $t("home.content1.content") }}
           </p>
         </article>
       </div>
@@ -36,7 +31,7 @@
       class="architecture flex between wrap-wrap"
       v-if="videoComponenetDialog"
     >
-      <title-component msg="Architecture"></title-component>
+      <title-component :msg="$t('home.content2.title')"></title-component>
       <div class="architecture-circle-wrap">
         <div
           class="architecture-circle-1 wow fadeInRight"
@@ -115,7 +110,10 @@
         class="home-yuan wow fadeIn"
         alt=""
       />
-      <title-component msg="Value" class="article-list-title"></title-component>
+      <title-component
+        :msg="$t('home.content3.title')"
+        class="article-list-title"
+      ></title-component>
       <ul>
         <li class="wow fadeInUp">
           <h4>
@@ -123,14 +121,11 @@
               <i class="iconfont iconhome_icon_b1"></i>
             </div>
             <span class="theme-color-text-fill">
-              Internet of Everything
+              {{ $t("home.content3.sup1") }}
             </span>
           </h4>
           <p>
-            Based on the connection of the standardized network protocol
-            interface provided by the DSP, different IOT devices are connected
-            to the same network through the standardized protocol interface for
-            data transmission, sharing and storage.
+            {{ $t("home.content3.sub1") }}
           </p>
         </li>
         <li class="wow fadeInUp">
@@ -139,13 +134,11 @@
               <i class="iconfont iconhome_icon_b2"></i>
             </div>
             <span class="theme-color-text-fill">
-              Copyright Control
+              {{ $t("home.content3.sup2") }}
             </span>
           </h4>
           <p>
-            The ownership and control of the data are completely returned to the
-            user. Whether the file is deleted or viewed, the data owner needs to
-            be authorized. Nodes and others have no right to operate on files.
+            {{ $t("home.content3.sub2") }}
           </p>
         </li>
         <li class="wow fadeInUp">
@@ -154,13 +147,11 @@
               <i class="iconfont iconhome_icon_b3"></i>
             </div>
             <span class="theme-color-text-fill">
-              Data Control
+              {{ $t("home.content3.sup3") }}
             </span>
           </h4>
           <p>
-            The ownership and control of the data are completely returned to the
-            user. Whether the file is deleted or viewed, the data owner needs to
-            be authorized. Nodes and others have no right to operate on files.
+            {{ $t("home.content3.sub3") }}
           </p>
         </li>
         <li class="wow fadeInUp">
@@ -169,14 +160,15 @@
               <i class="iconfont iconhome_icon_b4"></i>
             </div>
             <span class="theme-color-text-fill">
-              Avoid Data Leakage
+              {{ $t("home.content3.sup4") }}
             </span>
           </h4>
           <p>
-            The same file will be fragmented. Even if you get all the data of a
+            {{ $t("home.content3.sub4") }}
+            <!-- The same file will be fragmented. Even if you get all the data of a
             node, you can't get a complete file. Nesting based on multiple
             encryption methods fundamentally eliminates the possibility of data
-            leakage.
+            leakage. -->
           </p>
         </li>
         <li class="wow fadeInUp">
@@ -185,15 +177,17 @@
               <i class="iconfont iconhome_icon_b5"></i>
             </div>
             <span class="theme-color-text-fill">
-              Anti-Monitoring and Anti-Examination
+              {{ $t("home.content3.sup5") }}
+              <!-- Anti-Monitoring and Anti-Examination -->
             </span>
           </h4>
           <p>
-            All personally generated data and uploaded and downloaded file data
+            {{ $t("home.content3.sub5") }}
+            <!-- All personally generated data and uploaded and downloaded file data
             are processed with multiple encryptions, and even path obfuscation
             can be performed through routing protocols, so that they cannot be
             traced to specific senders and receivers, ensuring maximum personal
-            privacy.
+            privacy. -->
           </p>
         </li>
         <li class="wow fadeInUp">
@@ -202,15 +196,17 @@
               <i class="iconfont iconhome_icon_b6"></i>
             </div>
             <span class="theme-color-text-fill">
-              Data Persistence
+              <!-- Data Persistence -->
+              {{ $t("home.content3.sup6") }}
             </span>
           </h4>
           <p>
-            Multiple ways to ensure the timeliness and consistency of network
+            {{ $t("home.content3.sub6") }}
+            <!-- Multiple ways to ensure the timeliness and consistency of network
             content through multi-node storage throughout the network, backup
             node status monitoring and strategic synchronization of backup
             content. Avoid data loss or temporary interruption of access caused
-            by a single point of failure.
+            by a single point of failure. -->
           </p>
         </li>
         <li class="wow fadeInUp">
@@ -219,14 +215,16 @@
               <i class="iconfont iconhome_icon_b7"></i>
             </div>
             <span class="theme-color-text-fill">
-              Link Intelligence Autonomous Optimization
+              <!-- Link Intelligence Autonomous Optimization -->
+              {{ $t("home.content3.sup7") }}
             </span>
           </h4>
           <p>
-            Automatically capture the transmission status between nodes across
+            {{ $t("home.content3.sub7") }}
+            <!-- Automatically capture the transmission status between nodes across
             the network. Through analysis and intelligent adjustment, the
             optimal path between nodes can be dynamically adjusted to ensure the
-            optimization of the transmission status across the network.
+            optimization of the transmission status across the network. -->
           </p>
         </li>
         <li class="wow fadeInUp">
@@ -235,28 +233,34 @@
               <i class="iconfont iconhome_icon_b8"></i>
             </div>
             <span class="theme-color-text-fill">
-              Developer Friendly
+              <!-- Developer Friendly -->
+              {{ $t("home.content3.sup8") }}
             </span>
           </h4>
           <p>
-            Interfaces, components, and modules are standardized and open
+            {{ $t("home.content3.sub8") }}
+            <!-- Interfaces, components, and modules are standardized and open
             sourced for reuse. Avoid duplication of development, reduce
             redundant development work, and developers return to the business
-            itself.
+            itself. -->
           </p>
         </li>
       </ul>
     </section>
-    <section class="dsp-labs-wrap" v-if="videoComponenetDialog">
+    <section class="dsp-labs-wrap">
       <div class="home-bj2"></div>
       <img src="../assets/img/home_zs1.svg" class="home-zs1" alt="" />
       <img src="../assets/img/home_xiu3.svg" class="home-xiu3" alt="" />
       <img src="../assets/img/home_xian2.svg" class="home-xian2" alt="" />
       <a name="dsplabs"></a>
       <div class="dsp-labs-content">
-        <title-component msg="DSP Labs" theme="white"></title-component>
+        <title-component
+          :msg="$t('home.content4.title')"
+          theme="white"
+        ></title-component>
         <p class="wow fadeIn" data-wow-delay="0.5s">
-          DSP Labs, established by Onchain, is a research, development and
+          {{ $t("home.content4.content") }}
+          <!-- DSP Labs, established by Onchain, is a research, development and
           deployment organization that improves next-generation Internet
           technologies. We hope to establish a new set of free and open network
           protocols-based on this set of protocols, people can achieve true
@@ -268,7 +272,7 @@
           foundation of the Internet provides fast, free and safe interaction of
           information and data for the entire network, reduces data transmission
           and storage costs, and accelerates the revolution in the era of
-          information freedom.
+          information freedom. -->
         </p>
       </div>
     </section>
