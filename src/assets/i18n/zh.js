@@ -197,5 +197,5 @@ module.exports = {
       sub6: "6. 集成ENS服务，帮助提供更友好的文件网站索引。",
     },
   },
-  videoSrc: `${process.env.BASE_URL}/DSP_2.mp4`,
+  videoSrc: `${process.env.BASE_URL}/DSP_1.mp4`,
 };
