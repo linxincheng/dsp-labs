@@ -35,7 +35,6 @@
       >
       </el-pagination>
     </div>
-    {{ $t("type") }}
   </div>
 </template>
 
