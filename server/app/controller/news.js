@@ -11,6 +11,11 @@ class NewsController extends Controller {
         main: "string",
         main_desc: "string",
         banner: "string",
+        titleZh: "string",
+        autherZh: "string",
+        mainZh: "string",
+        main_descZh: "string",
+        bannerZh: "string",
       },
       ctx.request.body
     );
@@ -45,6 +50,11 @@ class NewsController extends Controller {
         main: "string",
         main_desc: "string",
         banner: "string",
+        titleZh: "string",
+        autherZh: "string",
+        mainZh: "string",
+        main_descZh: "string",
+        bannerZh: "string",
         id: "string",
         publish_at: "number",
       },
@@ -107,6 +117,7 @@ class NewsController extends Controller {
     const { ctx } = this;
     const errors = this.app.validator.validate(
       {
+        type: "string",
         offset: {
           type: "string",
           required: false,
@@ -128,6 +139,7 @@ class NewsController extends Controller {
       }
     } else {
       const ret = await ctx.service.news.get(
+        ctx.params.type,
         ctx.params.offset,
         ctx.params.limit
       );
@@ -139,6 +151,7 @@ class NewsController extends Controller {
     const { ctx } = this;
     const errors = this.app.validator.validate(
       {
+        type: "string",
         id: "string",
       },
       ctx.params
@@ -151,7 +164,10 @@ class NewsController extends Controller {
       }
     }
 
-    const ret = await ctx.service.news.getInfoById(ctx.params.id);
+    const ret = await ctx.service.news.getInfoById(
+      ctx.params.type,
+      ctx.params.id
+    );
     ctx.body = ret;
   }
 }

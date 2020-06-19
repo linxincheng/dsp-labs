@@ -27,7 +27,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue, Watch } from "vue-property-decorator";
 import NavComponent from "@/components/NavComponent.vue";
 import TitleComponent from "@/components/TitleComponent.vue";
 import axios from "./../axios/http";
@@ -49,8 +49,17 @@ export default class NewsHeaderComponenet extends Vue {
     this.getFirstNews();
   }
 
+  get lang(): any {
+    return this.$t("type");
+  }
+
+  @Watch("lang")
+  public langChange(): void {
+    this.getFirstNews();
+  }
+
   public getFirstNews(): void {
-    axios.get(`${api.getList}/0/1`).then((res: any) => {
+    axios.get(`${api.getList}/${this.lang}/0/1`).then((res: any) => {
       if (res.error === 0) {
         if (res.result.total >= 1) {
           this.news = res.result.list[0];

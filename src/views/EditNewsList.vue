@@ -103,7 +103,7 @@ export default class EditNewsList extends Vue {
   public pageChange(pageNumber: number): void {
     axios
       .get(
-        `${api.getList}/${(pageNumber - 1) * this.PAGE_SIZE}/${pageNumber *
+        `${api.getList}/0/${(pageNumber - 1) * this.PAGE_SIZE}/${pageNumber *
           this.PAGE_SIZE}`
       )
       .then((res: any) => {

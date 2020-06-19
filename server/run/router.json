@@ -67,6 +67,16 @@
     ],
     "paramNames": [
       {
+        "name": "type",
+        "prefix": "/",
+        "delimiter": "/",
+        "optional": false,
+        "repeat": false,
+        "partial": false,
+        "asterisk": false,
+        "pattern": "[^\\/]+?"
+      },
+      {
         "name": "offset",
         "prefix": "/",
         "delimiter": "/",
@@ -87,8 +97,8 @@
         "pattern": "[^\\/]+?"
       }
     ],
-    "path": "/v1/news/getList/:offset/:limit",
-    "regexp": "/^\\/v1\\/news\\/getList\\/((?:[^\\/]+?))\\/((?:[^\\/]+?))(?:\\/(?=$))?$/",
+    "path": "/v1/news/getList/:type/:offset/:limit",
+    "regexp": "/^\\/v1\\/news\\/getList\\/((?:[^\\/]+?))\\/((?:[^\\/]+?))\\/((?:[^\\/]+?))(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]
@@ -101,6 +111,16 @@
     ],
     "paramNames": [
       {
+        "name": "type",
+        "prefix": "/",
+        "delimiter": "/",
+        "optional": false,
+        "repeat": false,
+        "partial": false,
+        "asterisk": false,
+        "pattern": "[^\\/]+?"
+      },
+      {
         "name": "id",
         "prefix": "/",
         "delimiter": "/",
@@ -111,8 +131,8 @@
         "pattern": "[^\\/]+?"
       }
     ],
-    "path": "/v1/news/getInfo/:id",
-    "regexp": "/^\\/v1\\/news\\/getInfo\\/((?:[^\\/]+?))(?:\\/(?=$))?$/",
+    "path": "/v1/news/getInfo/:type/:id",
+    "regexp": "/^\\/v1\\/news\\/getInfo\\/((?:[^\\/]+?))\\/((?:[^\\/]+?))(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]

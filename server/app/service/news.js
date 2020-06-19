@@ -3,13 +3,13 @@ const uuidv1 = require("uuid/v1");
 const NEWS_LIST = "newsList";
 
 class NewsService extends Service {
-  async get(offset = 0, limit = 0) {
+  async get(type = 0, offset = 0, limit = 0) {
     offset = offset == 0 ? undefined : parseInt(offset);
     limit = limit == 0 ? undefined : parseInt(limit);
     let _list = await global.news.getData(NEWS_LIST);
     let arr = _list.slice(offset, limit);
     for (let i = 0, len = arr.length; i < len; i++) {
-      let { result: info } = await this.getInfoById(arr[i]);
+      let { result: info } = await this.getInfoById(type, arr[i]);
       delete info["main"];
       arr[i] = info;
     }
@@ -22,7 +22,7 @@ class NewsService extends Service {
     };
   }
 
-  async getInfoById(id) {
+  async getInfoById(type, id) {
     let info = await global.news.getData(id, null);
     if (info === null) {
       return {
@@ -30,6 +30,24 @@ class NewsService extends Service {
         result: null,
       };
     } else {
+      if (type === "1") {
+        info["title"] = info["titleZh"];
+        info["banner"] = info["bannerZh"];
+        info["auther"] = info["autherZh"];
+        info["main_desc"] = info["main_descZh"];
+        info["main"] = info["mainZh"];
+        delete info["titleZh"];
+        delete info["bannerZh"];
+        delete info["autherZh"];
+        delete info["main_descZh"];
+        delete info["mainZh"];
+      } else if (type === "0") {
+        delete info["titleZh"];
+        delete info["bannerZh"];
+        delete info["autherZh"];
+        delete info["main_descZh"];
+        delete info["mainZh"];
+      }
       return {
         error: 0,
         result: info,

@@ -198,4 +198,8 @@ module.exports = {
     },
   },
   videoSrc: `${process.env.BASE_URL}/DSP_1.mp4`,
+  type: "1",
+  article: {
+    auther: "作 者",
+  },
 };

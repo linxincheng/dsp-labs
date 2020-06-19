@@ -35,11 +35,12 @@
       >
       </el-pagination>
     </div>
+    {{ $t("type") }}
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue, Watch } from "vue-property-decorator";
 import axios from "./../axios/http";
 import api from "./../assets/config/api";
 import WOW from "wow.js";
@@ -58,6 +59,15 @@ export default class NewsList extends Vue {
     this.pageChange(1);
   }
 
+  get lang(): any {
+    return this.$t("type");
+  }
+
+  @Watch("lang")
+  public langChange(): void {
+    this.pageChange(this.currentPage);
+  }
+
   public pageChange(pageNumber: number): void {
     this.loadingObj = this.$loading({
       target: ".news-list-content",
@@ -66,9 +76,8 @@ export default class NewsList extends Vue {
     });
     axios
       .get(
-        `${api.getList}/${(pageNumber - 1) * this.PAGE_SIZE + 1}/${pageNumber *
-          this.PAGE_SIZE +
-          1}`
+        `${api.getList}/${this.lang}/${(pageNumber - 1) * this.PAGE_SIZE +
+          1}/${pageNumber * this.PAGE_SIZE + 1}`
       )
       .then((res: any) => {
         if (res.error === 0) {

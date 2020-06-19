@@ -19,8 +19,8 @@
         ></i>
         <i
           class="iconfont iconmedium"
-          title="https://medium.com/@dsplabs"
-          @click="linkTo('https://medium.com/@dsplabs')"
+          title="https://medium.com/dsplabs"
+          @click="linkTo('https://medium.com/dsplabs')"
         ></i>
         <i
           class="iconfont iconicon_githubb"

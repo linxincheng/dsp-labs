@@ -206,4 +206,8 @@ module.exports = {
     },
   },
   videoSrc: `${process.env.BASE_URL}/DSP_2.mp4`,
+  type: "0",
+  article: {
+    auther: "Auther",
+  },
 };

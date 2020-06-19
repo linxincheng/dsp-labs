@@ -46,6 +46,9 @@
     <el-button @click="editNews" type="primary" v-else>update</el-button>
     <el-button @click="resetNews">reset</el-button>
     <el-button @click="back">back</el-button>
+    <el-button @click="switchType">{{
+      lang ? "切换至英文" : "切换至中文"
+    }}</el-button>
     <div
       @click="fullScreen"
       class="w-e-menu full-screen-icon"
@@ -82,12 +85,27 @@ export default {
         banner: "",
         auther: "",
       },
+      formZh: {
+        title: "",
+        banner: "",
+        auther: "",
+        main: "",
+        main_desc: "",
+      },
+      formZh: {
+        title: "",
+        banner: "",
+        auther: "",
+        main: "",
+        main_desc: "",
+      },
       dialogVisible: false,
       editor: null,
       id: "",
       publishAt: 0,
       loadingObj: null,
       full: false,
+      lang: false, // false :en , true:zh
     };
   },
   methods: {
@@ -114,10 +132,13 @@ export default {
     },
     pulishNews() {
       const vm = this;
-      let _desc = this.editor.txt.text();
-      let params = Object.assign(this.form, {
-        main: this.editor.txt.html(),
-        main_desc: _desc.slice(0, 100),
+      this.saveForm();
+      let params = Object.assign(this.formEn, {
+        titleZh: this.formZh.title,
+        autherZh: this.formZh.auther,
+        bannerZh: this.formZh.banner,
+        mainZh: this.formZh.main,
+        main_descZh: this.formZh.main_desc,
       });
       this.loadingObj = this.$loading({
         target: ".publish",
@@ -138,15 +159,55 @@ export default {
           vm.loadingObj && vm.loadingObj.close();
         });
     },
+    switchType() {
+      this.saveForm();
+      this.lang = !this.lang;
+      if (this.lang) {
+        this.form.title = this.formZh.title;
+        this.form.banner = this.formZh.banner;
+        this.form.auther = this.formZh.auther;
+        this.editor.txt.html(this.formZh.main);
+      } else {
+        this.form.title = this.formEn.title;
+        this.form.banner = this.formEn.banner;
+        this.form.auther = this.formEn.auther;
+        this.editor.txt.html(this.formEn.main);
+      }
+    },
+    saveForm() {
+      if (this.lang) {
+        this.formZh.main = this.editor.txt.html();
+        let _desc = this.editor.txt.text();
+        this.formZh.main_desc = _desc.slice(0, 100);
+        this.formZh.title = this.form.title;
+        this.formZh.banner = this.form.banner;
+        this.formZh.auther = this.form.auther;
+      } else {
+        this.formEn.main = this.editor.txt.html();
+        let _desc = this.editor.txt.text();
+        this.formEn.main_desc = _desc.slice(0, 100);
+        this.formEn.title = this.form.title;
+        this.formEn.banner = this.form.banner;
+        this.formEn.auther = this.form.auther;
+      }
+    },
     editNews() {
       const vm = this;
-      let _desc = this.editor.txt.text();
-      let params = Object.assign(this.form, {
-        main: this.editor.txt.html(),
-        main_desc: _desc.slice(0, 100),
-        id: vm.id,
-        publish_at: vm.publishAt,
-      });
+      this.saveForm();
+      let params = Object.assign(
+        this.formEn,
+        {
+          titleZh: this.formZh.title,
+          autherZh: this.formZh.auther,
+          bannerZh: this.formZh.banner,
+          mainZh: this.formZh.main,
+          main_descZh: this.formZh.main_desc,
+        },
+        {
+          id: vm.id,
+          publish_at: vm.publishAt,
+        }
+      );
       this.loadingObj = this.$loading({
         target: ".publish",
         text: "Loading...",
@@ -168,14 +229,37 @@ export default {
     },
     resetNews() {
       if (this.id) {
-        axios.get(`${api.getInfoById}/${this.id}`).then((res) => {
+        axios.get(`${api.getInfoById}/2/${this.id}`).then((res) => {
           if (res.error === 0) {
-            this.form = {
+            if (this.lang) {
+              this.form = {
+                title: res.result.titleZh,
+                banner: res.result.bannerZh,
+                auther: res.result.autherZh,
+              };
+              this.editor.txt.html(res.result.mainZh);
+            } else {
+              this.form = {
+                title: res.result.title,
+                banner: res.result.banner,
+                auther: res.result.auther,
+              };
+              this.editor.txt.html(res.result.main);
+            }
+            this.formEn = {
               title: res.result.title,
               banner: res.result.banner,
               auther: res.result.auther,
+              main: res.result.main,
+              main_desc: res.result.main_desc,
             };
-            this.editor.txt.html(res.result.main);
+            this.formZh = {
+              title: res.result.titleZh,
+              banner: res.result.bannerZh,
+              auther: res.result.autherZh,
+              main: res.result.mainZh,
+              main_desc: res.result.main_descZh,
+            };
             this.publishAt = res.result.publish_at;
           }
         });
@@ -184,6 +268,20 @@ export default {
           title: "",
           banner: "",
           auther: "",
+        };
+        this.formEn = {
+          title: "",
+          banner: "",
+          auther: "",
+          main: "",
+          main_desc: "",
+        };
+        this.formZh = {
+          title: "",
+          banner: "",
+          auther: "",
+          main: "",
+          main_desc: "",
         };
         this.editor.txt.clear();
       }

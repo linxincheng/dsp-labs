@@ -2,6 +2,7 @@
 node_modules
 /dist
 /server/app/view
+server/app/view
 /server/run
 /server/logs
 /server/app/db/dbFileDir/News

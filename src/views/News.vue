@@ -28,10 +28,6 @@ import WOW from "wow.js";
 new WOW().init();
 
 import "./../assets/tool/filter";
-// require("element-ui/lib/theme-chalk/index.css");
-// import { Pagination, Loading } from "element-ui";
-// Vue.use(Pagination);
-// Vue.prototype.$loading = Loading.service;
 
 @Component({
   components: {

@@ -18,7 +18,9 @@
         <p class="article-time">
           {{ (article.publish_at / 1000) | timeFormat }}
         </p>
-        <p class="article-auther">Auther: {{ article.auther }}</p>
+        <p class="article-auther">
+          {{ $t("article.auther") }}: {{ article.auther }}
+        </p>
       </div>
       <div v-else>
         loading...
@@ -29,7 +31,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue, Watch } from "vue-property-decorator";
 import NavComponent from "@/components/NavComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
 import "./../assets/tool/filter";
@@ -43,8 +45,17 @@ export default class Article extends Vue {
   public id: any = "";
   public article: any = null;
 
+  get lang(): any {
+    return this.$t("type");
+  }
+
+  @Watch("lang")
+  public langChange(): void {
+    this.getInfo();
+  }
+
   public getInfo(): void {
-    axios.get(`${api.getInfoById}/${this.id}`).then((res: any) => {
+    axios.get(`${api.getInfoById}/${this.lang}/${this.id}`).then((res: any) => {
       if (res.error === 0) {
         this.article = res.result;
       }
